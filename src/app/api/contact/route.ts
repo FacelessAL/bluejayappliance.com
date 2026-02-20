@@ -212,8 +212,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // If API key is not set, fall back to webhook
-    if (!GHL_API_KEY || !GHL_LOCATION_ID) {
+    // Webhook fallback — always works even if API key has wrong scopes
+    const sendViaWebhook = async () => {
       const webhookUrl =
         'https://services.leadconnectorhq.com/hooks/eqc7U7yE00bzdSYNPP0N/webhook-trigger/27247886-0b17-4052-a7c9-01e06bc8d6a2';
 
@@ -222,7 +222,11 @@ export async function POST(request: NextRequest) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
+    };
 
+    // If API key is not set, fall back to webhook
+    if (!GHL_API_KEY || !GHL_LOCATION_ID) {
+      await sendViaWebhook();
       return NextResponse.json({ success: true, method: 'webhook' });
     }
 
@@ -259,11 +263,21 @@ export async function POST(request: NextRequest) {
     const contactData = await contactRes.json();
 
     if (!contactRes.ok) {
-      console.error('GHL contact creation failed:', contactData);
-      return NextResponse.json(
-        { error: 'Failed to create contact', details: contactData },
-        { status: 500 }
-      );
+      console.error('GHL contact creation failed:', contactData, '— falling back to webhook');
+      await sendViaWebhook();
+
+      // Still try to send notifications even on API failure
+      const leadInfo = {
+        first_name: firstName, last_name: lastName, full_name: displayName,
+        email, phone, service_needed: service_needed || '', issue_description: issue_description || '',
+        urgency: urgency || '', service_address: service_address || '', city: city || '', postal_code: postal_code || '',
+      };
+      Promise.allSettled([
+        sendEmailNotification(leadInfo),
+        sendCustomerConfirmation(leadInfo),
+      ]).catch((err) => console.error('Notification error:', err));
+
+      return NextResponse.json({ success: true, method: 'webhook-fallback' });
     }
 
     const contactId = contactData.contact?.id;
