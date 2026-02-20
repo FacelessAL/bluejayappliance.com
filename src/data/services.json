@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "dishwasher-repair",
+    "title": "Dishwasher Repair",
+    "shortTitle": "Dishwasher Repair",
+    "image": "/images/services/dishwasher-repair.webp",
+    "metaTitle": "Dishwasher Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional dishwasher repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Dishwasher Repair",
+    "heroSubheading": "Professional dishwasher repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Dishwasher Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert dishwasher repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Dishwasher Repair"
+  },
+  {
+    "slug": "dryer-repair",
+    "title": "Dryer Repair",
+    "shortTitle": "Dryer Repair",
+    "image": "/images/services/dryer-repair.webp",
+    "metaTitle": "Dryer Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional dryer repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Dryer Repair",
+    "heroSubheading": "Professional dryer repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Dryer Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert dryer repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Dryer Repair"
+  },
+  {
+    "slug": "washer-repair",
+    "title": "Washer Repair",
+    "shortTitle": "Washer Repair",
+    "image": "/images/services/washer-repair.webp",
+    "metaTitle": "Washer Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional washer repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Washer Repair",
+    "heroSubheading": "Professional washer repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Washer Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert washer repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Washer Repair"
+  },
+  {
+    "slug": "refrigerator-and-freezer-repair",
+    "title": "Refrigerator & Freezer Repair",
+    "shortTitle": "Refrigerator & Freezer Repair",
+    "image": "/images/services/refrigerator-and-freezer-repair.webp",
+    "metaTitle": "Refrigerator & Freezer Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional refrigerator & freezer repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Refrigerator & Freezer Repair",
+    "heroSubheading": "Professional refrigerator & freezer repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Refrigerator & Freezer Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert refrigerator & freezer repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Refrigerator & Freezer Repair"
+  },
+  {
+    "slug": "stove-and-oven-repair",
+    "title": "Stove & Oven Repair",
+    "shortTitle": "Stove & Oven Repair",
+    "image": "/images/services/stove-and-oven-repair.webp",
+    "metaTitle": "Stove & Oven Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional stove & oven repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Stove & Oven Repair",
+    "heroSubheading": "Professional stove & oven repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Stove & Oven Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert stove & oven repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Stove & Oven Repair"
+  },
+  {
+    "slug": "range-repair",
+    "title": "Range Repair",
+    "shortTitle": "Range Repair",
+    "image": "/images/services/range-repair.webp",
+    "metaTitle": "Range Repair {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional range repair in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Range Repair",
+    "heroSubheading": "Professional range repair for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Range Repair in {city}",
+        "body": "Blue Jay Appliance Services provides expert range repair services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Range Repair"
+  },
+  {
+    "slug": "garbage-disposal-repair-and-installation",
+    "title": "Garbage Disposal Repair & Installation",
+    "shortTitle": "Garbage Disposal Repair & Installation",
+    "image": "/images/services/garbage-disposal-repair-and-installation.webp",
+    "metaTitle": "Garbage Disposal Repair & Installation {city} | Blue Jay Appliance Services",
+    "metaDescription": "Professional garbage disposal repair & installation in {city}. Expert service by Blue Jay Appliance Services. Licensed & insured. Call Call Now: (630) 998-0209.",
+    "heroHeading": "Garbage Disposal Repair & Installation",
+    "heroSubheading": "Professional garbage disposal repair & installation for residential and commercial clients.",
+    "contentSections": [
+      {
+        "heading": "Professional Garbage Disposal Repair & Installation in {city}",
+        "body": "Blue Jay Appliance Services provides expert garbage disposal repair & installation services to homes and businesses across the {cityFull} area. Our licensed professionals deliver fast, reliable service at transparent prices — no hidden fees, ever. Call 630-998-0209 to get started."
+      },
+      {
+        "heading": "Why Choose Blue Jay Appliance Services",
+        "body": "We're a locally-owned company — not a national franchise. Our professionals are fully licensed, insured, and background-checked. We provide upfront pricing before any work begins and stand behind our work with a satisfaction guarantee."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Garbage Disposal Repair & Installation"
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "name": "Blue Jay Appliance Services",
+  "shortName": "Blue Jay Appliance",
+  "industry": "appliance-repair",
+  "industryLabel": "Appliance Repair",
+  "serviceCategory": "Appliance Repair Service",
+  "schemaType": "HomeAndConstructionBusiness",
+  "phone": "(630) 998-0209",
+  "phoneRaw": "6309980209",
+  "phoneSlogan": "630-998-0209",
+  "phoneCTA": "Call Now: (630) 998-0209",
+  "email": "service@bluejayappliance.com",
+  "address": {
+    "street": "640 S Washington St #212",
+    "city": "Naperville",
+    "state": "IL",
+    "zip": "60540",
+    "full": "640 S Washington St #212, Naperville, IL 60540"
+  },
+  "license": "",
+  "licenseLabel": "License",
+  "domain": "bluejayappliance.com",
+  "url": "https://bluejayappliance.com",
+  "googlePlaceId": "ChIJm0uoL11d7ocRn6wpJObn6os",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJm0uoL11d7ocRn6wpJObn6os",
+  "googleProfileUrl": "https://www.google.com/maps/place/Blue+Jay+Appliance+Services/@41.7665362,-88.1480549,17z/data=!3m1!4b1!4m6!3m5!1s0x2ebd751df6a84b99:0x8b27e7e62429ac9f!8m2!3d41.7665362!4d-88.1480549!16s%2Fg%2F11s78pq5xb",
+  "googleMapsUrl": "https://www.google.com/maps/place/Blue+Jay+Appliance+Services/@41.7665362,-88.1480549,17z/data=!3m1!4b1!4m6!3m5!1s0x2ebd751df6a84b99:0x8b27e7e62429ac9f!8m2!3d41.7665362!4d-88.1480549!16s%2Fg%2F11s78pq5xb",
+  "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.5!2d-88.1480549!3d41.7665362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2ebd751df6a84b99%3A0x8b27e7e62429ac9f!2sBlue%20Jay%20Appliance%20Services!5e0!3m2!1sen!2sus!4v1",
+  "rating": 5,
+  "reviewCount": 50,
+  "social": {
+    "facebook": "https://www.facebook.com/Bluejayappliance/",
+    "linkedin": ""
+  },
+  "geo": {
+    "latitude": 41.7665362,
+    "longitude": -88.1480549
+  },
+  "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-12:00",
+  "description": "Professional appliance repair services in Naperville, Illinois. Blue Jay Appliance Services provides same or next-day service for all major appliances. Experienced technicians, transparent pricing, and a 90-day warranty on all parts and labor.",
+  "tagline": "Naperville's Local Appliance Repair Experts",
+  "serviceAreaName": "Naperville & Surrounding Areas",
+  "ownerName": "Jesse",
+  "ownerTitle": "Founder & Lead Technician",
+  "ownerBio": "Jesse is the owner and lead service technician at Blue Jay Appliance, bringing more than a decade of hands-on experience to every kitchen and laundry room he steps into. Starting out as a helper and working his way up through the trade, Jesse built Blue Jay Appliance on a simple idea: treat every home like it's your own and every customer like a neighbor. From refrigerators that suddenly stop cooling to washers that quit mid-cycle, Jesse has seen it all and knows how stressful a broken appliance can be. He's known for his calm, friendly approach, clear explanations, and honest recommendations, whether that means a quick repair or letting you know when it's smarter to replace.",
+  "aboutIntro": "If you're searching for a professional appliance repair company in Naperville, then look no further. At Blue Jay Appliance Services, we have many years of experience repairing and servicing almost all major brand appliances for your home or business.",
+  "aboutBody": "Our team of knowledgeable and friendly technicians will start by diagnosing the cause of the problem and put together an honest and written estimate for repair. Our rates are transparent and affordable and we offer a 90 day warranty on all parts and labor. Over the years, we've expanded our services, reflecting our commitment to meet the evolving needs of our customers. Each repair job has shaped our expertise, allowing us to tackle challenges with confidence. Today, we are proud to say that our reputation is built on quality workmanship and exceptional customer support.",
+  "aboutStory": "Over the years, we've expanded our services, reflecting our commitment to meet the evolving needs of our customers. Each repair job has shaped our expertise, allowing us to tackle challenges with confidence. Today, we are proud to say that our reputation is built on quality workmanship and exceptional customer support.",
+  "whyChooseUs": [
+    "Experienced & Certified Technicians - Our technicians have years of hands-on experience repairing a wide range of appliances.",
+    "Honest Service & Upfront Pricing - No hidden fees or unnecessary upsells. We believe in honest work at fair prices.",
+    "Fast Response & Reliable Results - We know your time matters. Our team arrives on schedule and completes repairs efficiently.",
+    "Local Expertise - As a local business, we understand the needs of our community and strive to deliver neighborly, dependable service."
+  ],
+  "warranty": "90-day warranty on all parts and labor",
+  "seniorDiscount": true,
+  "freeEstimates": true,
+  "sameDayService": true,
+  "brandColors": {
+    "primary": "#1E88E5",
+    "secondary": "#0D47A1",
+    "dark": "#13152C",
+    "accent": "#42A5F5"
+  },
+  "team": [
+    {
+      "role": "Founder & Lead Technician",
+      "name": "Jesse"
+    },
+    {
+      "role": "Senior Technician",
+      "name": ""
+    },
+    {
+      "role": "Customer Support",
+      "name": ""
+    },
+    {
+      "role": "Service Manager",
+      "name": ""
+    }
+  ]
+}

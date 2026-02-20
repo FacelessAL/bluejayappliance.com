@@ -1,0 +1,96 @@
+{
+  "business": {
+    "name": "Acme Plumbing Co",
+    "shortName": "Acme Plumbing",
+    "industry": "plumbing",
+    "industryLabel": "Plumbing",
+    "serviceCategory": "Plumber",
+    "schemaType": "Plumber",
+    "phone": "(555) 123-4567",
+    "phoneRaw": "5551234567",
+    "phoneSlogan": "555-123-4567",
+    "phoneCTA": "Call Us Today!",
+    "email": "info@acmeplumbing.com",
+    "address": {
+      "street": "123 Main St",
+      "city": "Springfield",
+      "state": "IL",
+      "zip": "62701",
+      "full": "123 Main St, Springfield, IL 62701"
+    },
+    "license": "PLB-12345",
+    "licenseLabel": "License",
+    "domain": "acmeplumbing.com",
+    "url": "https://acmeplumbing.com",
+    "googlePlaceId": "ChIJ...",
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ...",
+    "googleMapsUrl": "https://www.google.com/maps/place/Acme+Plumbing+Co",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=...",
+    "rating": 4.9,
+    "reviewCount": 50,
+    "social": {
+      "facebook": "https://www.facebook.com/acmeplumbing",
+      "linkedin": "https://www.linkedin.com/company/acmeplumbing"
+    },
+    "geo": {
+      "latitude": 39.7817,
+      "longitude": -89.6501
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "description": "Acme Plumbing Co provides fast, reliable 24/7 plumbing services in Springfield, IL and surrounding areas. Licensed, insured, and available now.",
+    "tagline": "The Services You Need at The Price You Want!",
+    "serviceAreaName": "Central Illinois",
+    "aboutIntro": "Acme Plumbing is a locally-operated company committed to providing fast and efficient plumbing services at a reasonable price.",
+    "aboutBody": "Our dedication to exceptional service has made us a leading choice in our community. Our technicians always go above and beyond the call of duty. We are fully licensed, certified, and insured.",
+    "brandColors": {
+      "primary": "#2CC7FF",
+      "secondary": "#c41e2f",
+      "dark": "#13152C",
+      "accent": "#454A77"
+    }
+  },
+
+  "services": [
+    "Emergency Service",
+    "Residential Plumbing",
+    "Commercial Plumbing",
+    "Water Heaters",
+    "Tankless Water Heaters",
+    "Sewer Line Repair & Replacement",
+    "Drain Cleaning",
+    "Water Line Repair & Replacement",
+    "Sump Pump",
+    "Gas Line Repair & Replacement"
+  ],
+
+  "locations": [
+    { "name": "Springfield", "state": "IL" },
+    { "name": "Decatur", "state": "IL" },
+    { "name": "Champaign", "state": "IL" },
+    { "name": "Bloomington", "state": "IL" },
+    { "name": "Peoria", "state": "IL" },
+    { "name": "Jacksonville", "state": "IL" },
+    { "name": "Lincoln", "state": "IL" },
+    { "name": "Taylorville", "state": "IL" },
+    { "name": "Chatham", "state": "IL" },
+    { "name": "Rochester", "state": "IL" }
+  ],
+
+  "testimonials": [
+    {
+      "name": "John D.",
+      "text": "Great service! Fast, reliable, and reasonably priced. Highly recommend.",
+      "color": "#4285F4"
+    },
+    {
+      "name": "Sarah M.",
+      "text": "Called for an emergency and they were here within 30 minutes. Excellent work!",
+      "color": "#0F9D58"
+    },
+    {
+      "name": "Mike R.",
+      "text": "Professional, on time, and fair pricing. Will use again for sure.",
+      "color": "#DB4437"
+    }
+  ]
+}
