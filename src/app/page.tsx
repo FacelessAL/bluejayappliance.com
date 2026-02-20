@@ -28,39 +28,53 @@ export default function Home() {
       />
 
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pb-[100px] pt-[160px] lg:pt-[180px] hero-offset">
+      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-end md:items-center overflow-hidden pb-[80px] md:pb-[100px] pt-[160px] lg:pt-[180px] hero-offset">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-bg.webp"
-            alt={`${biz.name} - appliance repair services`}
+            alt={`${biz.name} - professional appliance repair services in Naperville IL`}
             fill
             className="object-cover object-center"
             priority
           />
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15,27,45,0.45)' }} />
         </div>
-        <div className="relative z-10 w-full max-w-[700px] mx-4 text-center" style={{ backgroundColor: '#0F1B2DCF', padding: '50px 30px' }}>
-          <p className="text-white text-[30px] font-bold mb-6 font-[family-name:var(--font-figtree)]">{biz.shortName}</p>
-          <h1 className="text-[35px] md:text-[54px] font-bold text-white leading-tight mb-8 font-[family-name:var(--font-figtree)]">
-            {biz.tagline}
-          </h1>
-          <p className="text-white text-[18px] mb-12 font-[family-name:var(--font-poppins)]" style={{ opacity: 0.9 }}>
-            Same or Next Day Service Available. Your trusted partner for all appliance needs.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-[30px]">
-            <Link
-              href={`tel:${biz.phoneRaw}`}
-              style={{ padding: '12px 25px', backgroundColor: '#1565C0' }}
-              className="text-white rounded-[6px] font-bold text-[18px] hover:opacity-90 transition-colors uppercase font-[family-name:var(--font-figtree)]"
+        <div className="relative z-10 w-full container" style={{ maxWidth: '1200px' }}>
+          <div style={{ maxWidth: '680px' }}>
+            <div
+              className="font-[family-name:var(--font-figtree)]"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(21,101,192,0.85)', color: '#ffffff', padding: '8px 18px', borderRadius: '50px', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '24px' }}
             >
-              Call Now: {biz.phone}
-            </Link>
-            <Link
-              href="/contact-us"
-              className="bg-white rounded-[6px] font-bold text-[18px] hover:bg-gray-100 transition-colors uppercase font-[family-name:var(--font-figtree)] border-2 border-gray-300"
-              style={{ padding: '12px 25px', color: '#0F1B2D' }}
-            >
-              Free Estimate
-            </Link>
+              <span style={{ fontSize: '16px' }}>&#9733;</span>
+              Ask Us About Our Senior Discount!
+            </div>
+            <h1 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 800, color: '#ffffff', lineHeight: '1.1', marginBottom: '24px' }}>
+              {biz.address.city}&apos;s Local Appliance{' '}
+              <br className="hidden md:block" />
+              Repair <span style={{ color: '#42A5F5' }}>Experts</span>
+            </h1>
+            <p className="font-[family-name:var(--font-poppins)]" style={{ fontSize: '16px', color: '#d1d5db', lineHeight: '1.7', marginBottom: '36px', maxWidth: '560px' }}>
+              Same or Next Day Service Available. Professional appliance repair services in {biz.address.city}, {biz.address.state}. Your trusted partner for all appliance needs.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <Link
+                href={`tel:${biz.phoneRaw}`}
+                className="font-[family-name:var(--font-figtree)] hover:bg-gray-100 transition-colors"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', backgroundColor: '#ffffff', color: '#0F1B2D', padding: '14px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '16px', textDecoration: 'none' }}
+              >
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call Now: {biz.phone}
+              </Link>
+              <Link
+                href="/contact-us"
+                className="font-[family-name:var(--font-figtree)] hover:bg-blue-800 transition-colors"
+                style={{ display: 'inline-block', backgroundColor: '#1565C0', color: '#ffffff', padding: '14px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '16px', textDecoration: 'none' }}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
