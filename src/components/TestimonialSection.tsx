@@ -67,9 +67,10 @@ export default function TestimonialSection() {
             <Image
               src="/images/logo.webp"
               alt={biz.name}
-              width={60}
-              height={60}
-              style={{ height: '40px', width: 'auto' }}
+              width={200}
+              height={80}
+              style={{ height: '50px', width: 'auto' }}
+              quality={100}
             />
             <div>
               <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F1B2D', margin: 0 }}>{biz.name}</p>
