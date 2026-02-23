@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getBusiness, getAllServices, getAllLocations } from '@/lib/data';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialSection from '@/components/TestimonialSection';
-// CTABand removed from homepage
 import SchemaMarkup from '@/components/SchemaMarkup';
 import ContactForm from '@/components/ContactForm';
 

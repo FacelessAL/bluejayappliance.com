@@ -93,7 +93,7 @@ export default function ApplianceRentalPage() {
       {/* Hero */}
       <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '60px 0 50px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Appliance Rental', href: '/appliance-rental' }]} />
+          <Breadcrumbs items={[{ label: 'Appliance Rental', href: '/appliance-rental' }]} />
           <h1 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '16px', lineHeight: '1.15' }}>
             Appliance Rental Service
           </h1>

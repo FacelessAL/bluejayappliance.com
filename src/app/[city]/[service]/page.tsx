@@ -9,13 +9,13 @@ import {
   getBusiness,
   isServiceLocationPublished,
   getServiceLocationContent,
+  getAllServices,
 } from '@/lib/data';
 import { linkifyBody } from '@/lib/linkifyPhone';
 import ServiceSidebar from '@/components/ServiceSidebar';
 import TestimonialSection from '@/components/TestimonialSection';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { getAllServices } from '@/lib/data';
 
 const biz = getBusiness();
 
