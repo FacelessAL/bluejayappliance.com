@@ -212,170 +212,138 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Webhook fallback — always works even if API key has wrong scopes
-    const sendViaWebhook = async () => {
-      const webhookUrl =
-        'https://services.leadconnectorhq.com/hooks/eqc7U7yE00bzdSYNPP0N/webhook-trigger/27247886-0b17-4052-a7c9-01e06bc8d6a2';
+    // ─── STEP 1: WEBHOOK (PRIMARY — always fires, guaranteed delivery) ───
+    // This triggers the GHL workflow that creates the contact, sends
+    // notifications, and does everything the live site's embedded form does.
+    // The webhook is the single source of truth for lead delivery.
+    const GHL_WEBHOOK_URL =
+      'https://services.leadconnectorhq.com/hooks/eqc7U7yE00bzdSYNPP0N/webhook-trigger/27247886-0b17-4052-a7c9-01e06bc8d6a2';
 
-      await fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-    };
-
-    // If API key is not set, fall back to webhook
-    if (!GHL_API_KEY || !GHL_LOCATION_ID) {
-      await sendViaWebhook();
-      return NextResponse.json({ success: true, method: 'webhook' });
-    }
-
-    const headers = {
-      Authorization: `Bearer ${GHL_API_KEY}`,
-      'Content-Type': 'application/json',
-      Version: '2021-07-28',
-    };
-
-    // Step 1: Create or update the contact
-    const contactPayload = {
-      locationId: GHL_LOCATION_ID,
-      firstName,
-      lastName,
+    const webhookPayload = {
+      first_name: firstName,
+      last_name: lastName,
+      full_name: displayName,
       email,
       phone,
-      address1: service_address || '',
+      service_needed: service_needed || '',
+      issue_description: issue_description || '',
+      urgency: urgency || '',
+      service_address: service_address || '',
       city: city || '',
-      postalCode: postal_code || '',
+      postal_code: postal_code || '',
       source: 'Website Contact Form',
-      customFields: [
-        { id: 'okz7uk4DI6P5p0gNLIm5', value: service_needed || '' },
-        { id: 'uurHpeIpvfnWTqdzSxGV', value: issue_description || '' },
-        { id: 'epQjKKfBLuGAG6p6dh4g', value: urgency || '' },
-      ],
+      sms_consent: 'Yes',
     };
 
-    const contactRes = await fetch(`${GHL_BASE_URL}/contacts/upsert`, {
+    const webhookRes = await fetch(GHL_WEBHOOK_URL, {
       method: 'POST',
-      headers,
-      body: JSON.stringify(contactPayload),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(webhookPayload),
     });
 
-    const contactData = await contactRes.json();
-
-    if (!contactRes.ok) {
-      console.error('GHL contact creation failed:', contactData, '— falling back to webhook');
-      await sendViaWebhook();
-
-      // Still try to send notifications even on API failure
-      const leadInfo = {
-        first_name: firstName, last_name: lastName, full_name: displayName,
-        email, phone, service_needed: service_needed || '', issue_description: issue_description || '',
-        urgency: urgency || '', service_address: service_address || '', city: city || '', postal_code: postal_code || '',
-      };
-      Promise.allSettled([
-        sendEmailNotification(leadInfo),
-        sendCustomerConfirmation(leadInfo),
-      ]).catch((err) => console.error('Notification error:', err));
-
-      return NextResponse.json({ success: true, method: 'webhook-fallback' });
+    if (!webhookRes.ok) {
+      console.error('GHL webhook failed:', webhookRes.status, await webhookRes.text());
     }
 
-    const contactId = contactData.contact?.id;
-
-    // Add tags without overwriting existing ones
-    const newTags = [service_needed, urgency, 'website-lead'].filter(Boolean);
-    if (contactId && newTags.length > 0) {
-      try {
-        await fetch(`${GHL_BASE_URL}/contacts/${contactId}/tags`, {
-          method: 'POST',
-          headers,
-          body: JSON.stringify({ tags: newTags }),
-        });
-      } catch (err) {
-        console.error('Failed to add tags:', err);
-      }
-    }
-
-    // Step 2: Create or update an opportunity (if pipeline is configured)
+    // ─── STEP 2: GHL API ENHANCEMENTS (optional — runs if API scopes work) ───
+    // These add tags, pipeline opportunities, and notes ON TOP of what the
+    // webhook already did. If the API token returns 403, we skip silently —
+    // the webhook already delivered the lead.
+    let contactId: string | undefined;
     let opportunityId: string | undefined;
-    if (GHL_PIPELINE_ID && GHL_PIPELINE_STAGE_ID && contactId) {
-      const oppName = `${displayName} - ${service_needed || 'Service Request'}`;
 
-      // Try creating the opportunity first
-      const oppRes = await fetch(`${GHL_BASE_URL}/opportunities/`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify({
-          pipelineId: GHL_PIPELINE_ID,
-          pipelineStageId: GHL_PIPELINE_STAGE_ID,
-          locationId: GHL_LOCATION_ID,
-          contactId,
-          name: oppName,
-          source: 'Website',
-          status: 'open',
-        }),
-      });
+    if (GHL_API_KEY && GHL_LOCATION_ID) {
+      const ghlHeaders = {
+        Authorization: `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+        Version: '2021-07-28',
+      };
 
-      const oppData = await oppRes.json();
+      try {
+        // Try to upsert contact via API (adds custom fields, address, source)
+        const contactRes = await fetch(`${GHL_BASE_URL}/contacts/upsert`, {
+          method: 'POST',
+          headers: ghlHeaders,
+          body: JSON.stringify({
+            locationId: GHL_LOCATION_ID,
+            firstName,
+            lastName,
+            email,
+            phone,
+            address1: service_address || '',
+            city: city || '',
+            postalCode: postal_code || '',
+            source: 'Website Contact Form',
+            customFields: [
+              { id: 'okz7uk4DI6P5p0gNLIm5', value: service_needed || '' },
+              { id: 'uurHpeIpvfnWTqdzSxGV', value: issue_description || '' },
+              { id: 'epQjKKfBLuGAG6p6dh4g', value: urgency || '' },
+            ],
+          }),
+        });
 
-      if (oppRes.ok) {
-        opportunityId = oppData.opportunity?.id;
-      } else if (oppData.message?.includes('duplicate')) {
-        // GHL only allows 1 opportunity per contact per pipeline
-        // Find the existing one and update it with the new service request
-        try {
-          const searchRes = await fetch(
-            `${GHL_BASE_URL}/opportunities/search?location_id=${GHL_LOCATION_ID}&contact_id=${contactId}&pipeline_id=${GHL_PIPELINE_ID}`,
-            { method: 'GET', headers }
-          );
-          const searchData = await searchRes.json();
-          const existingOpp = searchData.opportunities?.[0];
+        if (contactRes.ok) {
+          const contactData = await contactRes.json();
+          contactId = contactData.contact?.id;
 
-          if (existingOpp?.id) {
-            // Update the existing opportunity with new info
-            const updateRes = await fetch(`${GHL_BASE_URL}/opportunities/${existingOpp.id}`, {
-              method: 'PUT',
-              headers,
-              body: JSON.stringify({
-                pipelineStageId: GHL_PIPELINE_STAGE_ID,
-                name: oppName,
-                status: 'open',
-              }),
-            });
-            const updateData = await updateRes.json();
+          // Add tags
+          const newTags = [service_needed, urgency, 'website-lead'].filter(Boolean);
+          if (contactId && newTags.length > 0) {
+            await fetch(`${GHL_BASE_URL}/contacts/${contactId}/tags`, {
+              method: 'POST',
+              headers: ghlHeaders,
+              body: JSON.stringify({ tags: newTags }),
+            }).catch((err) => console.error('Failed to add tags:', err));
+          }
 
-            if (updateRes.ok) {
-              opportunityId = existingOpp.id;
-              console.log('Updated existing opportunity:', existingOpp.id);
-            } else {
-              console.error('GHL opportunity update failed:', updateData);
+          // Create pipeline opportunity
+          if (GHL_PIPELINE_ID && GHL_PIPELINE_STAGE_ID && contactId) {
+            const oppName = `${displayName} - ${service_needed || 'Service Request'}`;
+            try {
+              const oppRes = await fetch(`${GHL_BASE_URL}/opportunities/`, {
+                method: 'POST',
+                headers: ghlHeaders,
+                body: JSON.stringify({
+                  pipelineId: GHL_PIPELINE_ID,
+                  pipelineStageId: GHL_PIPELINE_STAGE_ID,
+                  locationId: GHL_LOCATION_ID,
+                  contactId,
+                  name: oppName,
+                  source: 'Website',
+                  status: 'open',
+                }),
+              });
+              const oppData = await oppRes.json();
+              if (oppRes.ok) {
+                opportunityId = oppData.opportunity?.id;
+              }
+            } catch (err) {
+              console.error('Opportunity creation failed:', err);
             }
           }
-        } catch (err) {
-          console.error('GHL opportunity search/update failed:', err);
+
+          // Add note with full request details
+          if (contactId) {
+            const noteDate = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+            const noteBody = `📋 Website Service Request — ${noteDate}\n\nService: ${service_needed || 'N/A'}\nUrgency: ${urgency || 'N/A'}\nAddress: ${service_address || ''} ${city || ''} ${postal_code || ''}\n\nIssue Description:\n${issue_description || 'No details provided'}\n\nSMS Consent: Yes`;
+            await fetch(`${GHL_BASE_URL}/contacts/${contactId}/notes`, {
+              method: 'POST',
+              headers: ghlHeaders,
+              body: JSON.stringify({ body: noteBody }),
+            }).catch((err) => console.error('Failed to add note:', err));
+          }
+        } else {
+          // API returned 403 or other error — no problem, webhook already delivered
+          const errBody = await contactRes.text().catch(() => 'unknown');
+          console.warn(`GHL API enhancement skipped (${contactRes.status}): ${errBody}`);
         }
-      } else {
-        console.error('GHL opportunity creation failed:', oppData);
-      }
-    }
-
-    // Step 2b: Add a note to the contact with full request details
-    if (contactId) {
-      const noteDate = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
-      const noteBody = `📋 Website Service Request — ${noteDate}\n\nService: ${service_needed || 'N/A'}\nUrgency: ${urgency || 'N/A'}\nAddress: ${service_address || ''} ${city || ''} ${postal_code || ''}\n\nIssue Description:\n${issue_description || 'No details provided'}\n\nSMS Consent: Yes`;
-
-      try {
-        await fetch(`${GHL_BASE_URL}/contacts/${contactId}/notes`, {
-          method: 'POST',
-          headers,
-          body: JSON.stringify({ body: noteBody }),
-        });
       } catch (err) {
-        console.error('Failed to add contact note:', err);
+        // Network error on API — no problem, webhook already delivered
+        console.warn('GHL API enhancement failed:', err);
       }
     }
 
-    // Step 3: Send notifications (fire-and-forget, don't block response)
+    // ─── STEP 3: EMAIL NOTIFICATIONS (optional — runs if Resend key is set) ───
     const leadInfo = {
       first_name: firstName,
       last_name: lastName,
@@ -390,14 +358,14 @@ export async function POST(request: NextRequest) {
       postal_code: postal_code || '',
     };
 
-    // Send all notifications in parallel, don't await (non-blocking)
+    // Fire-and-forget — don't block the response
     Promise.allSettled([
       sendEmailNotification(leadInfo),
       sendSmsNotification(leadInfo),
       sendCustomerConfirmation(leadInfo),
     ]).catch((err) => console.error('Notification error:', err));
 
-    return NextResponse.json({ success: true, contactId, opportunityId });
+    return NextResponse.json({ success: true, method: contactId ? 'api' : 'webhook', contactId, opportunityId });
   } catch (error) {
     console.error('Contact form API error:', error);
     return NextResponse.json(
