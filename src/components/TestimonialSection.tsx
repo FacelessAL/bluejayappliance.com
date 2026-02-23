@@ -65,7 +65,7 @@ export default function TestimonialSection() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '8px' }}>
             <Image
-              src="/images/logo-icon.webp"
+              src="/images/logo.webp"
               alt={biz.name}
               width={60}
               height={60}
