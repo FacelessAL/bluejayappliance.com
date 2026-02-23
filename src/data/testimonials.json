@@ -1,72 +1,394 @@
 [
   {
+    "name": "Diana Patel",
+    "initial": "D",
+    "color": "#F4B400",
+    "timestamp": 1771720000,
+    "text": "Jesse explained everything thoroughly from start to finish and repaired my oven in a timely manner. Highly recommend!"
+  },
+  {
+    "name": "Cathy Koeplin",
+    "initial": "C",
+    "color": "#0F9D58",
+    "timestamp": 1770510000,
+    "text": "Jesse was extremely efficient and thoroughly explained the problem. I will highly recommend Blue Jay Appliance Services"
+  },
+  {
+    "name": "Will Magie",
+    "initial": "W",
+    "color": "#4285F4",
+    "timestamp": 1769300000,
+    "text": "Jesse and Blue Jay Appliance Services have been great to deal with, fantastic communication and very knowledgable in getting the repairs done on our dishwasher and dryer particularly over the holiday period!"
+  },
+  {
+    "name": "P Benjamin",
+    "initial": "P",
+    "color": "#DB4437",
+    "timestamp": 1768700000,
+    "text": "Great work, highly professional, prompt and helpful. Strongly recommend. Fixed our dryer basically the next day after we called. (Wife is happy.)"
+  },
+  {
+    "name": "Mathew Mc.",
+    "initial": "M",
+    "color": "#F4B400",
+    "timestamp": 1768090000,
+    "text": "Jesse was fantastic — super helpful and took great care of our appliance. He even came out on short notice. Highly recommend!"
+  },
+  {
+    "name": "Lorie Smith",
+    "initial": "L",
+    "color": "#0F9D58",
+    "timestamp": 1766880000,
+    "text": "Blue Jay Appliance Services remains one of our most trusted service partners. They respond quickly, communicate clearly, and always deliver dependable results, highly recommended from Moe LHG!"
+  },
+  {
+    "name": "Christopher Lang",
+    "initial": "C",
+    "color": "#4285F4",
+    "timestamp": 1766270000,
+    "text": "Very fast service!"
+  },
+  {
+    "name": "Cristian Gal",
+    "initial": "C",
+    "color": "#DB4437",
+    "timestamp": 1766270000,
+    "text": "I called the contact number, I got no answer, I did not left a message but he called back. That was great, he offered to show up, even it was the end of the day, I accepted he showed up and we identified the issue with my dryer. We decided not to continue with the repair but overall it was a great experience, and I strongly recommend his services. Great communication and updates over text messages."
+  },
+  {
+    "name": "Tatiana Kashikhina",
+    "initial": "T",
+    "color": "#F4B400",
+    "timestamp": 1765670000,
+    "text": "Good communication, knowledgeable and reasonable pricing."
+  },
+  {
+    "name": "John Callan",
+    "initial": "J",
+    "color": "#0F9D58",
+    "timestamp": 1765060000,
+    "text": "Jesse at Blue Jay identified the potential problems my washing machine had on his initial visit. He then repaired it on the second visit using the most cost effective method not adding any parts that weren't needed. He did the work in a tight area of the laundry room without an issue or complaint. It's hard to find qualified appliance repair people, which is why I highly recommend Jesse and Blue Jay Appliance!"
+  },
+  {
+    "name": "Ruben Gonzalez",
+    "initial": "R",
+    "color": "#4285F4",
+    "timestamp": 1764450000,
+    "text": "Bluejay Appliance Repair is hands down the best in the business! I've been using them for years and refer them to all my clients, friends, and family. They're honest, reliable, and always upfront about pricing. What I appreciate most is that they'll tell you the truth — whether it's worth fixing or if it's time for a replacement. Their professionalism and integrity make them my go-to for any appliance repair needs. Highly recommend!"
+  },
+  {
+    "name": "Kim Hakim",
+    "initial": "K",
+    "color": "#DB4437",
+    "timestamp": 1764450000,
+    "text": "Blue Jay Appliance Services did amazing work on the repair of our washing machine. Jesse was courteous, responsive and very dependable. When running late, he kept us informed at all times. He also suggested we use an aftermarket product to keep costs down. Will definitely use Blue Jay Appliance Services for future appliance repair."
+  },
+  {
     "name": "Nick L.",
     "initial": "N",
     "color": "#4285F4",
-    "timestamp": 1771114495,
+    "timestamp": 1762030000,
     "text": "Very responsive and professional. Jesse was great to work with on our dryer repair. I would highly recommend them for any appliance repairs!"
   },
   {
     "name": "T. Bartolotta",
     "initial": "T",
     "color": "#0F9D58",
-    "timestamp": 1768522495,
+    "timestamp": 1762030000,
     "text": "We've worked with Jesse several times over the past two years. He is professional, knowledgeable, polite, and reliable. A pleasure to work with. Highly recommend him!"
   },
   {
-    "name": "Kathy R.",
+    "name": "Kathy Rott",
     "initial": "K",
     "color": "#DB4437",
-    "timestamp": 1765930495,
+    "timestamp": 1762030000,
     "text": "Excellent work done efficiently and timely."
   },
   {
-    "name": "Orlando C.",
+    "name": "Orlando Cardenas",
     "initial": "O",
     "color": "#F4B400",
-    "timestamp": 1763338495,
-    "text": "Just wanted to say what a great experience I had with your company. Jesse was absolutely fantastic. He handled my repair with professionalism and honesty, which is rare to find these days. He took the time to explain everything clearly and made sure I felt confident in the work being done."
+    "timestamp": 1759440000,
+    "text": "Just wanted to say what a great experience I had with your company. Jesse was absolutely fantastic. He handled my repair with professionalism and honesty, which is rare to find these days. He took the time to explain everything clearly and made sure I felt confident in the work being done. I'll be recommending Jesse and your team to everyone I know."
   },
   {
     "name": "Allen M.",
     "initial": "A",
     "color": "#4285F4",
-    "timestamp": 1760746495,
+    "timestamp": 1758230000,
     "text": "Great Job, Jesse provided me with part number I needed to fix my oven and saved me some money."
   },
   {
-    "name": "Matt C.",
+    "name": "Matt Cluff",
     "initial": "M",
     "color": "#0F9D58",
-    "timestamp": 1758154495,
+    "timestamp": 1758230000,
     "text": "Great company. Jesse was amazing. He was very professional and honest with my repairs. He offered a fair price and also offered recommendations for future appliance purchases. I will recommend him to everyone."
   },
   {
-    "name": "Clifton B.",
+    "name": "Clifton Ballard",
     "initial": "C",
     "color": "#DB4437",
-    "timestamp": 1755562495,
+    "timestamp": 1757020000,
     "text": "Jesse was fantastic!! He correctly diagnosed both my dishwasher and refrigerator. Because of my home warranty the dishwasher was replaced and he returned to repair the refrigerator. Thanks Blue Jay, my kitchen is whole again!"
   },
   {
-    "name": "Ricardo B.",
+    "name": "Ricardo Bovolenta",
     "initial": "R",
     "color": "#F4B400",
-    "timestamp": 1752970495,
+    "timestamp": 1757020000,
     "text": "Blue Jay dispatched a technician same day and fixed my dryer really quickly and efficiently."
   },
   {
-    "name": "Kathryn C.",
+    "name": "Kathryn Callahan",
     "initial": "K",
     "color": "#4285F4",
-    "timestamp": 1750378495,
-    "text": "I had an oven that was not coming up to temperature. I called Jessie and he came out the next day to replace the ignitor. He was able to arrive 1 hour before scheduled and that worked perfectly with my availability. He explained everything he was doing and answered all my questions. He was very professional and his fee was affordable."
+    "timestamp": 1756410000,
+    "text": "I had an oven that was not coming up to temperature. I called Jessie and he came out the next day to replace the ignitor. He was able to arrive 1 hour before scheduled and that worked perfectly with my availability. He explained everything he was doing and answered all my questions. He was very professional and his fee was affordable. I would definitely call him if I need any future appliance repairs."
   },
   {
     "name": "Melissa M.",
     "initial": "M",
     "color": "#0F9D58",
-    "timestamp": 1747786495,
+    "timestamp": 1755800000,
     "text": "Old Washer. New life. Thanks, Jesse!!!"
+  },
+  {
+    "name": "Randy Tylin",
+    "initial": "R",
+    "color": "#DB4437",
+    "timestamp": 1755800000,
+    "text": "Jesse replied quickly to my request for service came out was very fair and gave us some good advice."
+  },
+  {
+    "name": "Benjamin Cesaretti",
+    "initial": "B",
+    "color": "#F4B400",
+    "timestamp": 1755800000,
+    "text": "Jesse is awesome. He is very responsive and always answers his phone. He fixed the belt on my dryer and he's fixed two of my dishwashers. I have referred him to family members and Downers Grove. And they can't say nicer things about them. Very fair and knowledgeable. He is my go to."
+  },
+  {
+    "name": "Dana Lopez",
+    "initial": "D",
+    "color": "#4285F4",
+    "timestamp": 1755190000,
+    "text": "Asked short notice. Made it within 48 hrs. Diagnosed quickly. Neat. Repaired. Additional information given."
+  },
+  {
+    "name": "Charles Toliver",
+    "initial": "C",
+    "color": "#0F9D58",
+    "timestamp": 1754580000,
+    "text": "I want to leave a review about Jessie service man who came to my home to repair my washing machine. He diagnosed correctly the issue got parts came back fixed it so fast and my washer works great better than ever! THANKS JESSIE I TRULY HONESTLY APPRECIATE YOUR SERVICE!!!"
+  },
+  {
+    "name": "Jannah Ahmed",
+    "initial": "J",
+    "color": "#DB4437",
+    "timestamp": 1754580000,
+    "text": "Highly recommended! Was able to get my washer up and running the same day!"
+  },
+  {
+    "name": "Mohammad Alnabulsieh",
+    "initial": "M",
+    "color": "#F4B400",
+    "timestamp": 1754580000,
+    "text": "Highly recommend! Quick and efficient!"
+  },
+  {
+    "name": "Carmen Lancaste",
+    "initial": "C",
+    "color": "#4285F4",
+    "timestamp": 1753970000,
+    "text": "Great customer service"
+  },
+  {
+    "name": "John O'Rourke",
+    "initial": "J",
+    "color": "#0F9D58",
+    "timestamp": 1753970000,
+    "text": "Fast service, incredibly thorough and was up front about costs and timelines for replacements."
+  },
+  {
+    "name": "Emily",
+    "initial": "E",
+    "color": "#4285F4",
+    "timestamp": 1753970000,
+    "text": "Jesse was awesome! They were able to work with my tight schedule. He listened to my concerns, was straight to the point, and honest that I didn't need anything done or any replacements for the time being. If needed, will definitely call Blue Jay Appliance Services again."
+  },
+  {
+    "name": "Juana Perez",
+    "initial": "J",
+    "color": "#DB4437",
+    "timestamp": 1753970000,
+    "text": "Bluejay appliance services has done an awesome job as soon as I called him. He made an appointment to see me and he was here on time very friendly always smiling make me feel very comfortable when he was in my home. He fixed my refrigerator my Kenmore, fixed my stove, and he also fixed my LG dryer and he always guaranteed me that it was fixed completely or he'll come back and fix it if something went wrong. And my appliances are still working as we speak. I will be recommending him to everyone."
+  },
+  {
+    "name": "Sunay Salievski",
+    "initial": "S",
+    "color": "#F4B400",
+    "timestamp": 1753360000,
+    "text": "Jesse was super responsive, honest, and informative. Highly recommend!"
+  },
+  {
+    "name": "Judy Butler",
+    "initial": "J",
+    "color": "#0F9D58",
+    "timestamp": 1752750000,
+    "text": "I was able to get quick and efficient same day service! Jesse was very informative and helped me make the decision to repair after explaining part costs and options. Rates are very reasonable. I would definitely use Blue Jay's services again!"
+  },
+  {
+    "name": "Matt Swanson",
+    "initial": "M",
+    "color": "#4285F4",
+    "timestamp": 1752140000,
+    "text": "Awesome experience and communication! Communicated well ahead of time, showed up exactly when they said they would and fixed our problem within just a few minutes. Highly recommend Blue Jay!"
+  },
+  {
+    "name": "Jesse Cornejo",
+    "initial": "J",
+    "color": "#DB4437",
+    "timestamp": 1751530000,
+    "text": "This is the BEST APPLIANCE SERVICE company in Illinois and especially the greater Chicago area. If you want an honest quote and a trustworthy technician this is the way to go. Jesse will give you the right price and do top notch work. Do yourself a favor and give him a call for all your appliance needs."
+  },
+  {
+    "name": "Kevin Molano",
+    "initial": "K",
+    "color": "#F4B400",
+    "timestamp": 1751530000,
+    "text": "I had my new dishwasher and stove installed by Blue Jay Appliance. They provided excellent service, and finished everything in a timely manner. I would highly recommend them!"
+  },
+  {
+    "name": "Richard Molano",
+    "initial": "R",
+    "color": "#0F9D58",
+    "timestamp": 1751530000,
+    "text": "Blue Jay is an awesome company! I was able to get a tech out ASAP. Great work done on my washer. I'm definitely calling them for any appliance needs. Thanks Blue Jay!"
+  },
+  {
+    "name": "Valerie Linares",
+    "initial": "V",
+    "color": "#4285F4",
+    "timestamp": 1751530000,
+    "text": "I highly recommend Blue Jay Appliance Services. They have repaired our GE washer, Whirlpool Dryer and our GE dishwasher. They are our go to company for all appliance needs."
+  },
+  {
+    "name": "Mayra Fick",
+    "initial": "M",
+    "color": "#DB4437",
+    "timestamp": 1751530000,
+    "text": "Highly recommend Blue Jay Appliance Services. Our GE dishwasher was in need of service. We had the pleasure of working with Jesse. We received courteous and efficient service. Prices are fair and professionalism is top notch. Will definitely use them again for any other required appliance repair."
+  },
+  {
+    "name": "Vincent Garramone",
+    "initial": "V",
+    "color": "#F4B400",
+    "timestamp": 1747180000,
+    "text": "Jesse was great! Straight shooter, no BS, thoroughly explained what he was checking for while teaching me how to get more out of my laundry system. Clearly gave me the options for repair, with NO pressure, so I could decide what I wanted to do."
+  },
+  {
+    "name": "Connie Marchetti",
+    "initial": "C",
+    "color": "#0F9D58",
+    "timestamp": 1747180000,
+    "text": "Jesse was recommended to me. My GE dishwasher decided it no longer wanted to work. After figuring out the problem he gave me an estimate for the work ordered the part, and was back a day later to install it. He is courteous, prompt, his charges are reasonable and he even showed me where the filter is in the dishwasher. All in all I will definitely call Blue Jay for any of my appliance problems. Thank you Jesse!!!"
+  },
+  {
+    "name": "Ann D.",
+    "initial": "A",
+    "color": "#4285F4",
+    "timestamp": 1738713600,
+    "text": "Jesse, who I worked with, was very kind and knowledgeable. My dryer is fixed!"
+  },
+  {
+    "name": "Yolanda Ramirez",
+    "initial": "Y",
+    "color": "#DB4437",
+    "timestamp": 1737504000,
+    "text": "I had an appointment the next day after calling for the company to come out and check why my oven was not heating up. Got a diagnosis right away and he came back two days later to fix it!! Very professional and on time and communication was kept open as to around what time he'd be arriving at my house. I will definitely be using them again if the time ever comes that I need services again."
+  },
+  {
+    "name": "Robert Konzelman",
+    "initial": "R",
+    "color": "#F4B400",
+    "timestamp": 1735084800,
+    "text": "Jesse was great. He was able to get out to our house same day we called (Christmas Eve Eve) and fix our washer. Highly recommend him. He was great with communication prior to arrival. Will call again if services are needed in the future."
+  },
+  {
+    "name": "Ryan Gonzalez",
+    "initial": "R",
+    "color": "#0F9D58",
+    "timestamp": 1732492800,
+    "text": "They were very communicative, understood the issue with my fridge, resolved it very quickly. They were honest and very fair priced. Definitely recommend."
+  },
+  {
+    "name": "Gina Nelson",
+    "initial": "G",
+    "color": "#4285F4",
+    "timestamp": 1718668800,
+    "text": "Jesse is always prompt, professional and has done a great job numerous times for us! We can always depend on him. Highly recommend"
+  },
+  {
+    "name": "Noree Mares",
+    "initial": "N",
+    "color": "#DB4437",
+    "timestamp": 1715990400,
+    "text": "Outstanding response and service from Blue Jay Appliance Services. Jesse, the technician who came to my home, was professional, knowledgeable and prompt. After diagnosing the problem, he told me what the problem was and what needed to happen and what the cost would be. My refrigerator was up and running better than ever the next day. I give Jesse and Blue Jay Appliance Services the highest rating possible."
+  },
+  {
+    "name": "Heather Martinez",
+    "initial": "H",
+    "color": "#F4B400",
+    "timestamp": 1703635200,
+    "text": "Jesse is amazing! I first called him for our washing machine a year ago. He gave us great advice about our options. Just recently, our ice maker started giving us problems. He replaced our ice maker and saved us the hassle of buying a new refrigerator. I trust Jesse with any and all of our appliances. He knows his stuff!"
+  },
+  {
+    "name": "Willy Diesel",
+    "initial": "W",
+    "color": "#0F9D58",
+    "timestamp": 1703030400,
+    "text": "Jesse came out and fixed our refrigerator. Super nice guy knowledgeable as hell. Cost was what we thought it would be. Happy with that! Actually told me what was wrong with our dishwasher while he was here. That was nice and also looked at her downstairs refrigerator took a couple of minutes."
+  },
+  {
+    "name": "Randy Garza",
+    "initial": "R",
+    "color": "#4285F4",
+    "timestamp": 1702425600,
+    "text": "Jesse was very communicative and timely. He knew exactly what the issue was and it took him no time to fix it."
+  },
+  {
+    "name": "Nick De La Cruz",
+    "initial": "N",
+    "color": "#DB4437",
+    "timestamp": 1702339200,
+    "text": "Thank you for making my life easier! Jesse at Blue Jay has fixed many of my appliances over the years. His knowledge and patient approach has not only fixed my problems but prevented them as well. The Blue Jay team are always responsive and careful with my home and appliances. Their honest and clear communication make them easy to work with. They always accommodate my schedule along with their competitive pricing has made me a customer for life."
+  },
+  {
+    "name": "Francisco Rios",
+    "initial": "F",
+    "color": "#F4B400",
+    "timestamp": 1701820800,
+    "text": "Jesse has not only serviced my family's appliances but he's also helped several of my real estate clients and the reviews are always positive. Thank you for being great at what you do."
+  },
+  {
+    "name": "M.J.",
+    "initial": "M",
+    "color": "#0F9D58",
+    "timestamp": 1691107200,
+    "text": "Jesse was able to get out to my house quickly, identify the issue, and fix it in a timely manner."
+  },
+  {
+    "name": "Mike Johnson",
+    "initial": "M",
+    "color": "#4285F4",
+    "timestamp": 1680134400,
+    "text": "They were phenomenal. Very responsive and fixed the appliance same day. I will absolutely use them in the future."
+  },
+  {
+    "name": "Samuel Carrera",
+    "initial": "S",
+    "color": "#DB4437",
+    "timestamp": 1668556800,
+    "text": "Amazing customer service, punctual great man will be a life long customer with this business, cannot recommend enough."
   }
 ]
