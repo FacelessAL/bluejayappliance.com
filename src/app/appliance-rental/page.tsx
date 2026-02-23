@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getBusiness } from '@/lib/data';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import ContactForm from '@/components/ContactForm';
 
 const biz = getBusiness();
 
@@ -101,25 +100,16 @@ export default function ApplianceRentalPage() {
           <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '18px', lineHeight: '1.7', color: '#d1d5db', maxWidth: '700px', marginBottom: '24px' }}>
             Affordable, reliable, and hassle-free appliance rentals for your home. Rent washers, dryers, and more with free delivery, installation, and maintenance included.
           </p>
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            <Link
-              href="#packages"
-              className="font-[family-name:var(--font-figtree)]"
-              style={{ display: 'inline-block', backgroundColor: '#1565C0', color: '#ffffff', padding: '14px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '16px', textDecoration: 'none' }}
-            >
-              View Packages
-            </Link>
-            <Link
-              href={`tel:${biz.phoneRaw}`}
-              className="font-[family-name:var(--font-figtree)]"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#ffffff', color: '#0F1B2D', padding: '14px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '16px', textDecoration: 'none' }}
-            >
-              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call {biz.phone}
-            </Link>
-          </div>
+          <Link
+            href={`tel:${biz.phoneRaw}`}
+            className="font-[family-name:var(--font-figtree)] hover:bg-blue-800 transition-colors"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', backgroundColor: '#1565C0', color: '#ffffff', padding: '16px 32px', borderRadius: '50px', fontWeight: 700, fontSize: '18px', textDecoration: 'none' }}
+          >
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call Now: {biz.phone}
+          </Link>
         </div>
       </section>
 
@@ -169,10 +159,13 @@ export default function ApplianceRentalPage() {
                   ))}
                 </ul>
                 <Link
-                  href="/contact-us"
-                  className="font-[family-name:var(--font-figtree)]"
+                  href={`tel:${biz.phoneRaw}`}
+                  className="font-[family-name:var(--font-figtree)] hover:opacity-90 transition-opacity"
                   style={{
-                    display: 'block',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
                     backgroundColor: pkg.popular ? '#1565C0' : '#0F1B2D',
                     color: '#ffffff',
                     padding: '12px 24px',
@@ -183,7 +176,10 @@ export default function ApplianceRentalPage() {
                     textTransform: 'uppercase',
                   }}
                 >
-                  Select Package
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call to Rent
                 </Link>
               </div>
             ))}
@@ -215,21 +211,25 @@ export default function ApplianceRentalPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Call to Action */}
       <section style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
-        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 2rem' }}>
-          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center', marginBottom: '8px', color: '#0F1B2D' }}>
-            Get Started Today
+        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 2rem', textAlign: 'center' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '16px', color: '#0F1B2D' }}>
+            Ready to Get Started?
           </h2>
-          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', textAlign: 'center', marginBottom: '32px' }}>
-            Complete our simple rental form or give us a call at{' '}
-            <Link href={`tel:${biz.phoneRaw}`} style={{ color: '#1565C0', fontWeight: 600, textDecoration: 'none' }}>
-              {biz.phone}
-            </Link>
+          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', marginBottom: '32px', lineHeight: '1.7' }}>
+            Give us a call to discuss your rental needs. We&apos;ll help you pick the right package and schedule a convenient delivery time.
           </p>
-          <div style={{ backgroundColor: '#f9fafb', borderRadius: '12px', padding: '32px', border: '1px solid #e5e7eb' }}>
-            <ContactForm />
-          </div>
+          <Link
+            href={`tel:${biz.phoneRaw}`}
+            className="font-[family-name:var(--font-figtree)] hover:bg-blue-800 transition-colors"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#1565C0', color: '#ffffff', padding: '20px 48px', borderRadius: '50px', fontWeight: 700, fontSize: '22px', textDecoration: 'none' }}
+          >
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            {biz.phoneCTA}
+          </Link>
         </div>
       </section>
     </>
