@@ -3,26 +3,130 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   async redirects() {
-    const oldSlugs = [
-      "naperville-il-appliance-repair-service",
-      "aurora-il-appliance-repair-service",
-      "joliet-il-appliance-repair-service",
-      "plainfield-il-appliance-repair-service",
-    ];
-    const redirects = oldSlugs.map((old) => ({
-      source: `/${old}`,
-      destination: `/${old.replace("-service", "")}`,
-      permanent: true,
-    }));
-    // Also redirect old city/service combo URLs
-    oldSlugs.forEach((old) => {
-      redirects.push({
-        source: `/${old}/:service`,
-        destination: `/${old.replace("-service", "")}/:service`,
+    return [
+      // ============================================================
+      // WordPress → Next.js migration redirects (301 permanent)
+      // Preserves SEO rankings for all indexed URLs
+      // ============================================================
+
+      // --- Service parent page ---
+      {
+        source: "/our-services",
+        destination: "/services",
         permanent: true,
-      });
-    });
-    return redirects;
+      },
+
+      // --- Individual service pages (old WordPress slugs → new) ---
+      {
+        source: "/our-services/washer-repair",
+        destination: "/services/washer-repair",
+        permanent: true,
+      },
+      {
+        source: "/our-services/dryer-repair-naperville-il",
+        destination: "/services/dryer-repair",
+        permanent: true,
+      },
+      {
+        source: "/our-services/dishwasher-repair-naperville-il",
+        destination: "/services/dishwasher-repair",
+        permanent: true,
+      },
+      {
+        source: "/our-services/refrigerator-repair-naperville-il",
+        destination: "/services/refrigerator-and-freezer-repair",
+        permanent: true,
+      },
+      {
+        source: "/our-services/stove-oven-range-repair-naperville-il",
+        destination: "/services/stove-and-oven-repair",
+        permanent: true,
+      },
+      {
+        source: "/our-services/garbage-disposal-repair-installation-naperville-il",
+        destination: "/services/garbage-disposal-repair-and-installation",
+        permanent: true,
+      },
+
+      // --- Catch-all for any other /our-services/* pages Google may have crawled ---
+      {
+        source: "/our-services/:slug",
+        destination: "/services",
+        permanent: true,
+      },
+
+      // --- Location pages (old format without state abbreviation) ---
+      {
+        source: "/plainfield-appliance-repair",
+        destination: "/plainfield-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/joliet-appliance-repair",
+        destination: "/joliet-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/aurora-appliance-repair",
+        destination: "/aurora-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/naperville-appliance-repair",
+        destination: "/naperville-il-appliance-repair",
+        permanent: true,
+      },
+
+      // --- Locations hub page ---
+      {
+        source: "/locations",
+        destination: "/service-area",
+        permanent: true,
+      },
+
+      // --- Old "-service" suffix URLs (from earlier site version) ---
+      {
+        source: "/naperville-il-appliance-repair-service",
+        destination: "/naperville-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/aurora-il-appliance-repair-service",
+        destination: "/aurora-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/joliet-il-appliance-repair-service",
+        destination: "/joliet-il-appliance-repair",
+        permanent: true,
+      },
+      {
+        source: "/plainfield-il-appliance-repair-service",
+        destination: "/plainfield-il-appliance-repair",
+        permanent: true,
+      },
+      // Also handle city/service combos with old -service suffix
+      {
+        source: "/naperville-il-appliance-repair-service/:service",
+        destination: "/naperville-il-appliance-repair/:service",
+        permanent: true,
+      },
+      {
+        source: "/aurora-il-appliance-repair-service/:service",
+        destination: "/aurora-il-appliance-repair/:service",
+        permanent: true,
+      },
+      {
+        source: "/joliet-il-appliance-repair-service/:service",
+        destination: "/joliet-il-appliance-repair/:service",
+        permanent: true,
+      },
+      {
+        source: "/plainfield-il-appliance-repair-service/:service",
+        destination: "/plainfield-il-appliance-repair/:service",
+        permanent: true,
+      },
+    ];
   },
 };
 
