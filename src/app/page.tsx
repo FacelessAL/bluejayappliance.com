@@ -88,8 +88,8 @@ export default function Home() {
           <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '18px', fontWeight: 400, lineHeight: '31px', textAlign: 'center', color: '#ffffff', marginBottom: '48px', maxWidth: '1100px', margin: '0 auto 48px auto' }}>
             From washers and dryers to refrigerators and ovens, our expert technicians handle it all. We service nearly all major brand appliances for your home or business, delivering fast and reliable repairs at transparent prices.
           </p>
-          <div className="grid-3col" style={{ gap: '10px' }}>
-            {services.slice(0, 6).map((service) => (
+          <div className="grid-4col-services" style={{ gap: '10px' }}>
+            {services.map((service) => (
               <ServiceCard
                 key={service.slug}
                 title={service.title}

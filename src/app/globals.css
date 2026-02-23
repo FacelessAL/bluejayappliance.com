@@ -64,7 +64,7 @@ html {
 
 /* Main content padding below fixed header */
 .main-content {
-  padding-top: var(--header-h, 180px);
+  padding-top: var(--header-h, 100px);
 }
 
 @media (max-width: 1023px) {
@@ -87,7 +87,7 @@ html {
 
 /* Homepage hero offset to overlap fixed header */
 .hero-offset {
-  margin-top: calc(var(--header-h, 180px) * -1);
+  margin-top: calc(var(--header-h, 100px) * -1);
 }
 
 @media (max-width: 1023px) {
@@ -129,6 +129,12 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+
+.grid-4col-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .grid-4col-icons {
@@ -177,6 +183,10 @@ html {
   .grid-4col {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .grid-4col-services {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-4col-icons {
@@ -230,6 +240,10 @@ html {
   .grid-4col {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .grid-4col-services {
+    grid-template-columns: 1fr;
   }
 
   .grid-4col-icons {
