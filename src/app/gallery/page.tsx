@@ -4,7 +4,6 @@ import { getBusiness } from '@/lib/data';
 import galleryData from '@/data/gallery.json';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import CTABand from '@/components/CTABand';
 import GalleryGrid from '@/components/GalleryGrid';
 
 const biz = getBusiness();
@@ -102,8 +101,6 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
-
-      <CTABand />
     </>
   );
 }

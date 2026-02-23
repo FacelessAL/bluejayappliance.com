@@ -11,7 +11,6 @@ import {
 import { linkifyBody } from '@/lib/linkifyPhone';
 import ServiceSidebar from '@/components/ServiceSidebar';
 import TestimonialSection from '@/components/TestimonialSection';
-import CTABand from '@/components/CTABand';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -142,7 +141,6 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
-      <CTABand serviceName={service.shortTitle} />
       <TestimonialSection />
     </>
   );

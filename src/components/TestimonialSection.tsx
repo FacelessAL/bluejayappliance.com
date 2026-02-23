@@ -61,38 +61,42 @@ export default function TestimonialSection() {
           Client Testimonials
         </h2>
 
-        {/* Google Reviews Widget */}
-        <div className="grid-2col" style={{ alignItems: 'flex-start', marginBottom: '48px' }}>
-          {/* Left: Business rating summary */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        {/* Rating summary — centered */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '8px' }}>
             <Image
-              src="/images/logo.webp"
+              src="/images/logo-icon.webp"
               alt={biz.name}
-              width={150}
-              height={50}
-              style={{ height: '40px', width: 'auto', marginBottom: '8px' }}
+              width={60}
+              height={60}
+              style={{ height: '40px', width: 'auto' }}
             />
-            <p style={{ fontWeight: 700, fontSize: '14px', color: '#0F1B2D' }}>{biz.name}</p>
-            <div style={{ display: 'flex', gap: '2px', marginTop: '4px' }}>
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} width="16" height="16" fill="#FBBC05" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+            <div>
+              <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F1B2D', margin: 0 }}>{biz.name}</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}>
+                <div style={{ display: 'flex', gap: '2px' }}>
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="16" height="16" fill="#FBBC05" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span style={{ fontSize: '13px', color: '#6b7280' }}>{biz.reviewCount} Google reviews</span>
+              </div>
             </div>
-            <p style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px' }}>{biz.reviewCount} Google reviews</p>
-            <Link
-              href={writeReviewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginTop: '12px', border: '1px solid #d1d5db', color: '#0F1B2D', padding: '6px 16px', borderRadius: '4px', fontSize: '12px', fontWeight: 500, textDecoration: 'none' }}
-            >
-              Write a review
-            </Link>
           </div>
+          <Link
+            href={writeReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginTop: '8px', border: '1px solid #d1d5db', color: '#0F1B2D', padding: '8px 20px', borderRadius: '4px', fontSize: '13px', fontWeight: 500, textDecoration: 'none' }}
+          >
+            Write a review
+          </Link>
+        </div>
 
-          {/* Right: Review carousel */}
-          <div style={{ position: 'relative' }}>
+        {/* Review carousel — full width */}
+        <div style={{ position: 'relative', marginBottom: '40px' }}>
             {/* Nav arrows */}
             <button
               onClick={prevSlide}
@@ -150,26 +154,25 @@ export default function TestimonialSection() {
               ))}
             </div>
 
-            {/* Dot indicators */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', marginTop: '16px' }}>
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentIndex(i)}
-                  aria-label={`Go to review ${i + 1}`}
-                  style={{
-                    width: currentIndex === i ? '24px' : '8px',
-                    height: '8px',
-                    borderRadius: '4px',
-                    backgroundColor: currentIndex === i ? '#1565C0' : '#d1d5db',
-                    border: 'none',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s',
-                    padding: 0,
-                  }}
-                />
-              ))}
-            </div>
+          {/* Dot indicators */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', marginTop: '16px' }}>
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                aria-label={`Go to review ${i + 1}`}
+                style={{
+                  width: currentIndex === i ? '24px' : '8px',
+                  height: '8px',
+                  borderRadius: '4px',
+                  backgroundColor: currentIndex === i ? '#1565C0' : '#d1d5db',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s',
+                  padding: 0,
+                }}
+              />
+            ))}
           </div>
         </div>
 
@@ -194,11 +197,6 @@ export default function TestimonialSection() {
             />
           </Link>}
         </div>
-
-        {/* Subheading */}
-        <p className="font-[family-name:var(--font-figtree)]" style={{ textAlign: 'center', fontSize: '18px', fontWeight: 600, color: '#0F1B2D', marginTop: '32px', lineHeight: '28px' }}>
-          We strive to exceed your expectations, ensuring that each client receives top-tier service at a reasonable cost
-        </p>
       </div>
     </section>
   );

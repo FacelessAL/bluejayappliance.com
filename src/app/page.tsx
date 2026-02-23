@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getBusiness, getAllServices, getAllLocations } from '@/lib/data';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialSection from '@/components/TestimonialSection';
-import CTABand from '@/components/CTABand';
+// CTABand removed from homepage
 import SchemaMarkup from '@/components/SchemaMarkup';
 import ContactForm from '@/components/ContactForm';
 
@@ -79,32 +79,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== WELCOME / ABOUT INTRO ===== */}
-      <section className="bg-white" style={{ padding: '80px 0' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', textAlign: 'center' }}>
-          <h2 className="font-[family-name:var(--font-figtree)] heading-hero" style={{ fontWeight: 700, textTransform: 'uppercase', marginBottom: '24px', color: '#0F1B2D' }}>
-            Welcome to {biz.name}
+      {/* ===== OUR APPLIANCE REPAIR SERVICES ===== */}
+      <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '80px 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+          <h2 className="font-[family-name:var(--font-figtree)] heading-lg" style={{ fontWeight: 700, textTransform: 'uppercase', textAlign: 'center', marginBottom: '16px', color: '#ffffff' }}>
+            Our Appliance Repair Services
           </h2>
-          <p style={{ maxWidth: '1050px', margin: '0 auto 48px', fontFamily: 'var(--font-poppins)', fontSize: '18px', fontWeight: 500, lineHeight: '31px', color: '#0F1B2D' }}>
-            {biz.aboutIntro} Our team of knowledgeable and friendly technicians will start by diagnosing the cause of the problem and put together an honest and written estimate for repair. Our rates are transparent and affordable and we offer a 90 day warranty on all parts and labor.
+          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '18px', fontWeight: 400, lineHeight: '31px', textAlign: 'center', color: '#ffffff', marginBottom: '48px', maxWidth: '1100px', margin: '0 auto 48px auto' }}>
+            From washers and dryers to refrigerators and ovens, our expert technicians handle it all. We service nearly all major brand appliances for your home or business, delivering fast and reliable repairs at transparent prices.
           </p>
-          {/* Featured Services Grid */}
-          <div className="grid-4col-icons" style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            {services.slice(0, 4).map((service, i) => (
-              <Link
-                key={i}
+          <div className="grid-3col" style={{ gap: '10px' }}>
+            {services.slice(0, 6).map((service) => (
+              <ServiceCard
+                key={service.slug}
+                title={service.title}
+                shortTitle={service.shortTitle}
+                description={service.heroSubheading}
+                image={service.image}
                 href={`/services/${service.slug}`}
-                className="hover:opacity-90 transition-colors"
-                style={{ backgroundColor: '#1565C0', padding: '40px 20px', borderRadius: '16px', boxShadow: '2px 2px 22px 0px rgba(0, 0, 0, 0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
-              >
-                <span style={{ color: '#fff', fontWeight: 700, fontSize: '20px', textTransform: 'uppercase', fontFamily: 'var(--font-figtree)', textAlign: 'center' }}>{service.shortTitle}</span>
-              </Link>
+              />
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '32px' }}>
             <Link
               href="/services"
-              style={{ display: 'inline-block', backgroundColor: '#1565C0', color: '#ffffff', padding: '14px 36px', borderRadius: '4px', fontWeight: 700, fontSize: '15px', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-figtree)', letterSpacing: '0.5px' }}
+              className="hover:bg-white hover:text-bj-dark transition-colors"
+              style={{ display: 'inline-block', border: '2px solid #ffffff', color: '#ffffff', padding: '12px 32px', borderRadius: '4px', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', textDecoration: 'none' }}
             >
               View All Services
             </Link>
@@ -173,40 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== OUR SERVICES GRID ===== */}
-      <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '80px 0' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
-          <h2 className="font-[family-name:var(--font-figtree)] heading-lg" style={{ fontWeight: 700, textTransform: 'uppercase', textAlign: 'center', marginBottom: '16px', color: '#ffffff' }}>
-            Our Appliance Repair Services
-          </h2>
-          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '18px', fontWeight: 400, lineHeight: '31px', textAlign: 'center', color: '#ffffff', marginBottom: '48px', maxWidth: '1100px', margin: '0 auto 48px auto' }}>
-            From washers and dryers to refrigerators and ovens, our expert technicians handle it all. We service nearly all major brand appliances for your home or business, delivering fast and reliable repairs at transparent prices.
-          </p>
-          {/* Services Grid */}
-          <div className="grid-3col" style={{ gap: '10px' }}>
-            {services.slice(0, 6).map((service) => (
-              <ServiceCard
-                key={service.slug}
-                title={service.title}
-                shortTitle={service.shortTitle}
-                description={service.heroSubheading}
-                image={service.image}
-                href={`/services/${service.slug}`}
-              />
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '32px' }}>
-            <Link
-              href="/services"
-              className="hover:bg-white hover:text-bj-dark transition-colors"
-              style={{ display: 'inline-block', border: '2px solid #ffffff', color: '#ffffff', padding: '12px 32px', borderRadius: '4px', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', textDecoration: 'none' }}
-            >
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ===== SAME-DAY SERVICE + SENIOR DISCOUNT ===== */}
       <section style={{ position: 'relative', backgroundColor: '#ffffff', paddingTop: '100px', paddingBottom: '80px' }}>
         {/* Curved divider at top */}
@@ -256,144 +222,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== MEET THE OWNER ===== */}
-      <section style={{ position: 'relative', overflow: 'hidden', padding: '80px 0' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <Image
-            src="/images/hero-overlay.webp"
-            alt="Background"
-            fill
-            style={{ objectFit: 'cover', objectPosition: 'center center' }}
-          />
-          <div style={{ position: 'absolute', inset: 0, backgroundColor: '#0F1B2DE6' }} />
-        </div>
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="grid-2col" style={{ gap: '48px', alignItems: 'center' }}>
-            <div>
-              <h2 className="font-[family-name:var(--font-figtree)] heading-xl" style={{ fontWeight: 700, textTransform: 'uppercase', marginBottom: '24px', color: '#ffffff' }}>
-                Meet Jesse, Your Local Appliance Expert
-              </h2>
-              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', fontWeight: 400, lineHeight: '28px', color: '#ffffff', marginBottom: '16px' }}>
-                Jesse is the owner and lead service technician at {biz.shortName}, bringing more than a decade of hands-on experience to every kitchen and laundry room he steps into. He built {biz.shortName} on a simple idea: treat every home like it&apos;s your own and every customer like a neighbor.
-              </p>
-              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', fontWeight: 400, lineHeight: '28px', color: '#ffffff', marginBottom: '24px' }}>
-                He&apos;s known for his calm, friendly approach, clear explanations, and honest recommendations — whether that means a quick repair or letting you know when it&apos;s smarter to replace.
-              </p>
-              <Link
-                href="/about-us"
-                style={{ display: 'inline-block', backgroundColor: '#1565C0', color: '#ffffff', padding: '12px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '16px', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}
-              >
-                Learn More About Us
-              </Link>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image
-                src="/images/about-team.gif"
-                alt="Jesse and his family - Blue Jay Appliance Services"
-                width={600}
-                height={500}
-                unoptimized
-                style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '12px', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== LOGO / WARRANTY SECTION ===== */}
-      <section style={{ backgroundColor: '#0D47A1', color: '#ffffff', padding: '80px 0' }}>
-        <div className="container" style={{ maxWidth: '1400px' }}>
-          <div className="grid-2col" style={{ gap: '48px', alignItems: 'center' }}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image
-                src="/images/logo.webp"
-                alt={biz.name}
-                width={640}
-                height={253}
-                style={{ width: '100%', maxWidth: '400px', height: 'auto' }}
-              />
-            </div>
-            <div>
-              <h2 className="font-[family-name:var(--font-figtree)] heading-xl" style={{ fontWeight: 700, textTransform: 'uppercase', marginBottom: '24px', color: '#ffffff' }}>
+      {/* ===== QUALITY WORKMANSHIP ===== */}
+      <section style={{ backgroundColor: '#0D47A1', color: '#ffffff', padding: '40px 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }}>
+            <div style={{ flex: '1 1 500px' }}>
+              <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '8px', color: '#ffffff' }}>
                 Quality Workmanship, Guaranteed
               </h2>
-              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', fontWeight: 400, lineHeight: '28px', color: '#ffffff', marginBottom: '32px' }}>
-                At {biz.shortName}, we stand behind every repair with a 90-day warranty on parts and labor. Our technicians are trained to follow the highest standards: show up on time, respect your home, fix it right, and stand behind the work. We service nearly all major brand appliances and provide free estimates before any work begins.
+              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '15px', fontWeight: 400, lineHeight: '24px', color: 'rgba(255,255,255,0.9)', margin: 0 }}>
+                We stand behind every repair with a 90-day warranty on parts and labor. Free estimates before any work begins.
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-                <Link
-                  href="/contact-us"
-                  style={{ display: 'inline-block', backgroundColor: '#ffffff', color: '#0D47A1', padding: '12px 28px', borderRadius: '4px', fontWeight: 700, fontSize: '16px', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}
-                >
-                  Get a Free Estimate
-                </Link>
-                <span style={{ color: '#ffffff', fontSize: '16px' }}>or</span>
-                <div>
-                  <span style={{ color: '#90CAF9', fontSize: '14px' }}>Need Help? Call Us!</span>
-                  <br />
-                  <Link href={`tel:${biz.phoneRaw}`} style={{ color: '#ffffff', fontWeight: 700, fontSize: '24px', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}>
-                    {biz.phone}
-                  </Link>
-                </div>
-              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <Link
+                href="/contact-us"
+                style={{ display: 'inline-block', backgroundColor: '#ffffff', color: '#0D47A1', padding: '12px 28px', borderRadius: '4px', fontWeight: 700, fontSize: '15px', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}
+              >
+                Get a Free Estimate
+              </Link>
+              <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>or</span>
+              <Link href={`tel:${biz.phoneRaw}`} style={{ color: '#ffffff', fontWeight: 700, fontSize: '20px', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}>
+                {biz.phone}
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== SERVICE AREA (Map + Locations) ===== */}
-      <section style={{ position: 'relative', overflow: 'hidden' }}>
-        <div className="grid-2col-map">
-          {/* Map side */}
-          <div className="map-hide-mobile" style={{ position: 'relative', minHeight: '500px' }}>
-            {biz.googleMapsEmbed ? (
-              <iframe
-                src={biz.googleMapsEmbed}
-                width="100%"
-                height="100%"
-                style={{ border: 0, position: 'absolute', inset: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`${biz.name} Service Area`}
-              />
-            ) : (
-              <div style={{ position: 'absolute', inset: 0, backgroundColor: '#0F1B2D', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9ca3af' }}>
-                <p>Service Area Map</p>
-              </div>
-            )}
+      {/* ===== SERVICE AREA ===== */}
+      <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '60px 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', textAlign: 'center', marginBottom: '8px', color: '#ffffff' }}>
+            Our Service Area
+          </h2>
+          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '15px', color: '#9ca3af', textAlign: 'center', marginBottom: '32px' }}>
+            Professional appliance repair across {biz.serviceAreaName}
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '12px' }}>
+            {locations.map((location) => (
+              <Link
+                key={location.slug}
+                href={`/${location.slug}`}
+                className="hover:bg-blue-700 transition-colors"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(21,101,192,0.5)', padding: '12px 16px', borderRadius: '6px', textDecoration: 'none' }}
+              >
+                <svg width="14" height="14" fill="#64B5F6" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', color: '#ffffff' }}>{location.fullName}</span>
+              </Link>
+            ))}
           </div>
-          {/* Locations side */}
-          <div style={{ position: 'relative', color: '#ffffff', padding: '48px' }}>
-            <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-              <Image
-                src="/images/service-area-overlay.webp"
-                alt="Service area background"
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div style={{ position: 'absolute', inset: 0, backgroundColor: '#0F1B2DE6', zIndex: 1 }} />
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <h2 className="font-[family-name:var(--font-figtree)] heading-xl" style={{ fontWeight: 700, marginBottom: '8px', color: '#ffffff' }}>Our Service Area</h2>
-              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '14px', color: '#9ca3af', marginBottom: '32px' }}>
-                Professional appliance repair across {biz.serviceAreaName}
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {locations.map((location) => (
-                  <Link
-                    key={location.slug}
-                    href={`/${location.slug}`}
-                    style={{ display: 'flex', alignItems: 'center', gap: '12px', backgroundColor: 'rgba(21,101,192,0.5)', padding: '16px 20px', borderRadius: '8px', textDecoration: 'none', transition: 'background-color 0.3s' }}
-                  >
-                    <svg width="16" height="16" fill="#64B5F6" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                    <span className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 600, fontSize: '14px', textTransform: 'uppercase', color: '#ffffff' }}>{location.fullName}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+          <div style={{ textAlign: 'center', marginTop: '24px' }}>
+            <Link
+              href="/service-area"
+              style={{ display: 'inline-block', border: '2px solid #ffffff', color: '#ffffff', padding: '10px 28px', borderRadius: '4px', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}
+            >
+              View All Locations
+            </Link>
           </div>
         </div>
       </section>
@@ -425,9 +312,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ===== CTA BAND ===== */}
-      <CTABand />
     </>
   );
 }

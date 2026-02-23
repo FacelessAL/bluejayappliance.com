@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { getAllServices, getBusiness } from '@/lib/data';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialSection from '@/components/TestimonialSection';
-import CTABand from '@/components/CTABand';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -75,7 +74,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABand />
       <TestimonialSection />
     </>
   );

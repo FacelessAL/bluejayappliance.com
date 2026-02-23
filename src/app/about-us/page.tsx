@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getBusiness, getAllLocations } from '@/lib/data';
 import TestimonialSection from '@/components/TestimonialSection';
-import CTABand from '@/components/CTABand';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -228,7 +227,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTABand />
       <TestimonialSection />
     </>
   );

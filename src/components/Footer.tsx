@@ -7,18 +7,6 @@ export default function Footer() {
 
   return (
     <footer style={{ backgroundColor: '#0F1B2D', color: '#ffffff' }}>
-      {/* Pre-Footer Band */}
-      <div style={{ borderTop: '3px solid #1565C0', borderBottom: '3px solid #1565C0', overflow: 'visible' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 2rem', textAlign: 'center' }}>
-          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, color: '#64B5F6', textTransform: 'uppercase', marginBottom: '8px', lineHeight: '1.2' }}>
-            {biz.name}
-          </h2>
-          <p style={{ fontSize: '14px', color: '#ffffff', fontFamily: 'var(--font-poppins)', lineHeight: '1.6', fontStyle: 'italic' }}>
-            We strive to exceed your expectations, ensuring that each client receives top-tier service at a reasonable cost
-          </p>
-        </div>
-      </div>
-
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '48px 2rem' }}>
         <div className="grid-4col" style={{ gap: '32px' }}>
           {/* Column 1: Logo + License + Button */}
@@ -81,19 +69,6 @@ export default function Footer() {
                   </svg>
                 </Link>
               )}
-              {biz.social.linkedin && (
-                <Link
-                  href={biz.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  style={{ width: '32px', height: '32px', borderRadius: '4px', backgroundColor: '#1e2040', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
-                >
-                  <svg width="16" height="16" fill="#ffffff" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </Link>
-              )}
             </div>
           </div>
 
@@ -109,6 +84,7 @@ export default function Footer() {
                 { href: '/services', label: 'Services' },
                 { href: '/service-area', label: 'Service Area' },
                 { href: '/contact-us', label: 'Contact Us' },
+                { href: '/gallery', label: 'Gallery' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#d1d5db', textDecoration: 'none', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>

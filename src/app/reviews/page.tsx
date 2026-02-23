@@ -4,7 +4,6 @@ import { getBusiness } from '@/lib/data';
 import testimonials from '@/data/testimonials.json';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import CTABand from '@/components/CTABand';
 import ReviewsGrid from '@/components/ReviewsGrid';
 
 const biz = getBusiness();
@@ -134,8 +133,6 @@ export default function ReviewsPage() {
           </div>
         </div>
       </section>
-
-      <CTABand />
     </>
   );
 }

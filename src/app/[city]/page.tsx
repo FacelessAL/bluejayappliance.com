@@ -9,7 +9,6 @@ import {
   isServiceLocationPublished,
 } from '@/lib/data';
 import TestimonialSection from '@/components/TestimonialSection';
-import CTABand from '@/components/CTABand';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -280,7 +279,6 @@ export default async function LocationPage({ params }: PageProps) {
         </div>
       </section>
 
-      <CTABand />
       <TestimonialSection />
     </>
   );
