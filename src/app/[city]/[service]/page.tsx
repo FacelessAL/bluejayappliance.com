@@ -311,30 +311,22 @@ export default async function ServiceLocationPage({ params }: PageProps) {
       <section style={{ padding: '64px 0', backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="grid-sidebar">
-            {/* Main Content */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-              {service.contentSections.map((section, index) => (
-                <div key={index}>
-                  <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                    {section.heading.replace(/\{city\}/g, location.name).replace(/\{cityFull\}/g, location.fullName)}
-                  </h2>
-                  <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px' }}>{linkifyBody(section.body.replace(/\{city\}/g, location.name).replace(/\{cityFull\}/g, location.fullName))}</p>
-                </div>
-              ))}
-
-              {/* Location-specific content */}
-              {(() => {
-                const slContent = getServiceLocationContent(location.slug, service.slug);
-                return (
+            {/* Main Content — all text pulled from per-page data for uniqueness */}
+            {(() => {
+              const slContent = getServiceLocationContent(location.slug, service.slug);
+              const pageFaqs = slContent?.faq || getServiceFAQs(service.slug, location.name).map(f => ({ q: f.question, a: f.answer }));
+              return (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+                  {/* Primary content — unique per page */}
                   <div>
                     <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                      Expert {service.title} Services in {location.fullName}
+                      {service.title} in {location.fullName}
                     </h2>
                     <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '20px' }}>
-                      {slContent?.localParagraph || `${biz.shortName} is proud to offer professional ${service.title.toLowerCase()} services to homeowners and businesses in ${location.fullName}. Our team of licensed, insured professionals understands the unique challenges that ${location.name} properties face, from older homes in historic districts to modern appliances in new developments. We bring years of local experience to every job, ensuring we understand the specific needs of ${location.name} residents.`}
+                      {slContent?.localParagraph || `${biz.shortName} provides professional ${service.title.toLowerCase()} services to homeowners in ${location.fullName}. Call ${biz.phoneCTA} for same or next-day service.`}
                     </p>
 
-                    {/* Local insights about appliance + city factors */}
+                    {/* Local insights */}
                     {slContent?.localInsights && (
                       <div style={{ backgroundColor: '#f8fafc', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
                         <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '18px', fontWeight: 700, color: '#0F1B2D', marginBottom: '12px' }}>
@@ -357,156 +349,98 @@ export default async function ServiceLocationPage({ params }: PageProps) {
                         </p>
                       </div>
                     )}
+                  </div>
 
-                    {/* Neighborhoods covered */}
-                    {slContent?.neighborhoodsCovered && slContent.neighborhoodsCovered.length > 0 && (
-                      <div style={{ marginBottom: '20px' }}>
-                        <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '18px', fontWeight: 700, color: '#0F1B2D', marginBottom: '12px' }}>
-                          {location.name} Neighborhoods We Serve
-                        </h3>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                          {slContent.neighborhoodsCovered.map((hood, i) => (
-                            <span key={i} style={{ backgroundColor: '#f0f7ff', color: '#1e40af', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 500, fontFamily: 'var(--font-poppins)', border: '1px solid #bfdbfe' }}>
-                              {hood}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                  {/* Common issues — factual reference list */}
+                  <div>
+                    <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
+                      Common {service.shortTitle} Problems We Fix in {location.name}
+                    </h2>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
+                      {getServiceSpecificIssues(service.slug).map((issue, i) => (
+                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                          <span style={{ color: '#1565C0', fontSize: '16px', marginTop: '2px' }}>•</span>
+                          <span style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5' }}>{issue}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    {/* Fallback neighborhood section if no specific neighborhoods */}
-                    {(!slContent?.neighborhoodsCovered || slContent.neighborhoodsCovered.length === 0) && (
-                      <div style={{ backgroundColor: '#f8fafc', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
-                        <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '18px', fontWeight: 700, color: '#0F1B2D', marginBottom: '12px' }}>
-                          Serving All {location.fullName} Neighborhoods
-                        </h3>
-                        <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', margin: 0 }}>
-                          From downtown {location.name} to the surrounding communities, our technicians provide prompt, reliable service throughout the entire area. We&apos;re familiar with local housing stock, common appliance issues in the region, and the specific needs of {location.name} homeowners.
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Common issues specific to service type */}
+                  {/* Why Choose Us — unique per page */}
+                  {slContent?.whyChooseUs && (
                     <div>
-                      <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '18px', fontWeight: 700, color: '#0F1B2D', marginBottom: '12px' }}>
-                        Common {service.shortTitle} Issues We Fix in {location.name}
-                      </h3>
-                      <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
-                        {getServiceSpecificIssues(service.slug).map((issue, i) => (
-                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                            <span style={{ color: '#1565C0', fontSize: '16px', marginTop: '2px' }}>•</span>
-                            <span style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5' }}>{issue}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                );
-              })()}
-
-              {/* Why Choose Us for this location */}
-              <div>
-                <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                  Why {location.name} Homeowners Trust {biz.shortName}
-                </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '20px' }}>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#1565C0', marginBottom: '8px' }}>
-                      Local Experts
-                    </h3>
-                    <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5', margin: 0 }}>
-                      Our technicians live and work in the {location.name} area. We understand local housing, appliance brands common in the region, and the unique challenges of {location.fullName}'s climate and water conditions.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#1565C0', marginBottom: '8px' }}>
-                      Prompt Service
-                    </h3>
-                    <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5', margin: 0 }}>
-                      Same or next-day service throughout {location.fullName}. Our local presence means we can respond quickly to emergency calls and minimize your downtime.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#1565C0', marginBottom: '8px' }}>
-                      Transparent Pricing
-                    </h3>
-                    <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5', margin: 0 }}>
-                      No hidden fees or surprise charges. We provide detailed, written estimates before any work begins and explain all costs upfront.
-                    </p>
-                  </div>
-                </div>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {[
-                    '90-day warranty on all parts and labor',
-                    'Licensed, insured, and background-checked technicians',
-                    `Serving all of ${location.fullName} and surrounding communities`,
-                    'Emergency service available',
-                    'Fully stocked trucks for most repairs on first visit',
-                  ].map((item, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <span style={{ color: '#1565C0', fontWeight: 700, fontSize: '18px', lineHeight: '1.4' }}>✓</span>
-                      <span style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.6' }}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Service Area Coverage */}
-              <div>
-                <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                  Our {location.fullName} Service Area
-                </h2>
-                <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '20px' }}>
-                  {biz.shortName} provides comprehensive {service.title.toLowerCase()} services throughout {location.fullName} and nearby communities. Whether you're in the heart of {location.name} or in the surrounding suburbs, our team is ready to help.
-                </p>
-                <div style={{ backgroundColor: '#f0f7ff', padding: '20px', borderRadius: '8px', border: '1px solid #bfdbfe' }}>
-                  <p style={{ color: '#1e40af', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.6', margin: 0, fontWeight: 500 }}>
-                    <strong>Service Radius:</strong> We typically serve within a 30-mile radius of {location.name}, ensuring prompt response times for all your {service.shortTitle.toLowerCase()} needs.
-                  </p>
-                </div>
-              </div>
-
-              {/* Related Services */}
-              <div>
-                <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                  Other Services We Offer in {location.name}
-                </h2>
-                <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '20px' }}>
-                  Beyond {service.title.toLowerCase()}, {biz.shortName} provides comprehensive appliance repair services throughout {location.fullName}. Our technicians are trained to handle all major household appliances.
-                </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
-                  {getRelatedServices(service.slug).map((relatedService, i) => (
-                    <Link
-                      key={i}
-                      href={`/${location.slug}/${relatedService.slug}`}
-                      style={{ display: 'block', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '6px', textDecoration: 'none', color: '#0F1B2D', fontSize: '14px', fontFamily: 'var(--font-poppins)', fontWeight: 500, transition: 'all 0.2s', border: '1px solid #e2e8f0' }}
-                      className="hover:bg-blue-600 hover:text-white hover:border-blue-600"
-                    >
-                      {relatedService.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* FAQ Section */}
-              <div>
-                <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                  Frequently Asked Questions - {service.title} in {location.name}
-                </h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  {getServiceFAQs(service.slug, location.name).map((faq, i) => (
-                    <div key={i} style={{ backgroundColor: '#f8fafc', padding: '20px', borderRadius: '8px' }}>
-                      <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#0F1B2D', marginBottom: '8px' }}>
-                        {faq.question}
-                      </h3>
-                      <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-                        {faq.answer}
+                      <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
+                        Why {location.name} Residents Choose {biz.shortName}
+                      </h2>
+                      <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px' }}>
+                        {slContent.whyChooseUs}
                       </p>
                     </div>
-                  ))}
+                  )}
+
+                  {/* Neighborhoods + Service Area — unique per page */}
+                  <div>
+                    <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
+                      {service.shortTitle} Service Coverage in {location.name}
+                    </h2>
+                    {slContent?.serviceAreaDesc && (
+                      <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '20px' }}>
+                        {slContent.serviceAreaDesc}
+                      </p>
+                    )}
+                    {slContent?.neighborhoodsCovered && slContent.neighborhoodsCovered.length > 0 && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '20px' }}>
+                        {slContent.neighborhoodsCovered.map((hood, i) => (
+                          <span key={i} style={{ backgroundColor: '#f0f7ff', color: '#1e40af', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 500, fontFamily: 'var(--font-poppins)', border: '1px solid #bfdbfe' }}>
+                            {hood}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Related Services */}
+                  <div>
+                    <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
+                      More Appliance Services in {location.name}
+                    </h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+                      {getRelatedServices(service.slug).map((relatedService, i) => (
+                        <Link
+                          key={i}
+                          href={`/${location.slug}/${relatedService.slug}`}
+                          style={{ display: 'block', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '6px', textDecoration: 'none', color: '#0F1B2D', fontSize: '14px', fontFamily: 'var(--font-poppins)', fontWeight: 500, transition: 'all 0.2s', border: '1px solid #e2e8f0' }}
+                          className="hover:bg-blue-600 hover:text-white hover:border-blue-600"
+                        >
+                          {relatedService.title} in {location.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* FAQ Section — unique per page when faq data exists */}
+                  {pageFaqs.length > 0 && (
+                    <div>
+                      <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
+                        {service.title} Questions — {location.name}
+                      </h2>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                        {pageFaqs.map((faq, i) => (
+                          <div key={i} style={{ backgroundColor: '#f8fafc', padding: '20px', borderRadius: '8px' }}>
+                            <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#0F1B2D', marginBottom: '8px' }}>
+                              {faq.q}
+                            </h3>
+                            <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
+                              {faq.a}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
+              );
+            })()}
 
             {/* Sidebar - shows other services in this same city */}
             <div>

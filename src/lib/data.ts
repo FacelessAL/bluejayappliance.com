@@ -69,6 +69,9 @@ export interface ServiceLocationContent {
   localInsights?: string;
   repairTips?: string;
   neighborhoodsCovered?: string[];
+  whyChooseUs?: string;
+  serviceAreaDesc?: string;
+  faq?: Array<{ q: string; a: string }>;
 }
 
 export function getServiceLocationContent(
