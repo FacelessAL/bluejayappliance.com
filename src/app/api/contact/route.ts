@@ -10,13 +10,17 @@ const GHL_BASE_URL = 'https://services.leadconnectorhq.com';
 const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || '';
 const NOTIFICATION_PHONE = process.env.NOTIFICATION_PHONE || '';
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const RESEND_FROM_DOMAIN = process.env.RESEND_FROM_DOMAIN || 'resend.dev';
 
 // ─── Notification helpers ───────────────────────────────────────
 
 async function sendEmailNotification(lead: Record<string, string>) {
   if (!RESEND_API_KEY || !NOTIFICATION_EMAIL) return;
 
-  const urgencyBadge = lead.urgency?.includes('Emergency') ? '🚨 EMERGENCY' : '📋 New Lead';
+  const isEmergency = lead.urgency?.includes('Emergency');
+  const subjectLine = isEmergency
+    ? `🚨 URGENT Lead: ${lead.full_name} needs ${lead.service_needed || 'service'} ASAP`
+    : `New Lead from Your Website: ${lead.full_name}`;
 
   try {
     await fetch('https://api.resend.com/emails', {
@@ -26,27 +30,38 @@ async function sendEmailNotification(lead: Record<string, string>) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: `${biz.shortName} Leads <leads@${biz.domain}>`,
+        from: `${biz.shortName} Website <leads@${RESEND_FROM_DOMAIN}>`,
         to: [NOTIFICATION_EMAIL],
-        subject: `${urgencyBadge}: ${lead.full_name} - ${lead.service_needed || 'Service Request'}`,
+        subject: subjectLine,
         html: `
-          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-            <div style="background:#0F1B2D;padding:20px;border-radius:8px 8px 0 0;">
-              <h1 style="color:#64B5F6;margin:0;font-size:20px;">New Service Request</h1>
-            </div>
-            <div style="padding:24px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px;">
-              <table style="width:100%;border-collapse:collapse;">
-                <tr><td style="padding:8px 0;color:#6b7280;width:140px;"><strong>Name:</strong></td><td style="padding:8px 0;">${lead.full_name}</td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;"><strong>Phone:</strong></td><td style="padding:8px 0;"><a href="tel:${lead.phone}">${lead.phone}</a></td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;"><strong>Email:</strong></td><td style="padding:8px 0;"><a href="mailto:${lead.email}">${lead.email}</a></td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;"><strong>Service:</strong></td><td style="padding:8px 0;">${lead.service_needed || 'N/A'}</td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;"><strong>Urgency:</strong></td><td style="padding:8px 0;font-weight:bold;color:${lead.urgency?.includes('Emergency') ? '#b91c1c' : '#0F1B2D'};">${lead.urgency || 'N/A'}</td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;vertical-align:top;"><strong>Issue:</strong></td><td style="padding:8px 0;">${lead.issue_description || 'N/A'}</td></tr>
-                <tr><td style="padding:8px 0;color:#6b7280;"><strong>Address:</strong></td><td style="padding:8px 0;">${lead.service_address || ''} ${lead.city || ''} ${lead.postal_code || ''}</td></tr>
-              </table>
-              <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center;">
-                <a href="tel:${lead.phone}" style="display:inline-block;background:#1565C0;color:#fff;padding:12px 32px;border-radius:6px;text-decoration:none;font-weight:bold;">Call Customer</a>
+          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;">
+            ${isEmergency ? '<div style="background:#b91c1c;color:#fff;padding:12px 20px;border-radius:8px 8px 0 0;font-weight:bold;font-size:14px;text-align:center;">⚡ EMERGENCY REQUEST — Customer needs service ASAP</div>' : ''}
+            <div style="padding:28px 24px;border:1px solid #e5e7eb;${isEmergency ? 'border-top:none;' : 'border-radius:8px 8px 0 0;'}">
+              <p style="font-size:16px;line-height:1.6;margin:0 0 16px;">
+                Hey Jesse,
+              </p>
+              <p style="font-size:16px;line-height:1.6;margin:0 0 16px;">
+                You just got a new lead from your website! The customer's name is <strong>${lead.full_name}</strong> and their phone number is <strong><a href="tel:${lead.phone}" style="color:#1565C0;">${lead.phone}</a></strong>.
+              </p>
+              <p style="font-size:16px;line-height:1.6;margin:0 0 16px;">
+                They're looking for help with <strong>${lead.service_needed || 'an appliance issue'}</strong>${lead.urgency ? ` and marked it as <strong style="color:${isEmergency ? '#b91c1c' : '#1565C0'};">${lead.urgency}</strong>` : ''}.
+              </p>
+              ${lead.issue_description ? `<div style="background:#f9fafb;border-left:3px solid #1565C0;padding:12px 16px;margin:0 0 16px;border-radius:0 6px 6px 0;"><p style="margin:0 0 4px;font-size:13px;color:#6b7280;font-weight:600;">What they said:</p><p style="margin:0;font-size:15px;line-height:1.5;color:#333;">"${lead.issue_description}"</p></div>` : ''}
+              ${lead.service_address ? `<p style="font-size:15px;line-height:1.6;margin:0 0 16px;color:#6b7280;">📍 Service address: <strong style="color:#333;">${lead.service_address}${lead.city ? `, ${lead.city}` : ''}${lead.postal_code ? ` ${lead.postal_code}` : ''}</strong></p>` : ''}
+              <p style="font-size:16px;line-height:1.6;margin:0 0 24px;">
+                Please give them a call back or click the button below to call them directly:
+              </p>
+              <div style="text-align:center;margin:0 0 24px;">
+                <a href="tel:${lead.phone}" style="display:inline-block;background:#1565C0;color:#ffffff;padding:16px 40px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:18px;">📞 Call ${lead.first_name || lead.full_name?.split(' ')[0] || 'Customer'} Now</a>
               </div>
+              <p style="font-size:14px;color:#9ca3af;margin:0;">
+                You can also email them at <a href="mailto:${lead.email}" style="color:#1565C0;">${lead.email}</a>
+              </p>
+            </div>
+            <div style="background:#f3f4f6;padding:14px 24px;border-radius:0 0 8px 8px;border:1px solid #e5e7eb;border-top:none;">
+              <p style="color:#9ca3af;font-size:12px;margin:0;text-align:center;">
+                This lead came from your website at <a href="${biz.url}" style="color:#1565C0;">${biz.domain}</a>
+              </p>
             </div>
           </div>
         `,
@@ -71,7 +86,7 @@ async function sendCustomerConfirmation(lead: Record<string, string>) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: `${biz.shortName} <service@${biz.domain}>`,
+        from: `${biz.shortName} <service@${RESEND_FROM_DOMAIN}>`,
         to: [lead.email],
         subject: `We Received Your Service Request - ${biz.shortName}`,
         html: `
