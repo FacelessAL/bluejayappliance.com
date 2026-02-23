@@ -63,11 +63,19 @@ export function getAllPublishedServiceLocationPairs(): { locationSlug: string; s
   return pairs;
 }
 
+export interface ServiceLocationContent {
+  published: boolean;
+  localParagraph?: string;
+  localInsights?: string;
+  repairTips?: string;
+  neighborhoodsCovered?: string[];
+}
+
 export function getServiceLocationContent(
   locationSlug: string,
   serviceSlug: string
-): { localParagraph?: string } | undefined {
-  const slMap = serviceLocations as unknown as Record<string, Record<string, { published: boolean; localParagraph?: string }>>;
+): ServiceLocationContent | undefined {
+  const slMap = serviceLocations as unknown as Record<string, Record<string, ServiceLocationContent>>;
   const locationData = slMap[locationSlug];
   if (!locationData) return undefined;
   return locationData[serviceSlug];
