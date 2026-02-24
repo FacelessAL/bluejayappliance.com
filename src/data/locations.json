@@ -288,54 +288,6 @@
     }
   },
   {
-    "slug": "addison-il-appliance-repair",
-    "name": "Addison",
-    "state": "IL",
-    "fullName": "Addison, IL",
-    "geo": {
-      "latitude": 41.9317,
-      "longitude": -87.989
-    },
-    "description": "Need appliance repair near me in Addison? Blue Jay Appliance offers fast, professional service covering Lake Street, Army Trail Road, and all neighborhoods.",
-    "metaTitle": "Appliance Repair in Addison, IL | Same-Day Service Near Me | Blue Jay Appliance",
-    "metaDescription": "Dependable appliance repair near me in Addison, IL. Same-day washer, dryer, dishwasher & refrigerator repair. Call (630) 998-0209.",
-    "localContent": {
-      "introParagraph": "Looking for appliance repair near me in Addison? Blue Jay Appliance provides expert repair throughout Addison. This hardworking DuPage County village features a mix of residential homes and we're experienced with the area's unique appliance challenges.",
-      "localExpertise": "Addison's residential areas feature mid-century ranch homes, bi-levels, and newer townhomes. Homes along Mill Road and Addison Road were built in the 1950s-1970s with updated appliances. Northern Addison near Army Trail Road has more recent construction with modern configurations.",
-      "commonIssues": [
-        "Refrigerator defrost system failures in mid-century ranch homes",
-        "Washing machine water valve issues with older galvanized plumbing in pre-1970s homes",
-        "Dryer exhaust problems in homes with long vent runs through crawl spaces",
-        "Dishwasher rack deterioration from DuPage County hard water",
-        "Stove and oven burner ignition problems in gas appliances"
-      ],
-      "localInfo": "Addison is a diverse DuPage County village of approximately 37,000 known for its strong industrial base, affordable housing, and easy access to I-355 and Route 20 (Lake Street). Home to Addison Trail High School and numerous ethnic restaurants on Lake Street.",
-      "aboutArea": "Blue Jay Appliance provides reliable service to all Addison neighborhoods, typically arriving within 25-35 minutes from Naperville.",
-      "faqs": [
-        {
-          "question": "How quickly can you get to Addison?",
-          "answer": "Typically within 25-35 minutes from Naperville with same-day and next-day availability."
-        },
-        {
-          "question": "My 20-year-old washer broke — worth repairing?",
-          "answer": "Washers typically last 10-15 years. We'll diagnose and give honest advice — if repair exceeds 50% of new, we recommend replacement."
-        },
-        {
-          "question": "Do you serve Army Trail Road area?",
-          "answer": "Yes — all of Addison including Army Trail, Mill Road, Lake Street, Addison Road, and every neighborhood."
-        },
-        {
-          "question": "Can you repair a garbage disposal?",
-          "answer": "Yes — repairs and installations for jams, motor failures, and leaking seals."
-        },
-        {
-          "question": "Is there a trip fee for Addison?",
-          "answer": "Standard service call fee for all locations — no extra charges. Applied toward repair if you proceed."
-        }
-      ]
-    }
-  },
-  {
     "slug": "lombard-il-appliance-repair",
     "name": "Lombard",
     "state": "IL",
@@ -379,54 +331,6 @@
         {
           "question": "What brands do you work on?",
           "answer": "All major brands: Whirlpool, Maytag, Samsung, LG, GE, KitchenAid, Frigidaire, Bosch, Amana, and more."
-        }
-      ]
-    }
-  },
-  {
-    "slug": "roselle-il-appliance-repair",
-    "name": "Roselle",
-    "state": "IL",
-    "fullName": "Roselle, IL",
-    "geo": {
-      "latitude": 41.9842,
-      "longitude": -88.0798
-    },
-    "description": "Need appliance repair near me in Roselle? Blue Jay Appliance provides professional, same-day service — covering Lake Park, Medinah, and Spring Hill areas.",
-    "metaTitle": "Appliance Repair in Roselle, IL | Same-Day Service Near Me | Blue Jay Appliance",
-    "metaDescription": "Trusted appliance repair near me in Roselle, IL. Same-day refrigerator, washer, dryer & dishwasher repair. Call (630) 998-0209.",
-    "localContent": {
-      "introParagraph": "Looking for appliance repair near me in Roselle? Blue Jay Appliance offers expert repair to Roselle residents. This friendly village straddling DuPage and Cook Counties features well-maintained homes and our team handles any appliance issue.",
-      "localExpertise": "Roselle's residential neighborhoods feature homes built from the 1960s-1990s, with newer construction near Spring Hill Mall and Irving Park Road. Established neighborhood homes often have mid-range appliances entering the repair-prone lifecycle phase.",
-      "commonIssues": [
-        "Refrigerator ice maker and water line problems with older supply connections",
-        "Dishwasher float switch and overfill issues near the Spring Hill area",
-        "Washing machine lid switch failures in top-load washers in older homes",
-        "Gas dryer flame sensor issues causing intermittent heating",
-        "Range hood fan motor failures in kitchens updated with modern hoods"
-      ],
-      "localInfo": "Roselle is a friendly village of approximately 23,000 straddling DuPage and Cook Counties. Known for the Taste of Roselle festival, affordable housing, and I-390/Elgin-O'Hare access. Shares Lake Park High School with neighboring communities.",
-      "aboutArea": "Blue Jay Appliance serves Roselle from Naperville, typically arriving within 30-40 minutes.",
-      "faqs": [
-        {
-          "question": "Do you service all of Roselle?",
-          "answer": "Yes — every part including near Lake Park High School, Spring Hill, Irving Park Road, and all surrounding communities."
-        },
-        {
-          "question": "How quickly can you get to Roselle?",
-          "answer": "Typically within 30-40 minutes from Naperville with same-day and next-day appointments."
-        },
-        {
-          "question": "My washer won't spin — can you fix it?",
-          "answer": "Yes — common causes: faulty lid switch, worn belt, or motor coupling. We diagnose on-site with estimates before work."
-        },
-        {
-          "question": "Do you offer senior discounts?",
-          "answer": "Yes — just mention it when scheduling your appointment."
-        },
-        {
-          "question": "Can you fix a noisy refrigerator?",
-          "answer": "Absolutely — usually a failing evaporator fan, condenser fan, or compressor. We'll pinpoint the source."
         }
       ]
     }
@@ -912,97 +816,145 @@
     }
   },
   {
-    "slug": "glendale-heights-il-appliance-repair",
-    "name": "Glendale Heights",
+    "slug": "lemont-il-appliance-repair",
+    "name": "Lemont",
     "state": "IL",
-    "fullName": "Glendale Heights, IL",
+    "fullName": "Lemont, IL",
     "geo": {
-      "latitude": 41.9145,
-      "longitude": -88.0654
+      "latitude": 41.6736,
+      "longitude": -88.0018
     },
-    "description": "Need appliance repair near me in Glendale Heights? Blue Jay Appliance offers fast, professional service — from Glen Ellyn Road to the North Avenue corridor.",
-    "metaTitle": "Appliance Repair in Glendale Heights, IL | Same-Day Service Near Me | Blue Jay Appliance",
-    "metaDescription": "Dependable appliance repair near me in Glendale Heights, IL. Same-day washer, dryer, dishwasher & refrigerator repair. Call (630) 998-0209.",
+    "description": "Need appliance repair near me in Lemont? Blue Jay Appliance provides same-day service throughout Lemont — from historic downtown to the Old Quarry and Cog Hill areas.",
+    "metaTitle": "Appliance Repair in Lemont, IL | Same-Day Service Near Me | Blue Jay Appliance",
+    "metaDescription": "Trusted appliance repair near me in Lemont, IL. Same-day dishwasher, refrigerator, washer & dryer repair. Call (630) 998-0209.",
     "localContent": {
-      "introParagraph": "Looking for appliance repair near me in Glendale Heights? Blue Jay Appliance provides professional, affordable repair to Glendale Heights homeowners. This diverse DuPage County village features affordable homes and active families who need reliable service.",
-      "localExpertise": "Glendale Heights features predominantly single-family homes and townhomes built in the 1960s-1980s with some newer condo developments. Functional kitchen layouts with standard residential appliances. We're experienced with the brands and models most commonly found here.",
+      "introParagraph": "Looking for appliance repair near me in Lemont? Blue Jay Appliance provides professional, same-day repair to Lemont homeowners. This historic village along the Des Plaines River bluffs features unique housing from canal-era stone homes to modern subdivisions — and we handle the distinct challenges of each.",
+      "localExpertise": "Lemont sits on limestone bluffs above the Des Plaines River valley, giving it terrain unlike any other western suburb. The village's historic downtown has homes dating to the 1800s-1950s with original kitchens and aging infrastructure, while newer subdivisions near Cog Hill and the Old Quarry development feature modern appliance suites. The hilly terrain means many homes have walkout basements with laundry installations that present unique access and drainage considerations.",
       "commonIssues": [
-        "Refrigerator defrost timer and heater failures in 1970s housing",
-        "Dishwasher pump and motor issues from hard water mineral deposits",
-        "Washing machine lid switch and timer problems in older top-loaders",
-        "Electric dryer heating element burnout — frequent in townhomes",
-        "Oven door hinge and seal failures causing heat loss"
+        "Refrigerator compressor stress from temperature swings in walkout basement kitchens along the bluffs",
+        "Dishwasher drain pump failures from hard water mineral buildup common in the limestone-rich water table",
+        "Washing machine drain issues in walkout basement laundry rooms with gravity-fed drainage",
+        "Gas range igniter failures in historic downtown homes with aging gas infrastructure",
+        "Dryer vent blockages in hillside homes where vents run through unusual angles due to the terrain"
       ],
-      "localInfo": "Glendale Heights is a diverse DuPage County village of approximately 34,000. Features the Camera Park District facilities, Glendale Heights Sports Hub, convenient access to North Avenue and Glen Ellyn Road, and proximity to the College of DuPage.",
-      "aboutArea": "Blue Jay Appliance reaches Glendale Heights within 25-30 minutes from Naperville.",
+      "localInfo": "Lemont is a historic village of approximately 17,000 straddling Cook, DuPage, and Will Counties along the Des Plaines River bluffs. Known for its limestone quarry heritage, the Illinois & Michigan Canal, the Hindu Temple of Greater Chicago, Old Stone Church, and charming downtown on State Street. Proximity to Argonne National Laboratory and easy I-355/I-55 access make it popular with professionals.",
+      "aboutArea": "Blue Jay Appliance reaches Lemont within 15-25 minutes from our Naperville headquarters, servicing from historic downtown to the Cog Hill area and every neighborhood in between.",
       "faqs": [
         {
-          "question": "How quickly can you get to Glendale Heights?",
-          "answer": "Typically 25-30 minutes from Naperville. Same-day and next-day available."
+          "question": "How quickly can you reach my Lemont home?",
+          "answer": "Typically within 15-25 minutes from our Naperville office. Same-day and next-day appointments available throughout Lemont."
         },
         {
-          "question": "Do you serve all Glendale Heights neighborhoods?",
-          "answer": "Yes — every area including Glen Ellyn Road, North Avenue corridor, Fullerton Avenue, and all residential communities."
+          "question": "Does Lemont's limestone-rich water affect my appliances?",
+          "answer": "Yes — the mineral-rich water table in the Lemont area causes accelerated scale buildup in dishwashers, washing machines, and refrigerator water lines. We frequently service clogged spray arms, scaled heating elements, and restricted water valves."
         },
         {
-          "question": "My dryer isn't heating — what's wrong?",
-          "answer": "Most commonly a failed heating element, thermal fuse, or gas igniter. We diagnose on-site and usually repair in one visit."
+          "question": "My Lemont home has a walkout basement with laundry — do you service that?",
+          "answer": "Absolutely. Many Lemont homes along the bluffs have walkout basements with unique laundry installations. We're experienced with the drainage and access considerations these setups present."
         },
         {
-          "question": "Do you offer payment plans?",
-          "answer": "We accept all major credit cards and provide upfront pricing before work begins."
+          "question": "Do you service historic homes near downtown Lemont?",
+          "answer": "Yes — we're experienced with older homes that have unique kitchen layouts, aging gas connections, and non-standard appliance configurations common in Lemont's historic district."
         },
         {
-          "question": "What's your service call fee?",
-          "answer": "A standard fee applies to all locations, credited toward repair cost if you proceed. No hidden charges."
+          "question": "What's your warranty on Lemont repairs?",
+          "answer": "Every repair comes with our 90-day warranty on parts and labor — same coverage throughout our entire service area."
         }
       ]
     }
   },
   {
-    "slug": "elk-grove-village-il-appliance-repair",
-    "name": "Elk Grove Village",
+    "slug": "lockport-il-appliance-repair",
+    "name": "Lockport",
     "state": "IL",
-    "fullName": "Elk Grove Village, IL",
+    "fullName": "Lockport, IL",
     "geo": {
-      "latitude": 42.0039,
-      "longitude": -87.9701
+      "latitude": 41.5895,
+      "longitude": -88.0573
     },
-    "description": "Searching for appliance repair near me in Elk Grove Village? Blue Jay Appliance provides professional service — from the industrial district to the residential neighborhoods near Busse Woods.",
-    "metaTitle": "Appliance Repair in Elk Grove Village, IL | Same-Day Service Near Me | Blue Jay Appliance",
-    "metaDescription": "Professional appliance repair near me in Elk Grove Village, IL. Same-day washer, dryer, refrigerator & dishwasher repair. Call (630) 998-0209.",
+    "description": "Searching for appliance repair near me in Lockport? Blue Jay Appliance delivers same-day service — from the historic canal district to newer subdivisions along Division Street.",
+    "metaTitle": "Appliance Repair in Lockport, IL | Same-Day Service Near Me | Blue Jay Appliance",
+    "metaDescription": "Expert appliance repair near me in Lockport, IL. Same-day washer, dryer, dishwasher & refrigerator repair. Call (630) 998-0209.",
     "localContent": {
-      "introParagraph": "Need appliance repair near me in Elk Grove Village? Blue Jay Appliance provides reliable, same-day repair to Elk Grove Village homeowners. This well-established Cook County village near O'Hare features well-maintained homes and our team delivers quality service to every neighborhood.",
-      "localExpertise": "Elk Grove Village's residential areas feature homes primarily built in the 1950s-1970s, many of which have been updated over the decades. The village's proximity to O'Hare and the massive Elk Grove industrial district means many residents are busy professionals who need efficient, reliable appliance repair that fits their schedules.",
+      "introParagraph": "Need appliance repair near me in Lockport? Blue Jay Appliance provides fast, professional repair throughout Lockport. This historic Will County city along the Illinois & Michigan Canal has housing ranging from canal-era homes to modern developments — and our technicians handle the specific needs of each.",
+      "localExpertise": "Lockport's housing tells the story of the city's growth — limestone canal-era homes near the historic downtown, mid-century neighborhoods along State Street, and large modern subdivisions along Division Street and Farrell Road with homes built from the 1990s through today. Older homes near the canal have original plumbing with galvanized pipes that affect water-using appliances. Newer western subdivisions feature builder-grade appliances from Samsung, LG, and Whirlpool now reaching the 10-15 year replacement cycle.",
       "commonIssues": [
-        "Refrigerator condenser fan motor failures in Elk Grove's mid-century homes",
-        "Dishwasher detergent dispenser and latch issues in homes with hard water",
-        "Washing machine pump and belt failures in older basement laundry setups",
-        "Gas range burner and ignition problems in 1960s-era ranch homes",
-        "Dryer lint trap and exhaust issues in homes with original ventilation systems"
+        "Samsung and LG refrigerator compressor failures in 2005-2015 era subdivisions along Division Street",
+        "Dishwasher inlet valve and spray arm clogs from mineral-rich Will County water",
+        "Washing machine drain issues in canal-district homes with aging cast-iron drain lines",
+        "Gas dryer igniter problems in mid-century neighborhoods along State Street",
+        "Oven temperature sensor failures in builder-grade ranges reaching end of life in newer homes"
       ],
-      "localInfo": "Elk Grove Village is a well-established Cook County village of approximately 33,000 known for having one of the largest consolidated industrial parks in North America. The residential areas feature tree-lined streets near Busse Woods Forest Preserve, the Pirate's Cove waterpark, and excellent park district programs. Convenient access to O'Hare Airport, I-290, and Route 83.",
-      "aboutArea": "Blue Jay Appliance serves Elk Grove Village from Naperville, typically arriving within 35-45 minutes. We service all residential neighborhoods.",
+      "localInfo": "Lockport is a historic Will County city of approximately 26,000 along the Des Plaines River and Illinois & Michigan Canal. Known for the Gaylord Building, Illinois State Museum Lockport Gallery, the historic downtown on State Street, and proximity to Lewis University. Newer development along Division Street and 159th Street has expanded the city significantly. Easy I-355 and Route 7 access.",
+      "aboutArea": "Blue Jay Appliance reaches Lockport within 20-30 minutes from our Naperville office, servicing the historic canal district, State Street corridor, and all western subdivisions.",
       "faqs": [
         {
-          "question": "How quickly can you reach Elk Grove Village?",
-          "answer": "Typically 35-45 minutes from Naperville. Same-day and next-day appointments available."
+          "question": "How fast can you get to Lockport?",
+          "answer": "Typically within 20-30 minutes from our Naperville office. Same-day service available throughout Lockport."
         },
         {
-          "question": "Do you service homes near Busse Woods?",
-          "answer": "Yes — every residential neighborhood in Elk Grove Village including areas near Busse Woods, Arlington Heights Road, and Biesterfield Road."
+          "question": "My Lockport subdivision home has a Samsung fridge that stopped cooling — can you fix it?",
+          "answer": "Samsung refrigerator compressor issues are one of our most common Lockport calls, especially in homes built 2005-2015. We diagnose sealed system issues, control board failures, and ice maker problems."
         },
         {
-          "question": "My 1960s ranch home has an old refrigerator — worth repairing?",
-          "answer": "Depends on the issue. If repair cost exceeds 50% of replacement value, we'll honestly recommend replacement. Otherwise, we'll get it running."
+          "question": "Does Lockport's water quality affect appliances?",
+          "answer": "Will County water is mineral-rich, causing scale buildup that clogs dishwasher spray arms, washing machine inlet valves, and refrigerator water lines faster than average. We address these issues routinely."
         },
         {
-          "question": "Do you work evenings for busy professionals?",
-          "answer": "We offer flexible scheduling Monday-Saturday with early morning and late afternoon slots to accommodate work schedules."
+          "question": "Do you service the historic downtown area?",
+          "answer": "Yes — every Lockport neighborhood from the canal-era downtown homes to the newest subdivisions along Division Street and Farrell Road."
         },
         {
-          "question": "What's your service area?",
-          "answer": "We serve Elk Grove Village and all communities across DuPage, Will, Kane, and parts of Cook County."
+          "question": "Is there extra cost for Lockport service calls?",
+          "answer": "No — same transparent pricing throughout our service area. No mileage fees or travel surcharges."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "westmont-il-appliance-repair",
+    "name": "Westmont",
+    "state": "IL",
+    "fullName": "Westmont, IL",
+    "geo": {
+      "latitude": 41.7958,
+      "longitude": -87.9756
+    },
+    "description": "Looking for appliance repair near me in Westmont? Blue Jay Appliance provides fast, professional service — from the Cass Avenue corridor to the Ogden Avenue area.",
+    "metaTitle": "Appliance Repair in Westmont, IL | Same-Day Service Near Me | Blue Jay Appliance",
+    "metaDescription": "Reliable appliance repair near me in Westmont, IL. Same-day dishwasher, refrigerator, washer & dryer service. Call (630) 998-0209.",
+    "localContent": {
+      "introParagraph": "Searching for appliance repair near me in Westmont? Blue Jay Appliance delivers professional, same-day repair to Westmont homeowners. This resilient DuPage County village — rebuilt stronger after the 1991 tornado — features well-maintained homes and modernized infrastructure deserving quality service.",
+      "localExpertise": "Westmont's housing reflects the village's unique history. The devastating 1991 tornado destroyed or damaged hundreds of homes in the southeastern section, and the rebuilt area features construction from the early 1990s with appliances now reaching the 30+ year mark. Untouched neighborhoods along Cass Avenue and near the Metra station have classic mid-century ranch and bi-level homes from the 1950s-1970s. The village's compact layout means we can reach any address quickly.",
+      "commonIssues": [
+        "Refrigerator sealed system issues in early-1990s rebuilt homes where original appliances have been replaced once and are aging again",
+        "Dishwasher pump and motor failures from DuPage County hard water mineral deposits",
+        "Washing machine vibration and leveling problems in bi-level homes along Cass Avenue",
+        "Gas oven igniter failures in mid-century ranch homes near the Metra station",
+        "Dryer thermal fuse and heating element burnout in homes with longer vent runs through crawl spaces"
+      ],
+      "localInfo": "Westmont is a resilient DuPage County village of approximately 25,000. Known for Ty Warner Park (formerly Burlington Park), the Village Greens of Woodridge golf course on its border, a growing dining scene along Ogden Avenue, and excellent Metra BNSF service. The village rebuilt stronger after the devastating 1991 tornado and maintains a strong community identity. Convenient Cass Avenue, Ogden Avenue, I-88, and I-294 access.",
+      "aboutArea": "Blue Jay Appliance reaches Westmont within 15-25 minutes from our Naperville office, servicing from the Cass Avenue corridor to the Ogden Avenue area and every neighborhood.",
+      "faqs": [
+        {
+          "question": "How quickly can you reach Westmont?",
+          "answer": "Typically within 15-25 minutes from our Naperville office. Same-day appointments available throughout Westmont."
+        },
+        {
+          "question": "My Westmont home was rebuilt after the 1991 tornado — are original appliances still repairable?",
+          "answer": "The rebuilt homes from the early 1990s now have appliances that are 30+ years old or have been replaced once and are aging again. We'll diagnose the issue and give an honest repair-vs-replace recommendation based on condition and cost."
+        },
+        {
+          "question": "Does Westmont's hard water cause appliance problems?",
+          "answer": "Yes — DuPage County water deposits minerals that clog dishwasher spray arms, scale washing machine components, and restrict refrigerator water lines. We address these water-related issues on nearly every Westmont service call."
+        },
+        {
+          "question": "Do you serve the Cass Avenue and Ogden Avenue areas?",
+          "answer": "Yes — every Westmont neighborhood including Cass Avenue corridor, Ogden Avenue area, near the Metra station, and all residential streets."
+        },
+        {
+          "question": "What warranty do you offer?",
+          "answer": "90-day warranty on all parts and labor for every repair throughout our service area."
         }
       ]
     }

@@ -112,6 +112,48 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // --- Removed cities (no longer serviced) → redirect to service area ---
+      {
+        source: "/elk-grove-village-il-appliance-repair",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/elk-grove-village-il-appliance-repair/:service",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/roselle-il-appliance-repair",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/roselle-il-appliance-repair/:service",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/addison-il-appliance-repair",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/addison-il-appliance-repair/:service",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/glendale-heights-il-appliance-repair",
+        destination: "/service-area",
+        permanent: true,
+      },
+      {
+        source: "/glendale-heights-il-appliance-repair/:service",
+        destination: "/service-area",
+        permanent: true,
+      },
+
       // Also handle city/service combos with old -service suffix
       {
         source: "/naperville-il-appliance-repair-service/:service",
