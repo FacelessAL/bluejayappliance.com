@@ -24,27 +24,27 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/our-services/dryer-repair-naperville-il",
-        destination: "/services/dryer-repair",
+        destination: "/naperville-il-appliance-repair/dryer-repair",
         permanent: true,
       },
       {
         source: "/our-services/dishwasher-repair-naperville-il",
-        destination: "/services/dishwasher-repair",
+        destination: "/naperville-il-appliance-repair/dishwasher-repair",
         permanent: true,
       },
       {
         source: "/our-services/refrigerator-repair-naperville-il",
-        destination: "/services/refrigerator-and-freezer-repair",
+        destination: "/naperville-il-appliance-repair/refrigerator-and-freezer-repair",
         permanent: true,
       },
       {
         source: "/our-services/stove-oven-range-repair-naperville-il",
-        destination: "/services/stove-and-oven-repair",
+        destination: "/naperville-il-appliance-repair/stove-and-oven-repair",
         permanent: true,
       },
       {
         source: "/our-services/garbage-disposal-repair-installation-naperville-il",
-        destination: "/services/garbage-disposal-repair-and-installation",
+        destination: "/naperville-il-appliance-repair/garbage-disposal-repair-and-installation",
         permanent: true,
       },
 
@@ -105,6 +105,13 @@ const nextConfig: NextConfig = {
         destination: "/plainfield-il-appliance-repair",
         permanent: true,
       },
+      // --- KML file from Rank Math local SEO (no page equivalent) ---
+      {
+        source: "/locations.kml",
+        destination: "/service-area",
+        permanent: true,
+      },
+
       // Also handle city/service combos with old -service suffix
       {
         source: "/naperville-il-appliance-repair-service/:service",

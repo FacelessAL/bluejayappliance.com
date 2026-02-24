@@ -19,192 +19,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 const biz = getBusiness();
 
-// Helper functions for enhanced content
-function getServiceSpecificIssues(serviceSlug: string): string[] {
-  const issues: Record<string, string[]> = {
-    'dishwasher-repair': [
-      'Dishwasher not draining properly',
-      'Leaking water from door or bottom',
-      'Dishes not getting clean',
-      'Unusual noises during operation',
-      'Dishwasher won\'t start or complete cycle',
-      'Error codes on display panel',
-    ],
-    'dryer-repair': [
-      'Dryer not heating or taking too long to dry',
-      'Loud banging or squealing noises',
-      'Dryer won\'t turn on or stops mid-cycle',
-      'Drum not spinning properly',
-      'Lint trap or vent blockage issues',
-      'Burning smell during operation',
-    ],
-    'washer-repair': [
-      'Washer won\'t drain or spin',
-      'Excessive vibration or shaking',
-      'Leaking from bottom or door',
-      'Won\'t start or stops during cycle',
-      'Error codes or flashing lights',
-      'Unusual noises during wash or spin',
-    ],
-    'refrigerator-and-freezer-repair': [
-      'Refrigerator not cooling properly',
-      'Freezer frosting up or not freezing',
-      'Water leaking inside or on floor',
-      'Ice maker not working or making strange noises',
-      'Loud buzzing or clicking sounds',
-      'Temperature fluctuation issues',
-    ],
-    'stove-and-oven-repair': [
-      'Oven not heating to correct temperature',
-      'Burners not igniting or heating unevenly',
-      'Oven door not closing properly',
-      'Gas smell or carbon monoxide concerns',
-      'Self-cleaning function not working',
-      'Digital controls or display issues',
-    ],
-    'range-repair': [
-      'Range burners not working properly',
-      'Oven temperature inaccurate',
-      'Gas ignition problems',
-      'Electrical control panel issues',
-      'Broiler not functioning',
-      'Timer or clock not working',
-    ],
-    'garbage-disposal-repair-and-installation': [
-      'Disposal humming but not grinding',
-      'Complete unit failure or jammed',
-      'Leaking from disposal unit',
-      'Loud metallic grinding noises',
-      'Reset button keeps tripping',
-      'Need new installation or replacement',
-    ],
-  };
-  return issues[serviceSlug] || ['General performance issues', 'Mechanical failures', 'Electrical problems', 'Wear and tear concerns'];
-}
-
 function getRelatedServices(currentServiceSlug: string): Array<{slug: string, title: string}> {
   const allServices = getAllServices();
   return allServices
     .filter(s => s.slug !== currentServiceSlug)
     .slice(0, 6); // Show up to 6 related services
-}
-
-function getServiceFAQs(serviceSlug: string, locationName: string): Array<{question: string, answer: string}> {
-  const baseFAQs: Record<string, Array<{question: string, answer: string}>> = {
-    'dishwasher-repair': [
-      {
-        question: `How quickly can you repair my dishwasher in ${locationName}?`,
-        answer: `We offer same or next-day service throughout ${locationName}. Most dishwasher repairs can be completed on the first visit, as our trucks are stocked with common parts for major brands.`,
-      },
-      {
-        question: 'What brands of dishwashers do you repair?',
-        answer: 'We repair all major dishwasher brands including Bosch, KitchenAid, Whirlpool, GE, Maytag, Samsung, LG, and more. Our technicians are certified to work on both standard and high-end models.',
-      },
-      {
-        question: 'Is it worth repairing an older dishwasher?',
-        answer: 'Generally, if your dishwasher is less than 8-10 years old and the repair cost is less than half the price of a new unit, repair is worth it. We provide honest assessments to help you make the best decision.',
-      },
-    ],
-    'dryer-repair': [
-      {
-        question: `Why is my dryer taking so long to dry clothes in ${locationName}?`,
-        answer: `Common causes include lint buildup in the vent system, a faulty heating element, or a broken thermostat. Our ${locationName} technicians can diagnose and fix these issues quickly, often on the same day.`,
-      },
-      {
-        question: 'Do you repair both gas and electric dryers?',
-        answer: 'Yes, we service both gas and electric dryers from all major manufacturers. Our technicians are properly trained and certified for gas appliance repairs.',
-      },
-      {
-        question: 'How often should dryer vents be cleaned?',
-        answer: 'We recommend cleaning dryer vents at least once a year, or more frequently if you do multiple loads daily. Clogged vents are a fire hazard and reduce efficiency.',
-      },
-    ],
-    'washer-repair': [
-      {
-        question: `What causes washing machines to leak in ${locationName} homes?`,
-        answer: 'Common causes include damaged door seals, loose hose connections, or faulty water pumps. Our technicians in the area see these issues regularly and can typically fix them on the first visit.',
-      },
-      {
-        question: 'Is it better to repair or replace a washing machine?',
-        answer: 'If your washer is under 8 years old and the repair is less than 50% of a new unit\'s cost, repair is usually economical. We provide transparent pricing to help you decide.',
-      },
-      {
-        question: 'Do you work on front-load and top-load washers?',
-        answer: 'Yes, we repair both front-load and top-load washing machines, including high-efficiency (HE) models and stackable units.',
-      },
-    ],
-    'refrigerator-and-freezer-repair': [
-      {
-        question: `Why is my refrigerator not cooling properly in ${locationName}?`,
-        answer: 'This could be due to a faulty compressor, dirty condenser coils, malfunctioning thermostat, or sealed system leak. Our technicians can diagnose the issue and often repair it the same day.',
-      },
-      {
-        question: 'How long does a refrigerator repair typically take?',
-        answer: 'Most common refrigerator repairs can be completed in 1-2 hours. If we need to order special parts, we\'ll schedule a follow-up visit as soon as the part arrives.',
-      },
-      {
-        question: 'Do you repair high-end refrigerator brands?',
-        answer: 'Yes, we service all refrigerator brands from basic to luxury models including Sub-Zero, Viking, Thermador, KitchenAid, and more.',
-      },
-    ],
-    'stove-and-oven-repair': [
-      {
-        question: `Is it safe to use a gas stove that\'s having problems?`,
-        answer: 'If you smell gas or suspect a carbon monoxide issue, stop using the appliance immediately and call us. For other issues like uneven heating or ignition problems, we can typically repair them safely.',
-      },
-      {
-        question: `How quickly can you fix my oven in ${locationName}?`,
-        answer: 'We offer same-day service for oven repairs throughout the area. Common issues like faulty heating elements or temperature sensors can often be fixed on the first visit.',
-      },
-      {
-        question: 'Do you repair glass cooktops?',
-        answer: 'Yes, we repair glass/ceramic cooktops including cracked surfaces, faulty burners, and control issues. We also handle gas cooktop repairs.',
-      },
-    ],
-    'range-repair': [
-      {
-        question: 'What\'s the difference between a stove and a range?',
-        answer: 'A range combines a cooktop and oven in one unit, while a stove typically refers to just the cooktop. We repair both standalone cooktops and complete range units.',
-      },
-      {
-        question: `Do you offer emergency range repair in ${locationName}?`,
-        answer: 'Yes, we provide emergency repair services for ranges throughout the area. Call us and we\'ll prioritize your service call, especially for gas range issues.',
-      },
-      {
-        question: 'How do I know if my range\'s control board is bad?',
-        answer: 'Signs include the display not working, buttons not responding, or the unit not heating properly. Our technicians can test and replace control boards.',
-      },
-    ],
-    'garbage-disposal-repair-and-installation': [
-      {
-        question: `Can you repair any brand of garbage disposal in ${locationName}?`,
-        answer: 'We repair all major disposal brands including Insinkerator, Waste King, GE, KitchenAid, and more. If your unit is beyond repair, we also handle full replacements.',
-      },
-      {
-        question: 'Is it better to repair or replace a garbage disposal?',
-        answer: 'If your disposal is under 7 years old and the repair cost is less than $150-200, repair is usually worthwhile. For older units or major failures, replacement might be more cost-effective.',
-      },
-      {
-        question: 'How long does garbage disposal installation take?',
-        answer: 'Typical installation takes 1-2 hours. We handle all plumbing and electrical connections, and we\'ll clean up the work area before leaving.',
-      },
-    ],
-  };
-  
-  return baseFAQs[serviceSlug] || [
-    {
-      question: `How quickly can you provide service in ${locationName}?`,
-      answer: `We offer same or next-day service throughout ${locationName} and the surrounding area. Call us to schedule an appointment at your convenience.`,
-    },
-    {
-      question: 'Are your technicians licensed and insured?',
-      answer: 'Yes, all our technicians are fully licensed, insured, and background-checked. We also provide a 90-day warranty on all parts and labor.',
-    },
-    {
-      question: 'Do you provide free estimates?',
-      answer: 'Yes, we provide free, no-obligation estimates before any work begins. Our pricing is transparent with no hidden fees.',
-    },
-  ];
 }
 
 interface PageProps {
@@ -314,7 +133,7 @@ export default async function ServiceLocationPage({ params }: PageProps) {
             {/* Main Content — all text pulled from per-page data for uniqueness */}
             {(() => {
               const slContent = getServiceLocationContent(location.slug, service.slug);
-              const pageFaqs = slContent?.faq || getServiceFAQs(service.slug, location.name).map(f => ({ q: f.question, a: f.answer }));
+              const pageFaqs = slContent?.faq || [];
               return (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
                   {/* Primary content — unique per page */}
@@ -349,21 +168,6 @@ export default async function ServiceLocationPage({ params }: PageProps) {
                         </p>
                       </div>
                     )}
-                  </div>
-
-                  {/* Common issues — factual reference list */}
-                  <div>
-                    <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
-                      Common {service.shortTitle} Problems We Fix in {location.name}
-                    </h2>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
-                      {getServiceSpecificIssues(service.slug).map((issue, i) => (
-                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                          <span style={{ color: '#1565C0', fontSize: '16px', marginTop: '2px' }}>•</span>
-                          <span style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.5' }}>{issue}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
                   {/* Why Choose Us — unique per page */}
