@@ -178,28 +178,28 @@ export default async function LocationPage({ params }: PageProps) {
                 <span style={{ color: '#facc15', fontSize: '28px', letterSpacing: '2px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               </div>
               <div className="font-[family-name:var(--font-figtree)]" style={{ color: '#ffffff', fontSize: '20px', fontWeight: 800, marginBottom: '4px' }}>{biz.rating} Star Rating</div>
-              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Based on {biz.reviewCount}+ Google Reviews</div>
+              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Trusted by {location.name} Homeowners</div>
             </div>
             <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{ height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '14px' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(21,101,192,0.2)', color: '#64B5F6', fontSize: '24px' }}>&#128737;</span>
               </div>
-              <div className="font-[family-name:var(--font-figtree)]" style={{ color: '#ffffff', fontSize: '20px', fontWeight: 800, marginBottom: '4px' }}>Experienced Techs</div>
-              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>10+ Years of Appliance Repair</div>
+              <div className="font-[family-name:var(--font-figtree)]" style={{ color: '#ffffff', fontSize: '20px', fontWeight: 800, marginBottom: '4px' }}>Licensed &amp; Insured</div>
+              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Serving {location.name} &amp; Surrounding Areas</div>
             </div>
             <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{ height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '14px' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(21,101,192,0.2)', color: '#64B5F6', fontSize: '24px' }}>&#9201;</span>
               </div>
               <div className="font-[family-name:var(--font-figtree)]" style={{ color: '#ffffff', fontSize: '20px', fontWeight: 800, marginBottom: '4px' }}>Same-Day Service</div>
-              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Fast Response, Reliable Results</div>
+              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Fast Response to {location.name}</div>
             </div>
             <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{ height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '14px' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(21,101,192,0.2)', color: '#64B5F6', fontSize: '24px' }}>&#10004;</span>
               </div>
               <div className="font-[family-name:var(--font-figtree)]" style={{ color: '#ffffff', fontSize: '20px', fontWeight: 800, marginBottom: '4px' }}>90-Day Warranty</div>
-              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Parts &amp; Labor Guaranteed</div>
+              <div style={{ color: '#9ca3af', fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>Every {location.name} Repair Guaranteed</div>
             </div>
           </div>
         </div>

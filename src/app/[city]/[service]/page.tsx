@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = getServiceBySlug(serviceSlug);
   if (!location || !service) return {};
 
-  const title = service.metaTitle.replace('{city}', location.fullName);
-  const description = service.metaDescription.replace('{city}', location.fullName);
+  const title = `${service.title} in ${location.fullName} | ${biz.name}`;
+  const description = `Professional ${service.title.toLowerCase()} in ${location.fullName}. Same or next-day service, upfront pricing, 90-day warranty. Call ${biz.phoneCTA}.`;
 
   return {
     title,
@@ -69,7 +69,7 @@ export default async function ServiceLocationPage({ params }: PageProps) {
       <SchemaMarkup
         type="Service"
         pageName={`${service.title} in ${location.fullName}`}
-        pageDescription={service.metaDescription.replace('{city}', location.fullName)}
+        pageDescription={`Professional ${service.title.toLowerCase()} in ${location.fullName}. Same or next-day service, upfront pricing, 90-day warranty.`}
         pageUrl={`${biz.url}/${location.slug}/${service.slug}`}
         serviceType={service.schemaServiceType}
         areaServed={location.name}
@@ -148,11 +148,8 @@ export default async function ServiceLocationPage({ params }: PageProps) {
                     <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
                       {service.title} in {location.fullName}
                     </h2>
-                    <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '20px' }}>
-                      {slContent?.localParagraph || `${biz.shortName} provides professional ${service.title.toLowerCase()} services to homeowners in ${location.fullName}. Call ${biz.phoneCTA} for same or next-day service.`}
-                    </p>
 
-                    {/* Local insights */}
+                    {/* Local insights — lead body content (localParagraph is in hero, not repeated here) */}
                     {slContent?.localInsights && (
                       <div style={{ backgroundColor: '#f8fafc', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
                         <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '18px', fontWeight: 700, color: '#0F1B2D', marginBottom: '12px' }}>
