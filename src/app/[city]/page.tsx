@@ -118,30 +118,19 @@ export default async function LocationPage({ params }: PageProps) {
                 Why {location.name} Residents Choose Us
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>Same or next-day service available</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>Upfront, transparent pricing before work begins</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>90-day warranty on parts and labor</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>All major appliance brands serviced</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>We respect your home — clean, courteous service</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
-                  <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>Locally operated from {biz.address.city} — fast response to {location.name}</span>
-                </li>
+                {(location.localContent.whyChooseUs || [
+                  'Same or next-day service available',
+                  'Upfront, transparent pricing before work begins',
+                  '90-day warranty on parts and labor',
+                  'All major appliance brands serviced',
+                  'We respect your home — clean, courteous service',
+                  `Locally operated from ${biz.address.city} — fast response to ${location.name}`,
+                ]).map((item: string, i: number) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ backgroundColor: '#1565C0', color: '#ffffff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
+                    <span style={{ color: '#374151', fontFamily: 'var(--font-poppins)', fontSize: '14px', fontWeight: 500 }}>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -155,7 +144,7 @@ export default async function LocationPage({ params }: PageProps) {
             Our {biz.industryLabel} Services in {location.name}
           </h2>
           <p style={{ textAlign: 'center', color: '#4b5563', marginBottom: '32px', maxWidth: '640px', margin: '0 auto 32px', fontFamily: 'var(--font-poppins)', fontSize: '14px' }}>
-            We offer a full range of residential appliance repair services near you throughout {location.fullName}.
+{`From dishwashers and refrigerators to washers, dryers, and stoves — ${biz.shortName} handles every major appliance repair for ${location.name} homeowners. Same or next-day appointments, upfront pricing, and a 90-day warranty on every job.`}
           </p>
           <div className="grid-3col">
             {services.map((service) => {

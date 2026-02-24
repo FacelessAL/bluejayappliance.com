@@ -111,7 +111,10 @@ export default async function ServiceLocationPage({ params }: PageProps) {
             {service.heroHeading} in {location.name}
           </h1>
           <p style={{ fontSize: '18px', color: '#d1d5db', maxWidth: '700px', margin: '0 auto 32px', fontFamily: 'var(--font-poppins)', lineHeight: '1.7' }}>
-            {service.heroSubheading} Serving {location.fullName} and surrounding areas.
+            {(() => {
+              const slc = getServiceLocationContent(location.slug, service.slug);
+              return slc?.localParagraph || `${biz.shortName} provides professional ${service.title.toLowerCase()} services to homeowners in ${location.fullName}. Call ${biz.phoneCTA} for same or next-day service.`;
+            })()}
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
             <Link

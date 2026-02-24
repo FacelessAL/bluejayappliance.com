@@ -171,8 +171,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = getServiceBySlug(slug);
   if (!service) return {};
 
-  const title = service.metaTitle.replace('{city}', `${biz.address.city}, ${biz.address.state}`).replace('{businessName}', biz.name).replace('{phoneCTA}', biz.phoneCTA);
-  const description = service.metaDescription.replace('{city}', `${biz.address.city}, ${biz.address.state}`).replace('{businessName}', biz.name).replace('{serviceCategory}', biz.serviceCategory).replace('{phoneCTA}', biz.phoneCTA);
+  const title = service.metaTitle;
+  const description = service.metaDescription;
 
   return {
     title,
@@ -200,7 +200,7 @@ export default async function ServicePage({ params }: PageProps) {
       <SchemaMarkup
         type="Service"
         pageName={service.title}
-        pageDescription={service.metaDescription.replace('{city}', `${biz.address.city}, ${biz.address.state}`).replace('{businessName}', biz.name).replace('{serviceCategory}', biz.serviceCategory).replace('{phoneCTA}', biz.phoneCTA)}
+        pageDescription={service.metaDescription}
         pageUrl={`${biz.url}/services/${service.slug}`}
         serviceType={service.schemaServiceType}
         breadcrumbs={[

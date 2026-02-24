@@ -48,7 +48,7 @@ export default function ServicesPage() {
       <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '60px 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 className="font-[family-name:var(--font-figtree)] heading-hero" style={{ fontWeight: 800, marginBottom: '16px', textTransform: 'uppercase' }}>
-            Our Services
+            Our Appliance Repair Services
           </h1>
           <p style={{ fontSize: '18px', color: '#d1d5db', maxWidth: '640px', margin: '0 auto', fontFamily: 'var(--font-poppins)', lineHeight: '1.7' }}>
             {biz.shortName} offers comprehensive {biz.industryLabel.toLowerCase()} services for homes and businesses throughout {biz.serviceAreaName}.
