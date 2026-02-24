@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getBusiness } from '@/lib/data';
+import { getBusiness, getAllLocations } from '@/lib/data';
 import galleryData from '@/data/gallery.json';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,6 +9,7 @@ import GalleryGrid from '@/components/GalleryGrid';
 const biz = getBusiness();
 
 const totalImages = Object.values(galleryData).reduce((sum, arr) => sum + (arr as unknown[]).length, 0);
+const totalCities = getAllLocations().length;
 
 export const metadata: Metadata = {
   title: `Our Work Gallery | ${biz.name} | Appliance Repair Photos`,
@@ -57,7 +58,7 @@ export default function GalleryPage() {
               <div style={{ fontSize: '12px', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-poppins)', fontWeight: 600 }}>Appliance Types</div>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '42px', fontWeight: 800, color: '#64B5F6' }}>21</div>
+              <div className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '42px', fontWeight: 800, color: '#64B5F6' }}>{totalCities}</div>
               <div style={{ fontSize: '12px', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'var(--font-poppins)', fontWeight: 600 }}>Cities Served</div>
             </div>
           </div>

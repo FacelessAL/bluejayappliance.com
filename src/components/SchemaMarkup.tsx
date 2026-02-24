@@ -66,7 +66,7 @@ export default function SchemaMarkup({
       postalCode: biz.address.zip,
       addressCountry: 'US',
     },
-    sameAs: [biz.social.facebook, biz.social.linkedin],
+    sameAs: [biz.social.facebook, biz.social.linkedin].filter(Boolean),
   };
   schemas.push(organizationSchema);
 
@@ -85,7 +85,7 @@ export default function SchemaMarkup({
       slogan: biz.tagline,
       'license': biz.license,
       hasMap: biz.googleMapsUrl,
-      sameAs: [biz.social.facebook, biz.social.linkedin],
+      sameAs: [biz.social.facebook, biz.social.linkedin].filter(Boolean),
       paymentAccepted: 'Cash, Credit Card, Check',
       address: {
         '@type': 'PostalAddress',
@@ -214,18 +214,13 @@ export default function SchemaMarkup({
     schemas.push(pageSchema);
   }
 
-  // WebSite schema (for homepage - helps with sitelinks search box)
+  // WebSite schema (for homepage)
   if (type === 'LocalBusiness') {
     const websiteSchema = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: biz.name,
       url: biz.url,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${biz.url}/services`,
-        'query-input': 'required name=search_term_string',
-      },
     };
     schemas.push(websiteSchema);
   }

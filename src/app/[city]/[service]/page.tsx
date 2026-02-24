@@ -81,6 +81,10 @@ export default async function ServiceLocationPage({ params }: PageProps) {
             url: `${biz.url}/${location.slug}/${service.slug}`,
           },
         ]}
+        faqItems={(() => {
+          const slc = getServiceLocationContent(location.slug, service.slug);
+          return slc?.faq?.map((f: { q: string; a: string }) => ({ question: f.q, answer: f.a })) || [];
+        })()}
       />
 
       <Breadcrumbs
@@ -208,6 +212,9 @@ export default async function ServiceLocationPage({ params }: PageProps) {
                     <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '24px', fontWeight: 800, color: '#0F1B2D', marginBottom: '16px' }}>
                       More Appliance Services in {location.name}
                     </h2>
+                    <p style={{ color: '#4b5563', lineHeight: '1.7', fontFamily: 'var(--font-poppins)', fontSize: '15px', marginBottom: '16px' }}>
+                      Learn more about our <Link href={`/services/${service.slug}`} style={{ color: '#1565C0', fontWeight: 600, textDecoration: 'none' }}>{service.title.toLowerCase()} services</Link> or explore other appliance repair options in {location.name}:
+                    </p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
                       {getRelatedServices(service.slug).map((relatedService, i) => (
                         <Link

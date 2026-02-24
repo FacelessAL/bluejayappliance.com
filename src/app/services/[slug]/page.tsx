@@ -208,6 +208,7 @@ export default async function ServicePage({ params }: PageProps) {
           { name: 'Services', url: `${biz.url}/services` },
           { name: service.title, url: `${biz.url}/services/${service.slug}` },
         ]}
+        faqItems={faqs.map((f) => ({ question: f.question, answer: f.answer }))}
       />
 
       <Breadcrumbs

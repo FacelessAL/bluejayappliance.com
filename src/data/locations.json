@@ -958,5 +958,101 @@
         }
       ]
     }
+  },
+  {
+    "slug": "homer-glen-il-appliance-repair",
+    "name": "Homer Glen",
+    "state": "IL",
+    "fullName": "Homer Glen, IL",
+    "geo": {
+      "latitude": 41.6003,
+      "longitude": -87.9342
+    },
+    "description": "Need appliance repair near me in Homer Glen? Blue Jay Appliance delivers same-day service throughout Homer Glen — from the Goodings Grove area to Heritage Falls and every neighborhood in between.",
+    "metaTitle": "Appliance Repair in Homer Glen, IL | Same-Day Service Near Me | Blue Jay Appliance",
+    "metaDescription": "Professional appliance repair near me in Homer Glen, IL. Same-day dishwasher, refrigerator, washer & dryer repair. Call Blue Jay Appliance at (630) 998-0209.",
+    "localContent": {
+      "introParagraph": "Searching for appliance repair near me in Homer Glen? Blue Jay Appliance provides reliable, professional repair service throughout this Will County community. Homer Glen's mix of established 1990s-2000s subdivisions and newer custom homes along 159th Street means varied appliance ages and configurations — we handle every scenario with experienced diagnostics and honest pricing.",
+      "localExpertise": "Homer Glen's residential character is defined by spacious single-family homes on larger lots, many built during the village's incorporation-era development boom from the late 1990s through the mid-2000s. These homes are now reaching the 20-30 year mark where major appliances begin failing. The village's well water pockets and generally hard Will County water accelerate wear on dishwashers, ice makers, and washing machines. Our technicians understand the specific challenges Homer Glen's housing stock presents.",
+      "commonIssues": [
+        "Refrigerator compressor and sealed system failures in homes built during Homer Glen's 1998-2008 construction boom",
+        "Dishwasher inlet valve and spray arm clogs from Will County's hard water mineral deposits",
+        "Dryer vent restrictions in homes with long vent runs through attic spaces — common in Homer Glen's larger floor plans",
+        "Washing machine bearing failures accelerated by hard water and sediment in homes near well water areas",
+        "Gas range igniter degradation in kitchens with original builder-grade appliances from the early 2000s"
+      ],
+      "localInfo": "Homer Glen is a village in Will County with approximately 24,000 residents, incorporated in 2001. Known for its semi-rural character, larger lot sizes, Heritage Park, and Teason's Woods Nature Preserve. The village is primarily residential with homes along 159th Street, Archer Avenue, and Bell Road corridors. Homer Glen is served by Homer Community Consolidated School District 33C and Lockport Township High School District 205.",
+      "aboutArea": "Blue Jay Appliance reaches Homer Glen within 20-30 minutes from our Naperville office. We service every neighborhood from Goodings Grove and Heritage Falls to the Hadley Valley and Bell Road areas.",
+      "faqs": [
+        {
+          "question": "How quickly can you get to my Homer Glen home?",
+          "answer": "We typically reach Homer Glen within 20-30 minutes from our Naperville office via I-355. Same-day and next-day appointments are available for most service calls."
+        },
+        {
+          "question": "My Homer Glen home was built in the early 2000s. Are the original appliances worth repairing?",
+          "answer": "At 20-25 years old, it depends on the specific issue. Simple fixes like igniters, thermostats, and door seals are affordable repairs. If the compressor or motor is failing, replacement may be the smarter investment. We give honest assessments every time."
+        },
+        {
+          "question": "Does Homer Glen's hard water affect my appliances?",
+          "answer": "Yes — Will County's hard water deposits minerals on dishwasher components, ice maker lines, and washing machine inlet screens. We recommend regular descaling and filter replacement on accelerated schedules."
+        },
+        {
+          "question": "Do you service the unincorporated areas near Homer Glen?",
+          "answer": "Yes. We service Homer Glen proper and the surrounding unincorporated Will County areas including near Goodings Grove, Marley, and along Archer Avenue."
+        },
+        {
+          "question": "Do you repair all appliance brands in Homer Glen?",
+          "answer": "Yes — Whirlpool, Samsung, LG, GE, Maytag, KitchenAid, Frigidaire, Bosch, and all other major brands. We carry common parts for same-visit repairs."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "burr-ridge-il-appliance-repair",
+    "name": "Burr Ridge",
+    "state": "IL",
+    "fullName": "Burr Ridge, IL",
+    "geo": {
+      "latitude": 41.7489,
+      "longitude": -87.9184
+    },
+    "description": "Looking for appliance repair near me in Burr Ridge? Blue Jay Appliance provides premium-quality repair for every brand — from standard to luxury — throughout Burr Ridge's upscale residential neighborhoods.",
+    "metaTitle": "Appliance Repair in Burr Ridge, IL | Same-Day Service Near Me | Blue Jay Appliance",
+    "metaDescription": "Expert appliance repair near me in Burr Ridge, IL. We service standard and luxury brands. Same-day service available. Call Blue Jay Appliance at (630) 998-0209.",
+    "localContent": {
+      "introParagraph": "Looking for appliance repair near me in Burr Ridge? Blue Jay Appliance delivers professional, discreet repair service throughout this prestigious DuPage and Cook County community. Burr Ridge homes frequently feature premium and luxury appliance brands that require technicians with specialized diagnostic experience — Blue Jay brings that expertise to every call.",
+      "localExpertise": "Burr Ridge is one of the western suburbs' most affluent communities, with homes ranging from elegant 1980s estates to modern custom builds. Kitchens in Burr Ridge commonly feature Sub-Zero refrigerators, Wolf and Thermador ranges, Miele dishwashers, and other premium brands that general repair companies often decline to service. Our technicians are trained on luxury brands alongside mainstream manufacturers, ensuring Burr Ridge homeowners receive the specialized care their investments deserve.",
+      "commonIssues": [
+        "Sub-Zero and built-in refrigerator compressor and condenser issues in Burr Ridge's larger kitchen installations",
+        "Wolf, Thermador, and Viking range igniter and control board failures in premium kitchens",
+        "Miele and Bosch dishwasher pump and sensor issues requiring brand-specific diagnostics",
+        "Dryer vent restrictions in large homes with extended vent runs through multiple floors",
+        "Speed Queen and Electrolux washer bearing and suspension failures in dedicated laundry rooms"
+      ],
+      "localInfo": "Burr Ridge is an affluent village straddling DuPage and Cook Counties with approximately 11,000 residents. Known for Burr Ridge Village Center, County Line Road estates, and proximity to I-55 and I-294. The village features large-lot single-family homes, many exceeding 4,000 square feet. Served by Pleasantdale Elementary District 107 and Hinsdale Township High School District 86.",
+      "aboutArea": "Blue Jay Appliance typically reaches Burr Ridge within 15-25 minutes from our Naperville office. We service all Burr Ridge neighborhoods from the County Line Road estates to Falling Water and the Village Center area.",
+      "faqs": [
+        {
+          "question": "Do you repair luxury appliance brands like Sub-Zero, Wolf, and Miele?",
+          "answer": "Yes — we service all premium and luxury brands including Sub-Zero, Wolf, Thermador, Viking, Miele, Bosch, and others commonly found in Burr Ridge homes. Our technicians carry diagnostic tools specific to these brands."
+        },
+        {
+          "question": "How quickly can you get to my Burr Ridge home?",
+          "answer": "We typically reach Burr Ridge within 15-25 minutes from our Naperville office. Same-day emergency service is available for cooling failures and gas-related issues."
+        },
+        {
+          "question": "Are your technicians experienced with built-in refrigerators and panel-ready appliances?",
+          "answer": "Yes. Built-in units from Sub-Zero, Thermador, and KitchenAid require specialized service approaches different from freestanding models. We handle panel-ready and integrated installations regularly in Burr Ridge."
+        },
+        {
+          "question": "My Burr Ridge home has a large kitchen with premium appliances. Do you provide comprehensive service?",
+          "answer": "Absolutely. We can service your entire kitchen in a single visit — refrigerator, dishwasher, range, and disposal. We bring the diagnostic equipment and parts inventory to handle multiple premium brands efficiently."
+        },
+        {
+          "question": "Do you offer any guarantees on luxury appliance repairs?",
+          "answer": "Every repair — standard or luxury brand — is backed by our 90-day warranty on parts and labor. We use manufacturer-specified parts and follow brand-specific repair protocols."
+        }
+      ]
+    }
   }
 ]

@@ -5458,5 +5458,541 @@
         }
       ]
     }
+  },
+  "homer-glen-il-appliance-repair": {
+    "dishwasher-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides expert dishwasher repair throughout Homer Glen, IL. Whether your unit won't drain, leaves residue on dishes, or displays error codes, our technicians arrive with diagnostic tools and common parts for efficient same-visit repair backed by our 90-day warranty.",
+      "localInsights": "Homer Glen's residential development peaked between 1998 and 2008, producing a housing stock now 20-30 years old with original builder-grade dishwashers reaching end of life. Will County's notably hard water accelerates mineral buildup on spray arms, heating elements, and inlet valve screens throughout the village. Homes in the Goodings Grove and Heritage Falls subdivisions frequently have Whirlpool, GE, and Maytag units from the original construction that are experiencing pump motor fatigue and control board failures. Newer custom homes along 159th Street may feature premium Bosch or KitchenAid units requiring brand-specific diagnostics.",
+      "repairTips": "Clean your dishwasher filter every two weeks — Homer Glen's hard water clogs filters faster than manufacturer timelines suggest. Run a monthly vinegar or descaling cycle to dissolve mineral deposits from the spray arms and interior walls. Check the float switch occasionally for mineral buildup that can cause overfill issues. If dishes are coming out gritty, the wash motor impeller may be wearing down from hard water sediment — have it inspected before it fails completely.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's builder-grade dishwashers from the 2000s construction boom are hitting failure age simultaneously — Blue Jay sees the patterns and stocks the right parts. Will County's hard water creates mineral challenges that standard maintenance schedules don't account for. We diagnose comprehensively, checking water pressure, inlet screens, and drain health alongside the dishwasher itself. Written estimates before work begins, 90-day warranty on every repair.",
+      "serviceAreaDesc": "Dishwasher repair covers all Homer Glen neighborhoods — Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine. Emergency leak calls receive same-day priority.",
+      "faq": [
+        {
+          "q": "My Homer Glen dishwasher was installed when the house was built in 2003. Worth repairing?",
+          "a": "At 20+ years, it depends on the issue. Simple repairs like door latches, gaskets, and inlet valves are cost-effective. If the wash motor or control board has failed, replacement is often the smarter investment. We'll give you an honest assessment."
+        },
+        {
+          "q": "Does Homer Glen's hard water damage dishwashers?",
+          "a": "Yes — Will County's hard water deposits minerals on spray arm nozzles, heating elements, and inlet screens faster than manufacturer schedules anticipate. Biweekly filter cleaning and monthly descaling cycles are essential here."
+        },
+        {
+          "q": "How quickly can you reach Homer Glen for a dishwasher leak?",
+          "a": "Typically within 20-30 minutes from our Naperville office via I-355. Leak emergencies receive same-day priority scheduling."
+        },
+        {
+          "q": "Do you service the newer dishwashers in custom Homer Glen homes?",
+          "a": "Yes — including Bosch, KitchenAid, Miele, and all other brands. Newer units with electronic controls require brand-specific diagnostics we're equipped to perform."
+        }
+      ]
+    },
+    "dryer-repair": {
+      "published": true,
+      "localParagraph": "When your dryer stops heating or develops problems, Blue Jay Appliance Services delivers fast dryer repair across Homer Glen. We service gas and electric dryers from every major manufacturer, carrying heating elements, thermal fuses, belts, and rollers for same-visit resolution.",
+      "localInsights": "Homer Glen's larger single-family homes frequently have laundry rooms on upper floors or in interior spaces that require extended dryer vent runs through attic cavities. These long runs — often 20-30 feet with multiple bends — trap lint more aggressively than standard basement installations and are the leading cause of dryer performance issues in the village. Gas dryers are prevalent in Homer Glen's 2000s-era construction, and after 15-20 years of service, igniters and gas valves begin failing. The village's larger lot sizes also mean some homes have detached or semi-detached utility spaces where dryer venting can be even more complex.",
+      "repairTips": "Schedule professional dryer vent cleaning annually — Homer Glen's extended vent runs through attic spaces demand it. Check the exterior vent hood quarterly for bird nests or debris, especially in spring. If your dryer takes more than one cycle to dry a standard load, restricted airflow is almost certainly the cause. Replace flexible foil or vinyl vent duct with rigid metal immediately. For gas dryers over 15 years old, have the flex connector inspected during any service call.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's larger floor plans route dryer vents through attic spaces at lint-trapping lengths that most suburbs don't encounter — Blue Jay checks vent condition on every single call. The village's 2000s-era gas dryers are reaching the age where igniters and gas valves fail simultaneously. We identify restricted vents and fire hazards before they become emergencies, and we carry the parts most Homer Glen dryers need for same-visit repair. Written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Dryer repair covers all Homer Glen neighborhoods — Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine. Vent-related safety concerns receive priority scheduling.",
+      "faq": [
+        {
+          "q": "Why does my Homer Glen dryer take two cycles to dry clothes?",
+          "a": "Almost certainly a restricted vent. Homer Glen homes with upper-floor laundry rooms have extended vent runs through attic spaces that trap lint aggressively. Professional vent cleaning usually resolves the issue immediately."
+        },
+        {
+          "q": "How often should I have my dryer vent cleaned in Homer Glen?",
+          "a": "Annually at minimum. If your dryer vent runs through the attic or makes multiple turns, twice yearly is safer. Homer Glen's larger homes are at higher risk for lint accumulation in extended vent runs."
+        },
+        {
+          "q": "My gas dryer is 18 years old. Common issues?",
+          "a": "At 18 years, expect weakening igniters, failing gas valves, and worn drum components. These are routine, affordable repairs if the motor is still strong. We'll assess whether repair or replacement makes more sense."
+        },
+        {
+          "q": "Do you check the dryer vent during a repair call?",
+          "a": "Always. We check vent airflow on every dryer service call in Homer Glen. Restricted vents cause most dryer performance issues and present a fire hazard we take seriously."
+        }
+      ]
+    },
+    "washer-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides washing machine repair throughout Homer Glen for every brand and configuration. Whether your top-loader won't drain, your front-load unit is throwing error codes, or your washer is leaking, our technicians diagnose the problem and complete the repair with quality parts — backed by a 90-day warranty.",
+      "localInsights": "Homer Glen's homes from the 2000s construction era typically have dedicated laundry rooms — some on upper floors, others in basements — with supply line configurations that have been in place for two decades. Rubber supply hoses from original construction are well past their recommended replacement interval and represent a burst risk. Will County's hard water deposits minerals on inlet valve screens and inside tubs, reducing fill speed and leaving residue on clothing. Front-load washers in Homer Glen's larger homes are particularly susceptible to door gasket mold in the village's humid summer months.",
+      "repairTips": "Replace rubber washer supply hoses with braided stainless steel immediately if they're original to the house — 20-year-old rubber hoses are a burst flood waiting to happen. Clean inlet hose screens annually to clear mineral buildup from Homer Glen's hard water. For front-load washers, leave the door ajar between loads and run monthly tub-clean cycles to prevent mold. Check washer leveling seasonally — settling foundations in Homer Glen's clay soil can shift alignment gradually.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's 20-year-old rubber supply hoses are a flood risk we flag on every washer call — Blue Jay checks hose condition proactively. Will County's hard water clogs inlet screens and accelerates component wear. The village's clay soil causes foundation settling that throws washers out of level gradually. We diagnose the whole system, not just the symptom. Written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Washer repair covers all Homer Glen neighborhoods — Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine. Leak emergencies receive priority scheduling.",
+      "faq": [
+        {
+          "q": "My Homer Glen washer supply hoses are original from 2004. Should I replace them?",
+          "a": "Immediately. Rubber supply hoses should be replaced every 5 years. At 20+ years, they're extremely high risk for bursting and flooding. We install braided stainless steel hoses during any washer service call."
+        },
+        {
+          "q": "My front-load washer smells musty. Is Homer Glen's humidity making it worse?",
+          "a": "Yes. Will County's summer humidity accelerates mold growth in front-load door gaskets. Leave the door cracked between loads, wipe the gasket dry after use, and run monthly tub-clean cycles. We clean and replace gaskets when needed."
+        },
+        {
+          "q": "Does Homer Glen's hard water affect my washing machine?",
+          "a": "It does. Mineral deposits clog inlet valve screens, reduce water flow, and leave residue on clothes. We clean screens during service calls and recommend water softener maintenance."
+        },
+        {
+          "q": "My washer shakes violently in my Homer Glen home. What's wrong?",
+          "a": "Homer Glen's clay soil causes gradual foundation settling that can shift washer leveling. We check and correct alignment on every call. If leveling isn't the issue, worn shock absorbers or bearings are the next most common cause."
+        }
+      ]
+    },
+    "refrigerator-and-freezer-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides prompt refrigerator and freezer repair across Homer Glen. From cooling failures and ice maker problems to compressor issues and unusual noises, our technicians arrive with diagnostic equipment and common parts for first-visit resolution on every brand.",
+      "localInsights": "Homer Glen's homes from the 2000s construction boom are now experiencing a wave of refrigerator failures as original units reach the 20-25 year mark — well past the typical 15-year service life. The village's larger kitchens often have side-by-side or French door refrigerators that were premium in the early 2000s but are now aging. Will County's hard water affects ice maker supply lines and water dispenser filters, requiring more frequent replacement than manufacturer schedules suggest. Summer power fluctuations during thunderstorms can damage compressor start relays, particularly in Homer Glen's areas farther from substations.",
+      "repairTips": "Clean condenser coils every six months — Homer Glen homes with pets need quarterly cleaning. Replace water dispenser filters every 4 months instead of the manufacturer's 6-month schedule due to Will County's hard water. Consider a surge protector for the refrigerator to guard against storm-season power fluctuations. If your refrigerator runs constantly but doesn't cool properly, dirty coils or a failing condenser fan are the most common culprits before assuming compressor failure.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's 2000s-era refrigerators are hitting end-of-life simultaneously — Blue Jay distinguishes between simple component failures and units that genuinely need replacement. Will County's hard water clogs ice maker lines and saturates filters ahead of schedule. We protect homeowners from unnecessary compressor replacements when the actual issue is a $40 start relay damaged by a power surge. Same-day cooling emergencies, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Refrigerator and freezer repair covers all Homer Glen neighborhoods with cooling emergencies receiving same-day priority. We service Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine.",
+      "faq": [
+        {
+          "q": "My Homer Glen refrigerator is original from 2003. Should I repair or replace?",
+          "a": "At 20+ years, it depends on the failure. If it's a thermostat, fan motor, or start relay, repair is affordable and can extend life several more years. If the compressor or sealed system is failing, replacement is almost always the better investment."
+        },
+        {
+          "q": "My ice maker stopped working after a storm. Is the refrigerator damaged?",
+          "a": "Power surges during Homer Glen's summer storms often damage the ice maker module or inlet valve independently of the rest of the refrigerator. These are targeted repairs — the fridge itself is usually fine."
+        },
+        {
+          "q": "How often should I replace my refrigerator water filter in Homer Glen?",
+          "a": "Every 4 months. Will County's hard water saturates filters faster than the manufacturer's 6-month recommendation. You'll notice reduced water flow and ice production when the filter is due."
+        },
+        {
+          "q": "My refrigerator runs constantly but isn't cold enough. What's wrong?",
+          "a": "Start with condenser coils — if they're dirty, the compressor overworks without adequate cooling. Next most common: failing condenser fan or blocked evaporator. We check all three before considering compressor diagnosis."
+        }
+      ]
+    },
+    "stove-and-oven-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services repairs gas and electric stoves and ovens across Homer Glen. Whether your gas igniter has failed, your oven temperature is inconsistent, or the control board is unresponsive, our certified technicians carry parts for efficient same-visit repair. Gas calls receive priority scheduling.",
+      "localInsights": "Gas cooking is standard in Homer Glen's homes, with nearly all built during the 2000s construction boom using natural gas ranges from mainstream brands like GE, Whirlpool, and Frigidaire. After 15-20 years of daily use, igniters weaken, thermostats drift, and door hinges fatigue across the village. Homer Glen's larger kitchens in custom homes along 159th Street sometimes feature dual-fuel or premium ranges from brands like KitchenAid and Samsung that require more specialized diagnostics. Power fluctuations during summer storms can affect electronic range controls, particularly digital displays and touchpad interfaces.",
+      "repairTips": "Replace a weakening gas igniter before it fails completely — delayed ignition wastes gas and creates a brief gas accumulation risk. Test oven temperature annually with a standalone thermometer. Clean under cooktop grates after spills to prevent burner port clogs. After power outages, reset the clock on digital ranges before assuming the control board has failed — many ovens won't operate until the clock is set.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's 2000s-era gas ranges need igniter and thermostat service we handle daily — common parts stocked on our trucks. Custom homes with premium ranges get the specialized diagnostics those units require. We check gas connections in aging installations and verify electrical conditions before replacing expensive control boards. Gas-certified technicians, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Stove and oven repair covers all Homer Glen neighborhoods with gas-related calls receiving safety-priority scheduling. We service Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine.",
+      "faq": [
+        {
+          "q": "My Homer Glen gas range igniter is getting weak. Should I wait for it to fail?",
+          "a": "No. A weakening igniter causes delayed ignition — gas accumulates briefly before lighting. This is both a safety concern and a waste of gas. Proactive replacement is one of the most affordable range repairs we perform."
+        },
+        {
+          "q": "My oven temperature seems off by 25-50 degrees. Can you fix that?",
+          "a": "Yes. After 15-20 years, oven thermostats drift gradually. We recalibrate or replace the thermostat and verify with precision measurements. This is extremely common in Homer Glen's original 2000s-era ranges."
+        },
+        {
+          "q": "My range display went blank after a storm. Is the control board dead?",
+          "a": "Not necessarily. Power surges can trip internal fuses or require a clock reset before the oven will operate. We check fuses and power supply before recommending expensive control board replacement."
+        },
+        {
+          "q": "Do you repair premium ranges in Homer Glen's custom homes?",
+          "a": "Yes — all brands including KitchenAid, Samsung, LG, and others found in Homer Glen's custom-built kitchens along 159th Street. We bring brand-specific diagnostic tools."
+        }
+      ]
+    },
+    "range-repair": {
+      "published": true,
+      "localParagraph": "Whether your range burners won't ignite, the oven runs too hot, or digital controls have failed, Blue Jay Appliance Services provides expert range repair across Homer Glen. We service freestanding, slide-in, and drop-in ranges in gas, electric, and dual-fuel configurations from all major brands.",
+      "localInsights": "Homer Glen kitchens predominantly feature 30-inch freestanding gas ranges from the original 2000s construction — GE, Whirlpool, Frigidaire, and Maytag are the most common. After two decades of daily cooking, these units show predictable failure patterns: igniters lose strength, oven sensors drift, and door gaskets deteriorate. Some Homer Glen homeowners who have remodeled have upgraded to slide-in or dual-fuel ranges that sit flush with countertops and require different service approaches. The village's power grid can experience fluctuations during severe weather that stress electronic range components.",
+      "repairTips": "Don't ignore a gas burner that takes more than 3-4 seconds to light — the igniter is weakening and should be replaced before it fails. Clean burner caps and ports monthly to maintain even flame patterns. If your range oven takes longer to preheat than it used to, the bake igniter or heating element is losing efficiency. Ensure adequate ventilation clearance around your range, especially if it's been recessed into a tight countertop cutout during a kitchen remodel.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's aging freestanding gas ranges follow predictable failure patterns we've seen thousands of times — parts stocked, diagnosis efficient. When homeowners upgrade to slide-in or dual-fuel models, we bring the diagnostic expertise those configurations require. We verify electrical conditions before blaming expensive control boards, and we check gas connections in every installation over 15 years old. Gas-certified, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Range repair covers all Homer Glen neighborhoods — Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine. Gas-related calls receive safety-priority scheduling.",
+      "faq": [
+        {
+          "q": "My 20-year-old Homer Glen range still works but has issues. Repair or replace?",
+          "a": "If the oven heats and burners light — even weakly — repair is usually cost-effective. Igniters, thermostats, and door seals are affordable fixes. If the control board has failed on an older model, replacement parts may be unavailable, making a new range the better option."
+        },
+        {
+          "q": "I upgraded to a slide-in range. Do you service those?",
+          "a": "Yes — all configurations including freestanding, slide-in, drop-in, gas, electric, dual-fuel, and induction from every manufacturer. Slide-in models have different access points for service that we're experienced with."
+        },
+        {
+          "q": "My gas burner flame is uneven. What's causing it?",
+          "a": "Clogged burner ports from food debris and grease buildup. Remove the burner cap and clean the ports with a pin or toothpick. If the flame is still uneven after cleaning, the burner base may need replacement."
+        },
+        {
+          "q": "Can power surges damage my range?",
+          "a": "Yes. Homer Glen's weather-related power fluctuations can damage electronic control boards, clock assemblies, and touchpad interfaces. A surge protector rated for large appliances provides good protection."
+        }
+      ]
+    },
+    "garbage-disposal-repair-and-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services repairs and installs garbage disposals throughout Homer Glen, handling all plumbing and electrical connections in a single visit. Whether your disposal is jammed, leaking, humming without grinding, or needs complete replacement, we restore your kitchen sink's functionality fast.",
+      "localInsights": "Homer Glen's homes from the 2000s construction era typically have original garbage disposals that are now 20+ years old — well past the typical 10-12 year service life. Builder-grade 1/3 HP and 1/2 HP units from GE and Badger were standard, and many have lost grinding efficiency or developed internal leaks at the sink flange. Will County's hard water deposits minerals on grinding components, further reducing performance. The village's kitchen drain configurations from the original construction are generally PVC and in good condition, making disposal replacement straightforward in most Homer Glen homes.",
+      "repairTips": "Run cold water for 15-20 seconds after grinding to flush waste completely through Homer Glen's drain lines. Feed scraps gradually — never overload the grinding chamber. Avoid fibrous vegetables, starchy pasta, coffee grounds in large quantities, and cooking grease. If the disposal hums but won't grind, try the reset button on the bottom first, then use the hex wrench to manually rotate the flywheel. Monthly ice cube and citrus rind grinding scours the chamber and freshens the drain.",
+      "neighborhoodsCovered": [
+        "Goodings Grove",
+        "Heritage Falls",
+        "Hadley Valley",
+        "Bell Road Area",
+        "159th Street Corridor",
+        "Archer Avenue Area",
+        "Parker Road Area",
+        "Stonebridge",
+        "Crystal Brook",
+        "Woodbine"
+      ],
+      "whyChooseUs": "Homer Glen's original builder-grade disposals are 20+ years old and failing across the village — Blue Jay handles both repair and full replacement in a single visit. Will County's hard water reduces grinding efficiency over time. We assess whether repair makes sense or if a modern, more powerful unit is the smarter investment. InSinkErator and Waste King stocked for same-day installation, all plumbing and electrical handled, 90-day warranty.",
+      "serviceAreaDesc": "Disposal repair and installation covers all Homer Glen neighborhoods — Goodings Grove, Heritage Falls, Hadley Valley, Bell Road, 159th Street corridor, Archer Avenue, Parker Road, Stonebridge, Crystal Brook, and Woodbine. Most disposal jobs completed in 1-2 hours.",
+      "faq": [
+        {
+          "q": "My Homer Glen disposal is original from 2002. Should I repair or replace?",
+          "a": "At 20+ years, replacement is almost always the better investment. Modern disposals are quieter, more powerful, and more efficient. We carry InSinkErator and Waste King for same-day installation."
+        },
+        {
+          "q": "What size disposal should I get for my Homer Glen home?",
+          "a": "For most Homer Glen families, a 3/4 HP unit handles daily cooking waste well. Larger families or avid home cooks should consider 1 HP. We recommend based on your actual usage patterns."
+        },
+        {
+          "q": "Does Homer Glen's hard water affect garbage disposals?",
+          "a": "Yes — mineral deposits accumulate on grinding components over time, reducing efficiency. Regular ice cube grinding helps, but older units in hard water areas lose performance faster than manufacturer estimates suggest."
+        },
+        {
+          "q": "How long does disposal installation take?",
+          "a": "Standard replacement takes 1-2 hours. Homer Glen's 2000s-era PVC drain configurations are generally straightforward. We handle all plumbing connections, electrical work, and testing in a single visit."
+        }
+      ]
+    }
+  },
+  "burr-ridge-il-appliance-repair": {
+    "dishwasher-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides expert dishwasher repair throughout Burr Ridge, IL. Whether your premium dishwasher won't drain, leaves spots on glassware, or is displaying error codes, our technicians have the brand-specific diagnostic experience that Burr Ridge kitchens require — backed by a 90-day warranty on every repair.",
+      "localInsights": "Burr Ridge kitchens frequently feature premium dishwashers from Miele, Bosch, and Thermador alongside mainstream brands. These units have sophisticated sensor systems, specialized wash programs, and proprietary components that general appliance companies often can't service effectively. The village's homes range from 1980s estates along County Line Road to modern custom builds — each era's dishwashers present different challenges. DuPage County's moderately hard water affects all dishwashers in Burr Ridge, depositing minerals on spray arms, heating elements, and precision sensors that premium units rely on for optimal performance.",
+      "repairTips": "Clean your dishwasher filter biweekly — premium brands like Miele and Bosch use fine-mesh filters that clog faster in DuPage County's hard water. Use a rinse aid consistently, even if you think your detergent handles it — hard water film is the leading cause of spotty glassware in Burr Ridge. Run a monthly descaling cycle with a manufacturer-recommended cleaning agent. If your Bosch or Miele displays an error code, note the exact code before resetting — it gives our technicians immediate diagnostic direction.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's premium dishwashers from Miele, Bosch, and Thermador require brand-specific expertise that general repair companies lack — Blue Jay technicians are trained on luxury and mainstream brands equally. DuPage County's hard water affects precision sensors and fine-mesh filters faster than standard. We carry diagnostic tools specific to premium European brands alongside parts for mainstream models. Written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Dishwasher repair covers all Burr Ridge neighborhoods — County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields. Emergency leak calls receive same-day priority.",
+      "faq": [
+        {
+          "q": "Do you repair Miele dishwashers in Burr Ridge?",
+          "a": "Yes. We service all Miele models including their integrated, panel-ready, and freestanding dishwashers. Miele uses proprietary components and error code systems that our technicians are specifically trained on."
+        },
+        {
+          "q": "My Bosch dishwasher shows an E15 error. What does that mean?",
+          "a": "E15 indicates water in the base pan — the anti-flood sensor has been triggered. This can be caused by a leaking pump seal, loose hose connection, or faulty aquastop valve. We diagnose and resolve E15 errors frequently in Burr Ridge."
+        },
+        {
+          "q": "Does Burr Ridge's water quality affect premium dishwashers?",
+          "a": "Yes. DuPage County's hard water deposits minerals on the precision sensors, fine-mesh filters, and spray arm nozzles that premium brands use. These components are more sensitive to mineral buildup than standard dishwashers."
+        },
+        {
+          "q": "How quickly can you reach Burr Ridge?",
+          "a": "Typically within 15-25 minutes from our Naperville office. Burr Ridge is one of our closer service areas."
+        }
+      ]
+    },
+    "dryer-repair": {
+      "published": true,
+      "localParagraph": "When your dryer fails to heat or develops problems, Blue Jay Appliance Services delivers fast dryer repair across Burr Ridge. We service gas and electric dryers from standard and luxury brands, carrying heating elements, thermal fuses, belts, and rollers for same-visit resolution.",
+      "localInsights": "Burr Ridge's larger homes — many exceeding 4,000 square feet — present unique dryer venting challenges. Multi-story residences often route dryer vents through interior walls and upper-floor cavities, creating extended runs with multiple elbows that trap lint aggressively. Some Burr Ridge estates have dedicated laundry wings with premium Speed Queen, Electrolux, or Miele dryers that require specialized service knowledge. The village's 1980s-era homes along County Line Road may have original dryer venting that hasn't been updated in decades, while newer custom builds generally have more efficient venting but with equally long runs due to floor plan size.",
+      "repairTips": "Schedule professional dryer vent cleaning at least annually — Burr Ridge's larger homes with multi-floor vent runs need it more than most. Check exterior vent hoods quarterly for obstruction. If your premium dryer displays an airflow restriction warning, take it seriously — the internal sensors are detecting a genuine blockage. Replace foil or vinyl vent duct with rigid metal. For gas dryers in 1980s-era Burr Ridge homes, have the gas connector inspected during any service call.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's multi-story homes have some of the longest, most complex dryer vent runs in the western suburbs — Blue Jay checks vent condition on every call. Premium dryers from Speed Queen, Electrolux, and Miele need technicians who understand their diagnostic systems. We identify restricted vents and fire hazards in larger homes before they become emergencies. Written estimates, common parts stocked, 90-day warranty.",
+      "serviceAreaDesc": "Dryer repair covers all Burr Ridge neighborhoods — County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields. Vent-related safety calls receive priority scheduling.",
+      "faq": [
+        {
+          "q": "Why does my Burr Ridge dryer take so long to dry?",
+          "a": "Large homes with multi-floor vent runs accumulate lint in ways that standard-length vents don't. Professional vent cleaning typically resolves extended dry times immediately. We see this constantly in Burr Ridge's larger residences."
+        },
+        {
+          "q": "Do you service Electrolux and Speed Queen dryers?",
+          "a": "Yes — including all premium and commercial-grade residential brands. These units have different control systems and component designs than mainstream dryers, and our technicians carry the appropriate diagnostic tools."
+        },
+        {
+          "q": "My dryer vent runs through two floors. How often should it be cleaned?",
+          "a": "At least annually, ideally twice per year. Multi-floor vent runs with multiple elbows trap lint at each bend. In Burr Ridge's larger homes, these runs can exceed 30 feet — well above the threshold for accelerated lint accumulation."
+        },
+        {
+          "q": "Should I upgrade my 1980s dryer vent duct?",
+          "a": "If it's flexible foil or vinyl, absolutely — replace with rigid metal immediately. Even if it's semi-rigid metal, upgrading to smooth-wall rigid duct improves airflow and safety significantly in older Burr Ridge installations."
+        }
+      ]
+    },
+    "washer-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides washing machine repair throughout Burr Ridge for standard and premium brands alike. Whether your high-efficiency washer throws error codes, your top-loader won't drain, or your premium unit needs specialized attention, our technicians diagnose and repair with quality parts — backed by our 90-day warranty.",
+      "localInsights": "Burr Ridge laundry rooms often feature premium washers from Speed Queen, Electrolux, LG Signature, and Miele — units that deliver superior performance but require technicians familiar with their specific diagnostic systems and proprietary components. The village's larger homes frequently have dedicated laundry rooms with both main-floor and basement installations. DuPage County's moderately hard water deposits minerals on inlet valve screens and inside tubs across all brands. Some 1980s-era Burr Ridge estates have original plumbing supply lines that may restrict water pressure to modern high-efficiency washers.",
+      "repairTips": "Check washer leveling seasonally — Burr Ridge's older estates may have floors that aren't perfectly level for newer high-efficiency models that are sensitive to alignment. Clean inlet hose screens annually to clear mineral deposits. For front-load washers, leave the door open between loads and run monthly tub-clean cycles. Replace rubber supply hoses with braided stainless steel every five years — a burst hose in a Burr Ridge home can cause significant water damage.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's premium washers from Speed Queen, Electrolux, and Miele require specialized expertise — Blue Jay services luxury and mainstream brands with equal confidence. DuPage County's hard water clogs inlet screens and leaves mineral residue. The village's older estates may have supply line pressure issues that affect modern high-efficiency models. We diagnose comprehensively, written estimates always, 90-day warranty.",
+      "serviceAreaDesc": "Washer repair covers all Burr Ridge neighborhoods — County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields. Leak emergencies receive priority scheduling.",
+      "faq": [
+        {
+          "q": "Do you repair Speed Queen and Miele washers?",
+          "a": "Yes. We service all premium residential washer brands including Speed Queen, Miele, Electrolux, and LG Signature. These units have different diagnostic systems and component sourcing than mainstream brands."
+        },
+        {
+          "q": "My Burr Ridge estate has low water pressure to the washer. Can you help?",
+          "a": "Yes. Some 1980s-era Burr Ridge homes have original supply lines that restrict flow to modern high-efficiency washers. We diagnose pressure issues and recommend solutions including supply line upgrades and inlet screen cleaning."
+        },
+        {
+          "q": "My front-load washer vibrates on my Burr Ridge home's upper floor. Is that fixable?",
+          "a": "Usually. Upper-floor installations require precise leveling and properly functioning shock absorbers. We check both and can add vibration dampening pads if needed. Excessive vibration on upper floors also stresses structural elements, so it's worth addressing promptly."
+        },
+        {
+          "q": "Should I replace washer hoses in my Burr Ridge home?",
+          "a": "If they're rubber and over 5 years old, yes — immediately. A burst hose in a larger home can cause extensive water damage before it's discovered, especially in basement or upper-floor laundry rooms."
+        }
+      ]
+    },
+    "refrigerator-and-freezer-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides prompt refrigerator and freezer repair across Burr Ridge. From Sub-Zero built-ins to mainstream freestanding models, our technicians arrive with the diagnostic tools and brand-specific knowledge that Burr Ridge's premium kitchens require. Same-day service available for cooling emergencies.",
+      "localInsights": "Burr Ridge kitchens commonly feature built-in refrigerators from Sub-Zero, Thermador, and KitchenAid alongside high-end freestanding models. Built-in units have integrated panel fronts, specialized compressor configurations, and air purification systems that freestanding models don't — requiring technicians with specific training. The village's 1980s estates may have Sub-Zero units that are 25-40 years old but still serviceable thanks to Sub-Zero's exceptional parts availability. DuPage County's hard water affects ice maker lines and water dispensers, and the village's larger refrigerators consume more energy, making condenser coil maintenance critical.",
+      "repairTips": "Clean condenser coils every 4-6 months — Burr Ridge's larger built-in refrigerators depend on adequate airflow for efficient operation. Replace water filters every 4 months due to DuPage County's hard water. For Sub-Zero units, keep the toe grille area clear of dust and debris — it's the primary airflow intake. Consider a high-quality surge protector for built-in units — they're expensive to replace if a power surge damages the compressor.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's Sub-Zero, Thermador, and built-in refrigerators require brand-specific expertise that most repair companies can't provide — Blue Jay services premium and mainstream brands with equal capability. We distinguish between simple component failures and sealed system issues that warrant replacement. DuPage County's hard water clogs ice maker lines ahead of schedule. Same-day cooling emergencies, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Refrigerator and freezer repair covers all Burr Ridge neighborhoods with cooling emergencies receiving same-day priority. We service County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields.",
+      "faq": [
+        {
+          "q": "Do you repair Sub-Zero refrigerators in Burr Ridge?",
+          "a": "Yes. We service all Sub-Zero models including their built-in, integrated, and under-counter units. Sub-Zero's exceptional parts availability means even units from the 1990s are often repairable."
+        },
+        {
+          "q": "My built-in refrigerator has a panel-matched front. Can you service it without damaging the panel?",
+          "a": "Yes. We're experienced with panel-ready and integrated installations. We access the unit properly without disturbing custom cabinetry or panel fronts — a common concern in Burr Ridge's custom kitchens."
+        },
+        {
+          "q": "My 1980s Sub-Zero is still running. Is it worth maintaining?",
+          "a": "Often yes. Sub-Zero units from the 1980s-1990s were built to last and parts are still available. If the sealed system is intact, component repairs can keep these units running for years. We'll give an honest assessment of remaining service life."
+        },
+        {
+          "q": "How quickly can you respond to a cooling emergency in Burr Ridge?",
+          "a": "Same-day, typically within 15-25 minutes from our Naperville office. Cooling failures — especially on built-in units with expensive food inventories — receive our highest priority scheduling."
+        }
+      ]
+    },
+    "stove-and-oven-repair": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services repairs gas, electric, and dual-fuel stoves and ovens across Burr Ridge. From Wolf and Thermador pro-style ranges to mainstream models, our certified technicians bring the specialized diagnostic tools that Burr Ridge's premium kitchens demand. Gas calls receive priority scheduling.",
+      "localInsights": "Burr Ridge kitchens frequently feature premium cooking appliances — Wolf, Thermador, Viking, and high-end KitchenAid ranges are common in the village's custom-built and renovated homes. These units have dual-fuel configurations, convection systems, self-cleaning technology, and digital controls that require brand-specific service approaches. The village's 1980s estates may still have original premium ranges that are 30-40 years old — remarkably, many Wolf and Thermador units from this era remain serviceable. Gas connections in older Burr Ridge homes should be inspected during any service call to verify integrity.",
+      "repairTips": "For premium ranges, keep the dual-fuel configuration in mind: the gas cooktop and electric oven may have independent issues. Clean burner ports regularly — premium burner designs collect debris in different locations than standard burners. If your Wolf or Thermador control knob feels loose, have it inspected before the valve shaft wears. Test oven temperature annually with a calibrated thermometer — even premium ovens drift over time.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's Wolf, Thermador, and Viking ranges require specialized diagnostics that most repair companies decline to attempt — Blue Jay services them confidently. Dual-fuel configurations, convection systems, and digital controls each need specific expertise. We check gas connections in older installations and verify electrical conditions before replacing expensive premium components. Gas-certified, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Stove and oven repair covers all Burr Ridge neighborhoods with gas-related calls receiving safety-priority scheduling. We service County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields.",
+      "faq": [
+        {
+          "q": "Do you repair Wolf and Thermador ranges?",
+          "a": "Yes — all models including pro-style, dual-fuel, and induction. Our technicians carry diagnostic tools specific to premium brands and understand their unique component architectures."
+        },
+        {
+          "q": "My 1980s Viking range still works but needs service. Can you find parts?",
+          "a": "Usually yes. Viking, Wolf, and Thermador have maintained parts availability for many older models. We assess parts availability before recommending repair vs replacement."
+        },
+        {
+          "q": "My dual-fuel range has a gas issue on top but electric issue in the oven. Two separate problems?",
+          "a": "Likely yes. Dual-fuel ranges have independent gas and electric systems. The gas cooktop igniter and the electric oven element are separate components that can fail independently. We diagnose and repair both in a single visit."
+        },
+        {
+          "q": "Is it safe to continue using my gas range if one burner won't light?",
+          "a": "If only one burner has a weak or dead igniter, the other burners are generally safe. However, if you smell gas without ignition, stop using the range immediately and call for service. We prioritize gas safety calls."
+        }
+      ]
+    },
+    "range-repair": {
+      "published": true,
+      "localParagraph": "Whether your range burners won't ignite, the oven temperature fluctuates, or the digital controls are unresponsive, Blue Jay Appliance Services provides expert range repair across Burr Ridge. We service freestanding, slide-in, and pro-style ranges in gas, electric, dual-fuel, and induction configurations from all brands.",
+      "localInsights": "Burr Ridge ranges span the full spectrum — from 30-inch freestanding gas models in original kitchens to 48-inch pro-style dual-fuel ranges in custom renovations. The village's premium kitchens may feature ranges from Wolf, Thermador, Viking, La Cornue, or Bertazzoni that general repair companies refuse to touch. These units have proprietary ignition systems, specialized thermostat calibration, and high-BTU burner configurations requiring brand-specific knowledge. Even Burr Ridge's mainstream ranges in original kitchens are now 20-40 years old and showing age-related failures across igniter, thermostat, and door components.",
+      "repairTips": "For pro-style ranges, clean high-BTU burner ports more frequently than standard burners — they accumulate debris faster due to higher flame volume. If your range has a griddle or grill accessory, clean it after every use to prevent grease from affecting adjacent burner performance. Address weakening igniters proactively — delayed ignition on high-BTU burners creates a larger gas accumulation risk than standard burners. Ensure proper ventilation clearance, especially for pro-style ranges that generate significantly more heat than standard models.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge's pro-style ranges from Wolf, Thermador, Viking, and other premium manufacturers need technicians who understand high-BTU systems, dual-fuel configurations, and brand-specific calibration — Blue Jay provides that expertise. We also service mainstream ranges in original Burr Ridge kitchens that are reaching end-of-life. Gas-certified for all BTU levels, written estimates, 90-day warranty.",
+      "serviceAreaDesc": "Range repair covers all Burr Ridge neighborhoods — County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields. Gas-related calls receive safety-priority scheduling.",
+      "faq": [
+        {
+          "q": "Do you repair 48-inch pro-style ranges?",
+          "a": "Yes — all sizes from 30-inch to 60-inch, all fuel types, all brands including Wolf, Thermador, Viking, La Cornue, and Bertazzoni. Pro-style ranges have different component architectures that we're specifically trained on."
+        },
+        {
+          "q": "My pro-style range igniter is slow. Is that dangerous?",
+          "a": "More concerning than on a standard range. High-BTU burners release more gas per second, so delayed ignition creates a larger accumulation risk. Have the igniter replaced promptly — it's an affordable repair that eliminates a real safety concern."
+        },
+        {
+          "q": "Can you calibrate my range oven temperature?",
+          "a": "Yes. We verify oven temperature with precision instruments and recalibrate the thermostat or oven sensor as needed. Premium ranges can drift from factory calibration over time, especially with heavy use."
+        },
+        {
+          "q": "My range has an induction cooktop. Do you service those?",
+          "a": "Yes — including induction ranges from all manufacturers. Induction cooktops have different failure modes than gas or electric, including coil failures, control board issues, and cooling fan problems. We diagnose all of them."
+        }
+      ]
+    },
+    "garbage-disposal-repair-and-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services repairs and installs garbage disposals throughout Burr Ridge, handling all plumbing and electrical connections in a single visit. Whether your disposal is jammed, leaking, or needs complete replacement, we carry premium InSinkErator models including the Evolution series for Burr Ridge's noise-conscious homeowners.",
+      "localInsights": "Burr Ridge kitchens — particularly those with premium appliance suites — benefit from higher-powered, quieter garbage disposals than the builder-grade units many homes still have. The village's 1980s estates may have original disposals that are 30-40 years old, while renovated kitchens often have InSinkErator Evolution or commercial-grade models. DuPage County's hard water deposits minerals on grinding components over time. Burr Ridge's kitchen configurations sometimes include disposal connections to dishwashers that need to be properly maintained when either appliance is serviced.",
+      "repairTips": "Run cold water for 20 seconds after grinding to flush waste completely. Feed scraps gradually — premium disposals handle more volume but still shouldn't be overloaded. Avoid fibrous vegetables, hot grease, and expandable starches. For InSinkErator Evolution models, the multi-grind technology handles more than standard disposals but still benefits from gradual feeding. Monthly ice and citrus cleaning maintains chamber hygiene and grinding sharpness.",
+      "neighborhoodsCovered": [
+        "County Line Road Estates",
+        "Falling Water",
+        "Burr Ridge Club",
+        "Carriageway",
+        "Village Center Area",
+        "Kraml Drive Area",
+        "Madison Street Area",
+        "79th Street Area",
+        "Garfield Avenue Area",
+        "Highland Fields"
+      ],
+      "whyChooseUs": "Burr Ridge homeowners expect quiet, powerful disposals that match their premium kitchen investments — Blue Jay stocks InSinkErator Evolution and higher-HP models for same-day installation. We properly maintain disposal-to-dishwasher connections that many technicians overlook. DuPage County's hard water reduces grinding efficiency over time. Full plumbing and electrical handled in a single visit, 90-day warranty.",
+      "serviceAreaDesc": "Disposal repair and installation covers all Burr Ridge neighborhoods — County Line Road Estates, Falling Water, Burr Ridge Club, Carriageway, Village Center, Kraml Drive, Madison Street, 79th Street, Garfield Avenue, and Highland Fields. Most disposal jobs completed in 1-2 hours.",
+      "faq": [
+        {
+          "q": "What disposal do you recommend for a Burr Ridge kitchen?",
+          "a": "For Burr Ridge's larger kitchens, we recommend the InSinkErator Evolution Excel (1 HP) or Evolution Compact (3/4 HP). The Evolution series is significantly quieter than standard disposals — an important factor in open-concept premium kitchens."
+        },
+        {
+          "q": "My 1980s Burr Ridge home still has the original disposal. Replace?",
+          "a": "At 30-40 years old, absolutely. Modern disposals are dramatically quieter, more powerful, and more efficient. Upgrading is one of the most impactful small kitchen improvements we perform."
+        },
+        {
+          "q": "Can you upgrade my disposal to a more powerful model?",
+          "a": "Yes. We frequently upgrade Burr Ridge kitchens from standard 1/2 HP disposals to 3/4 HP or 1 HP models. We verify electrical capacity and adjust plumbing connections as needed during the upgrade."
+        },
+        {
+          "q": "Does the disposal affect my dishwasher connection?",
+          "a": "Yes — many dishwashers drain through the disposal. When we service or replace a disposal, we always verify and properly reconnect the dishwasher drain line. This connection is frequently overlooked by less experienced technicians."
+        }
+      ]
+    }
   }
 }
