@@ -175,6 +175,68 @@ const nextConfig: NextConfig = {
         destination: "/plainfield-il-appliance-repair/:service",
         permanent: true,
       },
+
+      // --- WordPress infrastructure URLs (prevent 404s from crawled WP URLs) ---
+      {
+        source: "/feed",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/feed/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-sitemap.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/wp-sitemap-posts-page-1.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/wp-sitemap-posts-post-1.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/sitemap_index.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/wp-json/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-includes/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-login.php",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-admin/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/xmlrpc.php",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };

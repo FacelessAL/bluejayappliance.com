@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: `Appliance Rental Service | ${biz.name}`,
     description: `Affordable appliance rental in ${biz.address.city}. Free delivery & installation. Maintenance included. Call ${biz.phoneSlogan}.`,
   },
+  alternates: {
+    canonical: `${biz.url}/appliance-rental`,
+  },
 };
 
 const packages = [

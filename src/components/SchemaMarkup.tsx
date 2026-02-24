@@ -183,6 +183,8 @@ export default function SchemaMarkup({
     const serviceSchema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      name: pageName,
+      url: pageUrl,
       serviceType: serviceType || pageName,
       provider: {
         '@type': biz.schemaType || 'LocalBusiness',
@@ -214,8 +216,8 @@ export default function SchemaMarkup({
     schemas.push(pageSchema);
   }
 
-  // WebSite schema (for homepage)
-  if (type === 'LocalBusiness') {
+  // WebSite schema (homepage only — not every LocalBusiness page)
+  if (type === 'LocalBusiness' && (!pageUrl || pageUrl === biz.url)) {
     const websiteSchema = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
