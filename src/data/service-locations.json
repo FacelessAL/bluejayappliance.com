@@ -279,6 +279,46 @@
           "a": "Yes. We handle new installations including the drain modification, electrical hookup, and any necessary plumbing adjustments. We'll inspect your sink and drain configuration during the visit and recommend the right unit size and mounting approach for your specific setup."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs tank and tankless water heaters throughout Naperville — from the established neighborhoods near downtown to the newer developments south of 87th Street. Whether your current unit is leaking, struggling to keep up with demand, or simply past its prime, our licensed technicians handle the full installation including old unit removal, gas or electric hookup, code-compliant venting, and permit coordination with the City of Naperville.",
+      "localInsights": "Naperville homes built in the 1980s and 1990s — particularly in neighborhoods like Cress Creek, Maplebrook, and Brookdale — often still have their original water heaters or first-generation replacements. These 40-gallon natural gas units were standard for the era but many households have since added bathrooms, dishwashers, or high-flow shower systems that exceed the original capacity. We frequently upgrade these homes to 50-gallon high-efficiency tanks or Rinnai/Navien tankless systems that deliver unlimited hot water without the footprint of a larger tank.",
+      "repairTips": "Flush your tank water heater annually to remove sediment buildup — Naperville's Lake Michigan water supply is relatively soft, but mineral deposits still accumulate over time and reduce heating efficiency. Check the temperature-pressure relief valve yearly by lifting the lever briefly — if no water flows, the valve may be stuck and needs replacement. Set your thermostat to 120°F to balance comfort, safety, and energy savings.",
+      "neighborhoodsCovered": [
+        "Downtown Naperville",
+        "South Naperville",
+        "North Naperville",
+        "Cress Creek",
+        "White Eagle",
+        "Ashwood Park",
+        "Stillwater",
+        "Maplebrook",
+        "Brookdale",
+        "Tall Grass",
+        "River Run",
+        "Hobson West"
+      ],
+      "whyChooseUs": "Blue Jay is headquartered in Naperville, which means shorter response times and technicians who understand local building codes, permit requirements, and the specific water heater challenges of Naperville's housing stock. We carry Rheem, A.O. Smith, and Bradford White tank units for same-week installation, and we're certified Rinnai and Navien installers for tankless upgrades. Every installation includes proper permitting, old unit disposal, and a written workmanship warranty.",
+      "serviceAreaDesc": "We install water heaters across all Naperville zip codes — from the condos near the Riverwalk to the single-family homes along Naper Boulevard, the estates in White Eagle, and the newer communities south of 95th Street. Our Naperville base means we can often schedule installations within 2-3 days of your initial call.",
+      "faq": [
+        {
+          "q": "How quickly can you install a new water heater in Naperville?",
+          "a": "Most standard tank replacements in Naperville are scheduled within 2-3 business days and completed in 2-4 hours. Emergency replacements for leaking units can often be expedited to next-day."
+        },
+        {
+          "q": "Do you pull permits for water heater installation in Naperville?",
+          "a": "Yes. The City of Naperville requires permits for water heater installations. We handle the entire permitting process and ensure all work passes inspection."
+        },
+        {
+          "q": "What size water heater do I need for my Naperville home?",
+          "a": "For a typical 3-4 bedroom Naperville home with 2-3 bathrooms, a 50-gallon tank or a mid-range tankless unit handles demand comfortably. We assess your specific household during the on-site visit and recommend the right size."
+        },
+        {
+          "q": "Can you convert my Naperville home from tank to tankless?",
+          "a": "Absolutely. Many Naperville homeowners are making this switch. The conversion typically requires gas line resizing and new venting, which we handle as part of the installation. We'll provide a detailed quote covering all the work involved."
+        }
+      ]
     }
   },
   "aurora-il-appliance-repair": {
@@ -559,6 +599,40 @@
         {
           "q": "Can you work on a disposal connected to a septic system in Aurora?",
           "a": "Yes, though we recommend using the disposal sparingly on septic systems. Ground food waste increases the solid load in the septic tank, requiring more frequent pumping. We can install a disposal and advise on usage practices that minimize the impact on your septic system."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides professional water heater installation to homeowners throughout Aurora — Illinois' second-largest city. From the historic east side neighborhoods to the rapidly growing communities along Eola Road and Route 59, we install tank and tankless water heaters with proper permitting, code-compliant connections, and old unit removal included in every job.",
+      "localInsights": "Aurora's housing stock spans over a century, which creates unique water heater challenges. East side homes built in the early 1900s often have tight mechanical rooms and older gas lines that require careful assessment before installation. The west side developments from the 2000s-2020s typically have 50-gallon units in dedicated utility rooms with modern venting. Aurora's hard water — sourced from deep wells on the west side and the Fox River on the east — accelerates sediment buildup in tank water heaters, shortening their effective lifespan compared to softer-water communities.",
+      "repairTips": "Aurora's well water on the west side is notably hard. If you're in a west-side neighborhood, consider a water softener to extend your water heater's life. Flush your tank twice a year rather than once to manage the heavier mineral load. Check the anode rod every 2-3 years — hard water corrodes it faster, and replacing a $30 rod can add years to your tank's life.",
+      "neighborhoodsCovered": [
+        "Downtown Aurora",
+        "East Aurora",
+        "West Aurora",
+        "Fox Valley",
+        "Eola Road Corridor",
+        "Orchard Valley",
+        "Wheatland Plains",
+        "Boulder Hill",
+        "Fox River Shores",
+        "Stonebridge"
+      ],
+      "whyChooseUs": "Aurora's mix of century-old homes and modern construction requires a technician who can handle both — from navigating tight basement installations in east-side bungalows to running new gas lines in west-side developments. Our team is familiar with Aurora's permit requirements and water quality issues, and we carry both standard and high-efficiency units for fast scheduling.",
+      "serviceAreaDesc": "We serve all of Aurora from the Fox River corridor on the east side to the Eola Road developments on the west. Our proximity via I-88 and Route 59 means Aurora installations are typically scheduled within 2-3 days.",
+      "faq": [
+        {
+          "q": "Does Aurora's hard water affect my water heater?",
+          "a": "Yes, significantly. Hard water accelerates sediment buildup inside the tank, reducing efficiency and shortening lifespan. We recommend flushing twice annually and checking the anode rod every 2-3 years for Aurora homes, especially on the west side."
+        },
+        {
+          "q": "How much does a water heater installation cost in Aurora?",
+          "a": "Standard 40-50 gallon tank installations in Aurora typically range from $1,200-$2,500 including the unit, labor, materials, and permit. Tankless installations range from $2,500-$4,500. We provide a detailed written quote before starting."
+        },
+        {
+          "q": "Do you serve both east and west Aurora?",
+          "a": "Yes. We install water heaters across all Aurora neighborhoods — from the historic east side to the newest west-side developments along Eola Road and Route 59."
         }
       ]
     }
@@ -843,6 +917,39 @@
           "a": "The cost depends on the unit you choose and whether the existing drain connections need modification. We provide a written estimate that covers the disposal, installation labor, and any plumbing adjustments — all itemized with no hidden fees."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for homeowners throughout Joliet and the surrounding Will County area. Whether you're in a Cathedral Area bungalow with a cramped basement or a newer west-side home with a dedicated utility room, our licensed technicians handle the entire process — from selecting the right unit to pulling permits, making all connections, and hauling away your old water heater.",
+      "localInsights": "Joliet homes in the older Cathedral Area and east side neighborhoods frequently have water heaters tucked into tight basement corners with limited clearance for modern venting requirements. When upgrading these homes, we often need to reconfigure venting to meet current building codes. The newer subdivisions west of Route 59, like Wesmere and Lakewood Falls, typically have builder-grade 40-gallon tanks that families outgrow once they add bathrooms or high-demand fixtures. Joliet's water supply from Lake Michigan via the DuPage Water Commission is relatively soft, which is easier on water heater tanks compared to well-water communities.",
+      "repairTips": "Even with Joliet's relatively soft municipal water, sediment accumulates over time. Flush your tank annually and listen for popping or rumbling sounds — these indicate hardened sediment at the bottom of the tank. If your water heater is over 10 years old and you notice any rust-colored water, schedule a replacement before the tank fails and floods your basement.",
+      "neighborhoodsCovered": [
+        "Cathedral Area",
+        "East Joliet",
+        "West Joliet",
+        "Lakewood Falls",
+        "Wesmere",
+        "Ingalls Park",
+        "Crystal Lawns",
+        "Pilcher Park Area",
+        "Crest Hill Adjacent"
+      ],
+      "whyChooseUs": "We understand Joliet's building code requirements and permit process, and we're experienced with the unique installation challenges in both the city's historic neighborhoods and modern developments. Every installation is permitted and inspected per Will County and City of Joliet requirements.",
+      "serviceAreaDesc": "Our water heater installation service covers all Joliet neighborhoods plus nearby Crest Hill and unincorporated Will County areas. We access Joliet easily via I-80 and I-355 from our Naperville base.",
+      "faq": [
+        {
+          "q": "Do you need a permit for water heater installation in Joliet?",
+          "a": "Yes. Joliet requires permits for water heater installations. We handle the permitting and ensure all work passes the required inspection."
+        },
+        {
+          "q": "Can you install a water heater in a tight Joliet basement?",
+          "a": "Absolutely. We regularly work in Joliet's older homes with compact basements. We assess clearances, venting options, and gas line routing during the on-site evaluation to ensure a safe, code-compliant installation."
+        },
+        {
+          "q": "How long does a water heater last in Joliet?",
+          "a": "With Joliet's relatively soft municipal water, tank water heaters typically last 10-12 years with proper maintenance. We recommend annual flushing and anode rod checks every 3-4 years to maximize lifespan."
+        }
+      ]
     }
   },
   "plainfield-il-appliance-repair": {
@@ -1125,6 +1232,34 @@
           "a": "Yes — some homes on the village's western and southern fringes have septic systems rather than municipal sewer. We can install a disposal in septic-connected homes, but we recommend limited use and more frequent septic tank pumping to manage the additional solid load."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation to Plainfield homeowners across the village's rapidly growing communities. From the established homes near downtown Plainfield to the newer developments in Grande Park, Clublands, and along 143rd Street, we install both tank and tankless water heaters with full permitting and code compliance.",
+      "localInsights": "Plainfield's explosive growth over the past two decades means most homes in the village are relatively new — but even 15-20 year old water heaters in communities like Grande Park and Clublands are now reaching replacement age. Many of these homes were built with builder-grade 40-gallon tanks that served small families but can't keep up as households grow. The village's water supply from the Illinois American Water system can vary in hardness depending on the specific source, making regular tank maintenance especially important.",
+      "repairTips": "Plainfield homeowners in newer subdivisions should check their water heater's age — if your home was built between 2003-2010, your original water heater is likely approaching or past its expected lifespan. Don't wait for a failure that could flood your basement. A proactive replacement gives you time to choose the right unit and schedule installation at your convenience.",
+      "neighborhoodsCovered": [
+        "Downtown Plainfield",
+        "Grande Park",
+        "Clublands",
+        "Whispering Hills",
+        "Lakewood Springs",
+        "Winding Creek",
+        "Plainfield Central Area",
+        "143rd Street Corridor"
+      ],
+      "whyChooseUs": "Plainfield's predominantly newer housing stock means most installations are straightforward tank-to-tank or tank-to-tankless upgrades in well-designed utility spaces. We're familiar with the common builder-grade units installed in Plainfield developments and carry the right replacement sizes for efficient scheduling.",
+      "serviceAreaDesc": "We cover all Plainfield neighborhoods including the downtown area, communities along Route 126, and the newer developments south and west of Route 59. Easy access via I-55 means most Plainfield installations are scheduled within 2-3 days.",
+      "faq": [
+        {
+          "q": "My Plainfield home is 15 years old. Should I replace the water heater proactively?",
+          "a": "If your home was built around 2008-2010 and still has the original water heater, it's approaching the end of its expected lifespan. A proactive replacement avoids the emergency and flood risk of a sudden tank failure."
+        },
+        {
+          "q": "Is tankless worth the investment for a Plainfield home?",
+          "a": "For Plainfield families who've added bathrooms or have multiple people showering back-to-back, tankless is often worth it. The higher upfront cost pays back through lower energy bills and unlimited hot water. We'll run the numbers during your consultation."
+        }
+      ]
     }
   },
   "lisle-il-appliance-repair": {
@@ -1391,6 +1526,33 @@
         {
           "q": "How long does a disposal replacement take in Lisle?",
           "a": "A standard swap takes about 45-60 minutes. If the drain connections need modification — common in Lisle's older homes — the job takes closer to 90 minutes. We'll give you a time estimate when we assess the installation."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for Lisle homeowners from the charming streets near downtown to the residential communities along Ogden Avenue and Route 53. Our licensed technicians handle every aspect of the installation — unit selection, old unit removal, gas or electric connections, venting, and permit coordination with the Village of Lisle.",
+      "localInsights": "Lisle's housing mix includes 1950s-1970s homes near downtown with original or first-replacement water heaters in tight basement installations, alongside newer townhome and condo developments near the Arboretum area. The older homes often require venting modifications to meet current codes when replacing a water heater, while the newer multi-unit buildings may have specific HOA requirements for equipment replacements.",
+      "repairTips": "If you live in an older Lisle home with a water heater installed before 2010, check whether your unit has a power vent or atmospheric vent. Current building codes in many cases require power venting for new installations in confined spaces. Planning ahead for this requirement avoids surprises on installation day.",
+      "neighborhoodsCovered": [
+        "Downtown Lisle",
+        "Four Lakes",
+        "Green Trails",
+        "Arboretum Area",
+        "Lisle Station Park",
+        "River Bend",
+        "Benedictine Area"
+      ],
+      "whyChooseUs": "Our proximity to Lisle — just minutes from our Naperville headquarters — means fast response and efficient scheduling. We're experienced with both the older homes near downtown Lisle and the newer developments, and we handle Lisle's permit requirements as part of every installation.",
+      "serviceAreaDesc": "We serve all Lisle neighborhoods from the Route 53 corridor to the Ogden Avenue area and all points between. Most Lisle installations are scheduled within 1-2 days.",
+      "faq": [
+        {
+          "q": "How fast can you install a water heater in Lisle?",
+          "a": "Given our proximity to Lisle, we can often schedule installations within 1-2 business days. Standard tank replacements take 2-4 hours."
+        },
+        {
+          "q": "Does Lisle require a permit for water heater installation?",
+          "a": "Yes. The Village of Lisle requires permits for water heater replacements. We handle the permitting as part of our service."
         }
       ]
     }
@@ -1661,6 +1823,28 @@
           "a": "With proper use, a quality disposal lasts 10-15 years. Many Darien homes have units well past that age. If your disposal grinds poorly, jams frequently, or leaks, it's likely time for replacement rather than continued repair."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation throughout Darien, from the established neighborhoods near Cass Avenue to the residential areas along 75th Street and Plainfield Road. We install tank and tankless water heaters with proper permitting, code-compliant connections, and full removal of your old unit.",
+      "localInsights": "Darien homes built primarily in the 1970s-1990s are entering the phase where second or third water heater replacements are needed. Many homeowners are taking this opportunity to upgrade from standard-efficiency 40-gallon tanks to high-efficiency models or tankless systems. The city's compact lot sizes and finished basements sometimes create tight installation spaces that require careful planning for proper clearances and venting.",
+      "repairTips": "Darien homeowners with water heaters over 8 years old should check the anode rod — these sacrificial rods protect the tank from corrosion and typically need replacement every 4-6 years. A $30-40 anode rod replacement can add 3-5 years to your water heater's life.",
+      "neighborhoodsCovered": [
+        "Darien Woodlands",
+        "Hinsbrook",
+        "Farmingdale Village",
+        "Darien Park District Area",
+        "Cass Avenue Corridor",
+        "75th Street Area"
+      ],
+      "whyChooseUs": "Close proximity means 15-minute response from our Naperville base. We're familiar with Darien's 1970s-1990s housing stock and the water heater installation challenges common in these homes, including tight mechanical spaces and older venting that may need updating.",
+      "serviceAreaDesc": "We serve all Darien neighborhoods including the Cass Avenue corridor, the communities near Darien Sportsplex, and all residential areas between 55th and 83rd Streets.",
+      "faq": [
+        {
+          "q": "My Darien home was built in the 1980s. What should I expect for installation?",
+          "a": "1980s Darien homes often have atmospheric-vent water heaters. Depending on the installation location and current codes, you may need a power-vent model for the replacement. We assess this during the on-site evaluation and include any needed upgrades in your quote."
+        }
+      ]
     }
   },
   "lombard-il-appliance-repair": {
@@ -1927,6 +2111,29 @@
         {
           "q": "How long does a disposal installation take in Lombard?",
           "a": "A standard swap takes about 45-60 minutes. If the drain connections need modification — common in Lombard's older homes — the job takes closer to 90 minutes. We'll give you a time estimate during the initial assessment."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs tank and tankless water heaters for homeowners throughout Lombard — from the historic homes near Lilacia Park to the residential neighborhoods along Roosevelt Road and St. Charles Road. Every installation includes old unit removal, proper gas or electric connections, code-compliant venting, and permit coordination.",
+      "localInsights": "Lombard has one of the most diverse housing stocks in DuPage County, with homes ranging from the 1920s near downtown to modern construction along the village's newer corridors. The older homes often have water heaters in tight, unfinished basements with limited clearance, while mid-century homes may have units in utility closets that restrict sizing options. Understanding Lombard's building code requirements — which follow DuPage County standards — is essential for a compliant installation.",
+      "repairTips": "If your Lombard home has a water heater in a finished basement, make sure you have a drain pan and water alarm installed. A leaking water heater can cause thousands of dollars in damage to finished basement flooring and drywall. These inexpensive safeguards are included with every Blue Jay installation.",
+      "neighborhoodsCovered": [
+        "Downtown Lombard",
+        "Lilacia Park Area",
+        "Lombard Commons",
+        "Roosevelt Road Corridor",
+        "Butterfield Area",
+        "Four Season",
+        "Lombard Terrace"
+      ],
+      "whyChooseUs": "We're experienced with Lombard's century of housing styles and the specific water heater challenges each era presents. From navigating tight 1920s basements to upgrading builder-grade units in modern homes, our technicians handle every scenario.",
+      "serviceAreaDesc": "We install water heaters across all Lombard neighborhoods including the downtown area, the residential streets surrounding Lilacia Park, and the communities along Roosevelt Road and Butterfield Road.",
+      "faq": [
+        {
+          "q": "Can you install a water heater in my older Lombard home's tight basement?",
+          "a": "Yes. We frequently work in Lombard's older homes with compact basements. We assess clearances, venting options, and access before quoting to ensure a safe, code-compliant installation."
         }
       ]
     }
@@ -2211,6 +2418,30 @@
           "a": "In small amounts only. Bulk coffee grounds accumulate in pipe bends and create persistent clogs — particularly problematic in Wheaton's older galvanized drain lines. Composting is a better option for coffee grounds."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides professional water heater installation to Wheaton homeowners throughout this historic DuPage County seat. Whether you're replacing a failing tank in a North Wheaton colonial or upgrading to tankless in a South Wheaton contemporary, our licensed technicians handle the full installation from start to finish.",
+      "localInsights": "Wheaton's tree-lined residential streets feature homes from every decade since the 1890s, creating a wide range of water heater installation scenarios. The historic homes near downtown and Wheaton College often have original or second-generation water heaters in tight basement spaces with atmospheric venting that may no longer meet current codes. The Arrowhead and Danada areas have larger homes from the 1970s-1990s that typically use 50-gallon tanks and may benefit from high-efficiency upgrades.",
+      "repairTips": "Wheaton homeowners in historic homes should be aware that replacing an atmospheric-vent water heater may require upgrading to a power-vent or direct-vent model to meet current building codes. This is a common and manageable upgrade — talk to us before your current unit fails so you can plan accordingly.",
+      "neighborhoodsCovered": [
+        "Downtown Wheaton",
+        "North Wheaton",
+        "South Wheaton",
+        "Arrowhead",
+        "Danada",
+        "Wheaton College Area",
+        "Briarcliffe",
+        "Country Knolls"
+      ],
+      "whyChooseUs": "Just 10 minutes from our Naperville base, Wheaton is one of our quickest-response areas. We understand the unique requirements of Wheaton's historic homes and modern developments alike, and we handle all permitting with the City of Wheaton.",
+      "serviceAreaDesc": "We serve every Wheaton neighborhood from the college area downtown to the residential communities along Roosevelt Road, Butterfield Road, and Geneva Road.",
+      "faq": [
+        {
+          "q": "Does Wheaton have specific water heater code requirements?",
+          "a": "Wheaton follows DuPage County building codes for water heater installations. Permits are required, and we handle the entire process including scheduling the required inspection."
+        }
+      ]
     }
   },
   "elmhurst-il-appliance-repair": {
@@ -2491,6 +2722,29 @@
         {
           "q": "What shouldn't go in a disposal with older Elmhurst drain pipes?",
           "a": "Fibrous foods (corn husks, artichoke leaves, celery) jam the impeller. Bones can crack the grinding ring. Starchy foods create paste that coats already-narrowed pipes. With Elmhurst's older drain systems, thorough grinding and 20 seconds of cold water after each use are essential."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters throughout Elmhurst — from the stately homes near downtown to the family neighborhoods along Spring Road and York Road. We handle tank and tankless installations with proper permitting through the City of Elmhurst, code-compliant connections, and complete removal of your old unit.",
+      "localInsights": "Elmhurst is known for its renovated older homes and new-construction teardowns, which creates interesting water heater scenarios. Many homeowners renovating 1920s-1950s homes are upgrading their water heating as part of the project, often switching to tankless to free up basement space. New construction homes typically require high-efficiency units to meet current energy codes. Elmhurst's municipal water supply is well-maintained but the older galvanized pipes still found in some homes can create sediment issues that affect water heater performance.",
+      "repairTips": "If your Elmhurst home has been renovated with a new kitchen, multiple bathrooms, or a high-flow rain shower, make sure your water heater can keep up with the increased demand. A unit that was adequate for the home's original configuration may be undersized after a remodel.",
+      "neighborhoodsCovered": [
+        "Downtown Elmhurst",
+        "Spring Road Area",
+        "York Road Corridor",
+        "Elmhurst College Area",
+        "Salt Creek Area",
+        "Emery Manor",
+        "Berteau Hills"
+      ],
+      "whyChooseUs": "Elmhurst's mix of renovated historic homes and new construction requires a team that's comfortable with both. We handle everything from tight basement installations in 1920s bungalows to precision work in brand-new custom homes.",
+      "serviceAreaDesc": "We cover all Elmhurst neighborhoods from the downtown area to the residential streets along North Avenue, Spring Road, and the Salt Creek corridor.",
+      "faq": [
+        {
+          "q": "I'm renovating my Elmhurst home. Should I upgrade the water heater?",
+          "a": "If you're adding bathrooms or upgrading fixtures, yes. A renovation is the ideal time to right-size your water heating. We can coordinate with your contractor to install during the construction phase."
         }
       ]
     }
@@ -2775,6 +3029,33 @@
           "a": "Yes, but sparingly. Disposals add solids to the septic tank that accelerate fill rates. Use the disposal for small amounts only and increase your septic pumping frequency. We can advise on appropriate usage during installation."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides premium water heater installation to Hinsdale homeowners. With the village's large homes, multiple bathrooms, and high hot water demands, choosing the right water heater — and installing it properly — is critical. We install both high-capacity tank and whole-house tankless systems, handling all permitting through the Village of Hinsdale.",
+      "localInsights": "Hinsdale's luxury homes often have 4-6 bathrooms, soaking tubs, multi-head shower systems, and dedicated laundry rooms that create hot water demands far exceeding what a standard 50-gallon tank can deliver. Many homeowners are installing multiple tankless units or high-capacity commercial-grade tanks to meet demand. The village's strict building codes and permitting process require experienced installers who understand Hinsdale's specific requirements.",
+      "repairTips": "Hinsdale homes with multiple bathrooms should consider a recirculation system alongside a new water heater — it eliminates the wait for hot water at distant fixtures and reduces water waste. We install these systems as an add-on during water heater installation.",
+      "neighborhoodsCovered": [
+        "Downtown Hinsdale",
+        "South Hinsdale",
+        "North Hinsdale",
+        "Woodlands",
+        "Oak Street Area",
+        "County Line Road",
+        "Madison School Area"
+      ],
+      "whyChooseUs": "Hinsdale's large homes and strict building codes require experienced technicians. We're familiar with the village's permitting process, and we regularly install high-capacity systems — including multi-unit tankless configurations — in Hinsdale's premium homes. Our work is clean, professional, and code-compliant.",
+      "serviceAreaDesc": "We serve all Hinsdale neighborhoods from downtown to the estates along County Line Road, Oak Street, and the Woodlands.",
+      "faq": [
+        {
+          "q": "What's the best water heater for a large Hinsdale home?",
+          "a": "For homes with 4+ bathrooms, we typically recommend either a high-capacity 75-gallon tank, dual 50-gallon tanks, or a whole-house tankless system. The right choice depends on your simultaneous demand — we assess this during the on-site consultation."
+        },
+        {
+          "q": "Does Hinsdale have strict permitting for water heaters?",
+          "a": "Yes. The Village of Hinsdale has a thorough permitting and inspection process. We handle all permits and ensure full compliance with village building codes."
+        }
+      ]
     }
   },
   "oak-brook-il-appliance-repair": {
@@ -3043,6 +3324,26 @@
           "a": "Yes, but sparingly. Some Oak Brook estate properties have septic systems. Disposals add solids that accelerate fill rates — limit usage to small amounts and increase pumping frequency. We can advise during installation."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation to Oak Brook homeowners and the community's distinctive residential properties. From the condominiums near Oak Brook Center to the estate homes along Spring Road, we install properly sized tank and tankless water heaters with full permitting and code compliance.",
+      "localInsights": "Oak Brook's residential properties tend to be larger and more demanding than average — many homes have multiple bathrooms, high-end fixtures, and dedicated utility rooms that require careful sizing of the replacement water heater. The village's relatively small residential footprint means permits are processed efficiently, and inspections are typically scheduled within a few days of completion.",
+      "repairTips": "Oak Brook homes with premium fixtures should ensure their water heater's recovery rate matches demand — a standard unit may refill too slowly for simultaneous use of multiple high-flow fixtures. Ask about high-recovery tank units or tankless systems during your consultation.",
+      "neighborhoodsCovered": [
+        "Oak Brook Residential",
+        "Spring Road Estates",
+        "Oak Brook Hills",
+        "Jorie Boulevard Area"
+      ],
+      "whyChooseUs": "Fast response from our nearby Naperville office, and experience with Oak Brook's premium homes that demand properly sized, high-performance water heating systems. We handle Oak Brook's permitting efficiently.",
+      "serviceAreaDesc": "We serve all residential areas in Oak Brook including the homes along Spring Road, the communities near York Road, and the neighborhoods surrounding the Oak Brook Park District.",
+      "faq": [
+        {
+          "q": "Can you install a tankless water heater in my Oak Brook home?",
+          "a": "Yes. Tankless is an excellent choice for Oak Brook's larger homes. We install Rinnai, Navien, and Noritz tankless units and handle all gas line and venting modifications needed for the conversion."
+        }
+      ]
     }
   },
   "woodridge-il-appliance-repair": {
@@ -3309,6 +3610,28 @@
         {
           "q": "What foods should I avoid putting in the disposal?",
           "a": "Avoid starchy foods like rice and pasta that expand and create dense clogs. Skip fibrous vegetables like celery and corn husks whose fibers wrap around the impeller. Never pour cooking grease down the disposal — it solidifies in drain lines."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for Woodridge homeowners across the village's diverse neighborhoods — from the Seven Bridges community to the established homes along Janes Avenue and 75th Street. Every installation includes unit selection guidance, old unit removal, proper connections, and permit coordination.",
+      "localInsights": "Woodridge homes span from the 1970s through the 2000s, which means many original water heaters have already been replaced once and second replacements are now coming due. The Seven Bridges community features larger homes with higher hot water demands, while the more established neighborhoods have standard 40-50 gallon installations. Woodridge's municipal water supply is generally moderate in hardness.",
+      "repairTips": "Woodridge homeowners replacing a water heater should consider upgrading to a high-efficiency model — modern units use 10-20% less energy than models from even 10 years ago. The higher upfront cost typically pays for itself within 3-4 years through lower utility bills.",
+      "neighborhoodsCovered": [
+        "Seven Bridges",
+        "Janes Avenue Area",
+        "Woodridge Centre",
+        "Falconridge",
+        "Edgewood",
+        "Woodridge Village Green"
+      ],
+      "whyChooseUs": "Quick access to Woodridge via I-355 from our Naperville base, and familiarity with the village's housing stock and permit requirements. We carry common tank sizes for fast scheduling.",
+      "serviceAreaDesc": "We cover all Woodridge neighborhoods from Seven Bridges to the 75th Street corridor and all residential areas in between.",
+      "faq": [
+        {
+          "q": "How long will a new water heater last in Woodridge?",
+          "a": "With proper maintenance, a tank water heater in Woodridge lasts 10-12 years and a tankless unit 15-20 years. We recommend annual flushing and anode rod checks every 3-4 years."
         }
       ]
     }
@@ -3593,6 +3916,28 @@
           "a": "Press the reset button on the bottom of the unit first. Then use the hex wrench to manually free the stuck flywheel by turning it from underneath. If neither works, the motor or grinding mechanism needs professional attention."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation throughout Glen Ellyn, serving homeowners from the village's historic downtown streets to the residential communities near Lake Ellyn and along Roosevelt Road. We install both tank and tankless systems with full permitting and code-compliant work.",
+      "localInsights": "Glen Ellyn's charming neighborhoods feature homes from every era, with a concentration of 1920s-1960s homes near downtown and the Lake Ellyn area. These older homes often have water heaters in tight basement installations with atmospheric venting that may need updating to power-vent models during replacement. The village's newer construction along the south end typically has modern utility rooms with better access and ventilation.",
+      "repairTips": "Glen Ellyn homeowners in pre-1960 homes should have their water heater's venting inspected during any replacement. Atmospheric venting standards have changed significantly, and a replacement may require upgrading to a power-vent or direct-vent model for code compliance.",
+      "neighborhoodsCovered": [
+        "Downtown Glen Ellyn",
+        "Lake Ellyn Area",
+        "Churchill",
+        "Stacy's Corners",
+        "Glen Briar",
+        "Briargate"
+      ],
+      "whyChooseUs": "15-minute drive from our Naperville headquarters to anywhere in Glen Ellyn. We're experienced with the village's historic homes and understand the venting and code requirements specific to older DuPage County construction.",
+      "serviceAreaDesc": "We serve all Glen Ellyn neighborhoods from the downtown area to the communities along Main Street, Roosevelt Road, and the Park Boulevard corridor.",
+      "faq": [
+        {
+          "q": "Do I need a power-vent water heater for my older Glen Ellyn home?",
+          "a": "Possibly. Many pre-1980 Glen Ellyn homes had atmospheric-vent water heaters. Current codes may require a power-vent or direct-vent replacement depending on the installation location. We assess this during the on-site evaluation."
+        }
+      ]
     }
   },
   "bolingbrook-il-appliance-repair": {
@@ -3833,6 +4178,29 @@
         {
           "q": "What foods should I avoid putting in my disposal?",
           "a": "Avoid starchy foods like rice and pasta that expand and create dense blockages. Skip fibrous vegetables like celery whose fibers wrap around the impeller. Never pour cooking grease down the disposal — it solidifies in drain lines, especially problematic in homes with older galvanized pipes."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for Bolingbrook homeowners throughout the village — from the original neighborhoods near Boughton Road to the newer developments along Route 53 and Weber Road. We handle tank and tankless installations with proper permitting and complete old unit removal.",
+      "localInsights": "Bolingbrook experienced major growth in the 1970s-2000s, and many homes from these eras are now on their second or third water heater. The village's older sections near the Old Town area and along Boughton Road typically have 40-gallon natural gas units in unfinished basements, while newer homes in the Route 53 corridor may have 50-gallon units or power-vent models. Bolingbrook's water supply comes from deep wells and Lake Michigan blended sources, with moderate hardness levels that warrant regular maintenance.",
+      "repairTips": "Bolingbrook homeowners with homes built between 1975-1995 should check their water heater's age annually. These homes are in the replacement window, and a proactive swap avoids the cost and disruption of a basement flood from a failed tank.",
+      "neighborhoodsCovered": [
+        "Old Town Bolingbrook",
+        "Boughton Road Area",
+        "Colonial Village",
+        "Winston Park",
+        "Concord Square",
+        "Lakewood Falls",
+        "Route 53 Corridor"
+      ],
+      "whyChooseUs": "Easy access via I-355 means fast response to all Bolingbrook neighborhoods. We're familiar with the village's housing eras and carry the right tank sizes for Bolingbrook's most common installations.",
+      "serviceAreaDesc": "We cover all of Bolingbrook from the Old Town area to the Weber Road corridor and the communities along Boughton Road and Route 53.",
+      "faq": [
+        {
+          "q": "My Bolingbrook home was built in the 1980s. Is it time for a new water heater?",
+          "a": "If your home still has the original or second water heater, it's very likely due for replacement. Most 1980s Bolingbrook homes had 40-gallon atmospheric-vent gas units with a 10-12 year lifespan."
         }
       ]
     }
@@ -4103,6 +4471,26 @@
           "a": "Press the reset button on the bottom of the unit. Then use the hex wrench (Allen key) to manually free the stuck flywheel by turning it from underneath. If neither works, the motor or grinding mechanism needs professional attention — don't force it."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation to Willowbrook residents, including single-family homes, townhomes, and condominiums throughout the village. We install properly sized tank and tankless units with code-compliant connections and handle all permitting through DuPage County.",
+      "localInsights": "Willowbrook's mix of single-family homes, townhomes, and condo complexes creates varied water heater requirements. Single-family homes typically use standard 40-50 gallon tank units, while townhomes and condos may have space constraints that favor compact or tankless models. HOA requirements in condo communities sometimes dictate specific equipment types.",
+      "repairTips": "Willowbrook condo and townhome owners should check with their HOA before scheduling a water heater replacement — some associations have specific requirements for equipment type, noise levels, or contractor insurance that need to be met.",
+      "neighborhoodsCovered": [
+        "Willowbrook Residential",
+        "Midwestern University Area",
+        "Route 83 Corridor",
+        "Kingery Highway Area"
+      ],
+      "whyChooseUs": "Just 15 minutes from our Naperville office, Willowbrook installations are scheduled quickly. We're experienced with both single-family homes and multi-unit buildings, and we carry common condo-sized units on our trucks.",
+      "serviceAreaDesc": "We serve all Willowbrook neighborhoods from the Route 83 corridor to the residential areas along Midwestern University and the Kingery Highway.",
+      "faq": [
+        {
+          "q": "Can you install a water heater in a Willowbrook condo?",
+          "a": "Yes. We work with condo associations regularly and carry compact units suitable for condo mechanical closets. We ensure our work meets HOA requirements and obtain any required association approvals."
+        }
+      ]
     }
   },
   "bloomingdale-il-appliance-repair": {
@@ -4369,6 +4757,28 @@
         {
           "q": "What foods should I avoid putting in my disposal?",
           "a": "Avoid fibrous foods like celery that wrap around the impeller, and starchy foods like rice and pasta that expand and create dense clogs. Never pour cooking grease down the disposal — it solidifies in drain lines, especially in homes with older galvanized pipes."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs tank and tankless water heaters for Bloomingdale homeowners throughout the village. From the established neighborhoods near Old Town to the communities along Lake Street and Army Trail Road, we handle every aspect of your water heater replacement including permitting, installation, and old unit disposal.",
+      "localInsights": "Bloomingdale homes from the 1970s-1990s make up the majority of the village's housing stock, and many are entering the water heater replacement cycle for the second or third time. These homes typically have natural gas water heaters in basement utility areas with adequate space for modern replacements. The village's location in the Indian Creek watershed means some areas experience harder water than others, which can affect tank longevity.",
+      "repairTips": "Bloomingdale homeowners should check their water heater's manufacture date on the label — if it's over 10 years old, start planning for replacement rather than waiting for a failure. The tank serial number often encodes the manufacture date.",
+      "neighborhoodsCovered": [
+        "Old Town Bloomingdale",
+        "Lake Street Area",
+        "Stratford Square Area",
+        "Bloomingdale Court",
+        "Indian Lakes",
+        "Medinah Area"
+      ],
+      "whyChooseUs": "We serve Bloomingdale efficiently from our Naperville base via Army Trail Road and I-355. Our team is experienced with the village's housing stock and handles DuPage County permitting for all installations.",
+      "serviceAreaDesc": "We cover all Bloomingdale neighborhoods from Old Town to the Stratford Square area, along Lake Street, and the residential communities near Medinah.",
+      "faq": [
+        {
+          "q": "How do I know my Bloomingdale water heater's age?",
+          "a": "Check the serial number on the rating plate — most manufacturers encode the manufacture date in the first few digits. We can help you decode it during a phone call or on-site visit."
         }
       ]
     }
@@ -4653,6 +5063,34 @@
           "a": "Running cold water for 20 seconds after grinding flushes waste completely through the drain lines. This is especially important in Downers Grove's older homes where corroded drain passages trap residue. Inadequate flushing is the most common cause of preventable disposal-related clogs."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation throughout Downers Grove — from the century-old homes near Main Street to the residential neighborhoods along Ogden Avenue, 63rd Street, and Belmont Road. We install both tank and tankless systems with full permitting through the Village of Downers Grove.",
+      "localInsights": "Downers Grove's extensive housing inventory ranges from 1890s Victorians near downtown to 2020s new construction, creating every possible water heater installation scenario. The village's older homes often have tight basement installations with outdated venting, while the 1950s-1970s ranch homes along the south end have more accessible utility areas. Downers Grove's municipal water from Lake Michigan is relatively soft, which helps extend water heater life compared to well-water communities.",
+      "repairTips": "Downers Grove homeowners in homes built before 1960 should budget for potential venting upgrades when replacing a water heater. Modern code requirements may not allow a direct swap of the old atmospheric-vent unit, and a power-vent or direct-vent model may be required.",
+      "neighborhoodsCovered": [
+        "Downtown Downers Grove",
+        "North Downers Grove",
+        "South Downers Grove",
+        "Denburn Woods",
+        "Prentiss Creek",
+        "Fairview Area",
+        "Belmont Road Corridor",
+        "Lemon Creek"
+      ],
+      "whyChooseUs": "Quick response to Downers Grove from our nearby Naperville base, and deep experience with the village's wide range of housing styles. We handle Downers Grove's permitting efficiently and ensure all work meets current code requirements.",
+      "serviceAreaDesc": "We serve every Downers Grove neighborhood from the Metra station area downtown to the residential communities along Ogden Avenue, 63rd Street, and Belmont Road.",
+      "faq": [
+        {
+          "q": "I have an old home in Downers Grove. Will water heater replacement be complicated?",
+          "a": "Not necessarily. Many older Downers Grove homes have straightforward installations, but some require venting upgrades. We assess everything during the on-site evaluation and include all needed work in your quote — no surprises."
+        },
+        {
+          "q": "Does Downers Grove require permits for water heater replacement?",
+          "a": "Yes. The Village of Downers Grove requires permits and inspections for water heater installations. We handle the entire process."
+        }
+      ]
     }
   },
   "lemont-il-appliance-repair": {
@@ -4919,6 +5357,28 @@
         {
           "q": "How long should I run water after using the disposal?",
           "a": "At least 20 seconds with cold water after grinding. This is especially important in Lemont's older homes where drain lines have less tolerance for residue than modern PVC installations."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for Lemont homeowners throughout this historic limestone community. From the charming homes near downtown Lemont to the newer developments along 127th Street and Archer Avenue, we provide complete water heater installation including unit selection, permitting, and old unit removal.",
+      "localInsights": "Lemont's historic downtown area features older homes where water heaters may be in stone-walled basements with unique installation challenges. The newer developments south of I-355 have modern utility rooms with better access. Lemont draws water from Lake Michigan via the Illinois American Water system, with moderate hardness that warrants regular tank maintenance.",
+      "repairTips": "Lemont homeowners in the historic district should ensure adequate ventilation around their water heater — the thick limestone walls of older Lemont homes can restrict airflow and affect combustion in gas water heaters. Proper venting is especially critical in these installations.",
+      "neighborhoodsCovered": [
+        "Downtown Lemont",
+        "Old Town",
+        "127th Street Area",
+        "Archer Avenue Corridor",
+        "Lemont Bluffs",
+        "Keepataw"
+      ],
+      "whyChooseUs": "We're experienced with Lemont's unique housing mix — from stone-foundation historic homes to modern construction. We handle permitting and code compliance for every installation.",
+      "serviceAreaDesc": "We serve all Lemont neighborhoods from the downtown historic area to the newer communities along 127th Street and the residential areas near I-355.",
+      "faq": [
+        {
+          "q": "Can you install a water heater in my older Lemont home's stone basement?",
+          "a": "Yes. We work in Lemont's historic homes regularly and understand the unique challenges of stone-foundation basements. We ensure proper clearances, venting, and code compliance in these installations."
         }
       ]
     }
@@ -5189,6 +5649,28 @@
           "a": "Standard replacement takes 1-2 hours. New installations where no disposal existed may take slightly longer depending on the plumbing and electrical work required."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation to Lockport homeowners throughout this growing Will County city. From the historic downtown near the Illinois & Michigan Canal to the expanding residential developments west of Route 7, we install tank and tankless water heaters with full permitting and code-compliant work.",
+      "localInsights": "Lockport's housing ranges from 19th-century homes near the canal to brand-new construction in the city's western expansion areas. The older homes often have compact mechanical spaces, while newer developments feature dedicated utility rooms. Lockport's water supply includes both well water and Lake Michigan blended sources, with hardness varying by neighborhood — making water heater maintenance frequency location-dependent.",
+      "repairTips": "Lockport homeowners on well-water service should flush their water heater every 6 months rather than annually — the higher mineral content accelerates sediment buildup and reduces efficiency more quickly than municipal water does.",
+      "neighborhoodsCovered": [
+        "Downtown Lockport",
+        "Old Lockport",
+        "West Lockport",
+        "Route 7 Corridor",
+        "Lockport Heights",
+        "Lockport Township"
+      ],
+      "whyChooseUs": "We access Lockport efficiently via I-355 from our Naperville base and understand both the city's historic homes and modern developments. We handle Will County permitting for all water heater installations.",
+      "serviceAreaDesc": "We serve all Lockport neighborhoods from the historic downtown to the western expansion areas along Route 7 and the residential communities near Homer Glen.",
+      "faq": [
+        {
+          "q": "Does Lockport water hardness affect my water heater?",
+          "a": "It depends on your area. Some Lockport neighborhoods have harder well-sourced water that accelerates sediment buildup. We recommend more frequent flushing for these areas."
+        }
+      ]
     }
   },
   "westmont-il-appliance-repair": {
@@ -5455,6 +5937,27 @@
         {
           "q": "How long does disposal installation take in Westmont?",
           "a": "Standard replacement takes 1-2 hours. In older Westmont homes where drain adapter work is needed, it may take slightly longer. We handle all plumbing and electrical connections."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services installs water heaters for Westmont homeowners throughout the village. Whether you're in a condo along Cass Avenue, a townhome near Oakwood, or a single-family home along 63rd Street, we handle complete water heater installation including permitting, connections, and old unit removal.",
+      "localInsights": "Westmont's compact geography includes a mix of single-family homes, townhomes, and condo complexes, each with different water heater needs. The village's residential areas are predominantly from the 1960s-1990s, putting many homes in the water heater replacement window. Condo and townhome installations in Westmont sometimes require compact or low-profile units to fit existing mechanical spaces.",
+      "repairTips": "Westmont condo owners should coordinate with their HOA before scheduling a water heater replacement. Some Westmont condo associations have specific requirements for equipment noise levels, venting configurations, or contractor insurance.",
+      "neighborhoodsCovered": [
+        "Westmont Centre",
+        "Cass Avenue Corridor",
+        "Oakwood Area",
+        "63rd Street Corridor",
+        "Pasquinelli Area"
+      ],
+      "whyChooseUs": "Typically 10-15 minutes from our Naperville office, Westmont is one of our quickest-response areas. We handle installations in houses, townhomes, and condos with equal expertise.",
+      "serviceAreaDesc": "We serve all Westmont neighborhoods from the Cass Avenue corridor to the 63rd Street area and all residential communities in between.",
+      "faq": [
+        {
+          "q": "Can you install a water heater in my Westmont condo?",
+          "a": "Yes. We regularly install water heaters in Westmont condos and townhomes, including compact and low-profile models that fit existing mechanical closets. We work with HOAs to meet any community requirements."
         }
       ]
     }
@@ -5725,6 +6228,28 @@
           "a": "Standard replacement takes 1-2 hours. Homer Glen's 2000s-era PVC drain configurations are generally straightforward. We handle all plumbing connections, electrical work, and testing in a single visit."
         }
       ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides water heater installation to Homer Glen homeowners throughout this established Will County community. From the homes along 159th Street to the residential neighborhoods near Homer Glen Park District facilities, we install tank and tankless systems with proper permitting and code-compliant connections.",
+      "localInsights": "Homer Glen's predominantly 2000s-era housing stock means many original builder-grade water heaters are now 15-20 years old and approaching or past their expected lifespan. These homes typically have 40-50 gallon natural gas tanks in dedicated utility rooms with good access for installation. Homer Glen's Will County location means permits are processed through the county building department, which we handle as part of every installation.",
+      "repairTips": "Homer Glen homeowners in 2003-2008 construction should proactively plan for water heater replacement — builder-grade units from this era are at the end of their useful life. A planned replacement avoids the emergency (and potential flooding) of a sudden tank failure.",
+      "neighborhoodsCovered": [
+        "Homer Glen Central",
+        "159th Street Area",
+        "Hadley Valley",
+        "Heritage Estates",
+        "Parker Road Area",
+        "Bell Road Corridor"
+      ],
+      "whyChooseUs": "We reach Homer Glen efficiently via I-355 and understand the community's predominantly newer housing stock. Most Homer Glen installations are straightforward tank-to-tank or tank-to-tankless upgrades in well-designed utility spaces.",
+      "serviceAreaDesc": "We serve all Homer Glen neighborhoods from the 159th Street corridor to the residential communities along Parker Road and Bell Road.",
+      "faq": [
+        {
+          "q": "My Homer Glen home is from 2005. Is the original water heater still good?",
+          "a": "A 2005 water heater is 20+ years old — well past the expected 10-12 year lifespan for tank units. Even if it's still running, efficiency has degraded significantly and failure risk is high. We strongly recommend proactive replacement."
+        }
+      ]
     }
   },
   "burr-ridge-il-appliance-repair": {
@@ -5991,6 +6516,32 @@
         {
           "q": "Does the disposal affect my dishwasher connection?",
           "a": "Yes — many dishwashers drain through the disposal. When we service or replace a disposal, we always verify and properly reconnect the dishwasher drain line. This connection is frequently overlooked by less experienced technicians."
+        }
+      ]
+    },
+    "water-heater-installation": {
+      "published": true,
+      "localParagraph": "Blue Jay Appliance Services provides premium water heater installation to Burr Ridge homeowners. With the village's large custom homes, multiple bathrooms, and high-end fixtures, proper water heater sizing and professional installation are essential. We install high-capacity tank systems, tankless units, and multi-unit configurations designed to meet the demands of Burr Ridge's luxury residences.",
+      "localInsights": "Burr Ridge homes are among the largest and most demanding in our service area. Many feature 5-7 bathrooms, oversized soaking tubs, multi-head shower systems, and dedicated laundry facilities that create hot water demands well beyond what a single standard tank can deliver. We frequently install dual-tank systems or whole-house tankless configurations in Burr Ridge to ensure no fixture ever runs cold, even during peak demand.",
+      "repairTips": "Burr Ridge homeowners with large homes should consider a hot water recirculation system during any water heater upgrade. Recirculation eliminates the long wait for hot water at distant fixtures — a common complaint in large homes — and reduces water waste.",
+      "neighborhoodsCovered": [
+        "Burr Ridge Central",
+        "Burr Ridge Club",
+        "Falling Water",
+        "Carriageway",
+        "County Line Road Estates",
+        "Burr Oaks"
+      ],
+      "whyChooseUs": "We specialize in the high-capacity installations that Burr Ridge homes require — including multi-unit tankless configurations, dual-tank systems, and premium brands like Rinnai, Navien, and Noritz. Our work is clean, professional, and fully code-compliant.",
+      "serviceAreaDesc": "We serve all Burr Ridge neighborhoods including the Burr Ridge Club, the estates along County Line Road, and all residential areas within the village.",
+      "faq": [
+        {
+          "q": "What water heater setup works best for large Burr Ridge homes?",
+          "a": "For homes with 5+ bathrooms, we typically recommend either dual 50-75 gallon tanks or a multi-unit tankless configuration. The right choice depends on your peak simultaneous demand — we assess this during the on-site consultation and design a system that ensures no fixture ever runs cold."
+        },
+        {
+          "q": "Do you install recirculation systems in Burr Ridge?",
+          "a": "Yes. Hot water recirculation is one of the most popular add-ons for Burr Ridge installations. It eliminates the wait for hot water at distant fixtures and reduces water waste."
         }
       ]
     }

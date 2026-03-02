@@ -74,6 +74,14 @@ function getServiceIssues(slug: string): Array<{ issue: string; description: str
       { issue: 'Slow Draining', description: 'Poor drainage through the disposal is usually caused by food buildup in the drain pipe, a partially clogged P-trap, or worn grinding components that can\'t break down food effectively.' },
       { issue: 'New Installation Needed', description: 'Whether you\'re replacing an old unit or installing a disposal for the first time, we handle the complete job — electrical connections, plumbing, mounting hardware, and testing.' },
     ],
+    'water-heater-installation': [
+      { issue: 'No Hot Water', description: 'A water heater that produces no hot water has likely reached the end of its lifespan if it\'s over 10 years old. Common end-of-life causes include a failed gas valve, burned-out electric elements, or a tank that can no longer maintain temperature. We\'ll assess whether repair or replacement is the right call.' },
+      { issue: 'Rusty or Discolored Water', description: 'Brown or rust-colored hot water usually means the anode rod has corroded through and the tank interior is rusting. Once the tank itself is corroding, replacement is the only real solution — patching a rusted tank is not viable long-term.' },
+      { issue: 'Leaking Tank', description: 'Water pooling around the base of a tank water heater typically indicates internal corrosion and tank failure. This is not repairable — the unit needs replacement. We remove the old tank and install a new one, usually the same day.' },
+      { issue: 'Insufficient Hot Water', description: 'If your household has outgrown your current water heater — longer showers, more people, a new dishwasher — upgrading to a larger tank or a tankless system can solve the problem permanently.' },
+      { issue: 'High Energy Bills', description: 'An aging water heater loses efficiency as sediment builds up and insulation degrades. Replacing a 12-year-old unit with a modern high-efficiency model can reduce water heating costs by 15–30%.' },
+      { issue: 'Strange Noises from Tank', description: 'Popping, rumbling, or banging noises from a water heater are caused by sediment hardening at the bottom of the tank. While flushing can sometimes help, persistent noises in an older unit usually mean it\'s time for replacement.' },
+    ],
   };
   return issues[slug] || [];
 }
@@ -87,6 +95,7 @@ function getServiceBrands(slug: string): string[] {
     'stove-and-oven-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
     'range-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
     'garbage-disposal-repair-and-installation': ['InSinkErator', 'Waste King', 'GE', 'KitchenAid', 'Moen', 'Whirlpool', 'Frigidaire', 'Kenmore'],
+    'water-heater-installation': ['Rheem', 'A.O. Smith', 'Bradford White', 'Rinnai', 'Navien', 'Noritz', 'State', 'Whirlpool', 'GE', 'Kenmore', 'Bosch', 'Takagi'],
   };
   return brands[slug] || [];
 }
@@ -141,6 +150,13 @@ function getServiceProcess(slug: string): Array<{ step: string; detail: string }
       { step: 'Repair or Replace Recommendation', detail: 'We give you an honest assessment — if the disposal can be repaired affordably, we\'ll quote it. If replacement makes more sense, we\'ll recommend the right size and model.' },
       { step: 'Same-Visit Resolution', detail: 'Whether it\'s clearing a jam, fixing a leak, or installing a brand-new unit with all plumbing and electrical connections — most disposal jobs are done in one visit.' },
       { step: 'Test & Warranty', detail: 'We run the disposal with water flowing to confirm smooth operation and no leaks. Repairs and new installations are covered by our 90-day warranty.' },
+    ],
+    'water-heater-installation': [
+      { step: 'Discuss Your Hot Water Needs', detail: 'Call (630) 998-0209 and tell us about your situation — tank leaking, no hot water, upgrading to tankless, or new construction. We\'ll help you choose the right unit for your household size and budget.' },
+      { step: 'On-Site Assessment', detail: 'Our technician evaluates your current setup — gas vs. electric, venting requirements, water line sizing, and available space — to confirm the right unit and identify any code requirements.' },
+      { step: 'Detailed Written Quote', detail: 'You receive a clear, itemized quote covering the water heater unit, all materials, labor, old unit removal, and any permit fees. No hidden costs — you approve everything before we start.' },
+      { step: 'Professional Installation', detail: 'We remove the old unit, install the new water heater with proper gas/electric connections, code-compliant venting, expansion tank if required, and new water supply lines as needed.' },
+      { step: 'Test, Verify & Warranty', detail: 'We fire up the unit, check for leaks at every connection, verify proper venting and temperature output, and walk you through the controls. Your installation is backed by our workmanship warranty plus the manufacturer\'s warranty on the unit.' },
     ],
   };
   return processes[slug] || [
@@ -202,6 +218,13 @@ function getServiceFAQs(slug: string): Array<{ question: string; answer: string 
       { question: 'How long does garbage disposal installation take?', answer: 'A standard replacement installation takes 1-2 hours. New installations (where no disposal existed) may take slightly longer depending on the plumbing and electrical work required.' },
       { question: 'What size garbage disposal do I need?', answer: 'For most households, a 1/2 HP to 3/4 HP disposal is sufficient. Larger families or heavy cooks may benefit from a 1 HP unit. We can recommend the right size based on your usage.' },
       { question: 'Can I put anything down a garbage disposal?', answer: 'Avoid fibrous foods (celery, artichokes), grease/oil, bones, pasta/rice (they expand), and non-food items. We\'ll share care tips during your service visit to help extend your disposal\'s life.' },
+    ],
+    'water-heater-installation': [
+      { question: 'How much does a new water heater installation cost?', answer: 'A standard 40- or 50-gallon tank water heater installation typically runs between $1,200 and $2,500 including the unit, labor, and materials. Tankless installations range from $2,500 to $4,500 depending on the model and whether gas line or venting modifications are needed. We provide a detailed written quote before any work begins.' },
+      { question: 'Should I get a tank or tankless water heater?', answer: 'Tank units cost less upfront and work well for most households. Tankless units cost more initially but provide unlimited hot water and use 20-30% less energy. The best choice depends on your household size, hot water usage patterns, and budget. We\'ll walk you through both options honestly.' },
+      { question: 'How long does water heater installation take?', answer: 'A standard tank-to-tank replacement takes 2-4 hours. Switching from tank to tankless may take a full day because it often requires gas line resizing, new venting, and electrical work. We\'ll give you a realistic timeline during your quote.' },
+      { question: 'Do you remove and dispose of the old water heater?', answer: 'Yes. Removal and disposal of your old unit is included in every installation. We drain the tank, disconnect it safely, and haul it away so you don\'t have to deal with it.' },
+      { question: 'Do I need a permit for water heater installation?', answer: 'Most municipalities in DuPage and Will counties require a permit for water heater installation. We handle the permitting process as part of our service and ensure all work passes inspection.' },
     ],
   };
   return faqs[slug] || [];
@@ -337,6 +360,7 @@ export default async function ServicePage({ params }: PageProps) {
                       'stove-and-oven-repair': 'Gas and electric stoves and ovens each have their own common failure points. Here are the issues our gas-certified technicians handle routinely:',
                       'range-repair': 'Ranges combine cooktop and oven systems, doubling the potential failure points. Here are the problems our technicians diagnose and repair most often:',
                       'garbage-disposal-repair-and-installation': 'Garbage disposals are simple but critical kitchen components. When they fail, here are the issues we see and resolve:',
+                      'water-heater-installation': 'Water heaters give warning signs before they fail completely. Here are the most common reasons homeowners call us for a new installation:',
                     }[service.slug] || `Here are the most common ${service.shortTitle.toLowerCase()} problems we diagnose and repair:`}
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -368,6 +392,7 @@ export default async function ServicePage({ params }: PageProps) {
                     'stove-and-oven-repair': 'We take extra care with stove and oven repairs because gas safety is paramount. Here\'s our process:',
                     'range-repair': 'Range repairs require attention to both the cooktop and oven systems. Here\'s how we approach every range service call:',
                     'garbage-disposal-repair-and-installation': 'Whether it\'s a quick repair or a full replacement, here\'s what our disposal service looks like:',
+                    'water-heater-installation': 'From your first call to hot water flowing, here\'s how our water heater installation process works:',
                   }[service.slug] || 'Here\'s how our repair process works from start to finish:'}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -404,6 +429,7 @@ export default async function ServicePage({ params }: PageProps) {
                       'stove-and-oven-repair': 'We repair gas and electric stoves and ovens across the full spectrum of brands, from standard to professional-grade:',
                       'range-repair': 'Freestanding, slide-in, drop-in, pro-style — we service ranges from every major manufacturer in every configuration:',
                       'garbage-disposal-repair-and-installation': 'We repair and install units from every major disposal manufacturer, and carry InSinkErator and Waste King for same-day replacement:',
+                      'water-heater-installation': 'We install tank and tankless water heaters from every major manufacturer — and can recommend the best brand for your budget and hot water needs:',
                     }[service.slug] || `We service ${service.shortTitle.toLowerCase()} from all major manufacturers:`}
                   </p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
@@ -430,6 +456,7 @@ export default async function ServicePage({ params }: PageProps) {
                     'stove-and-oven-repair': `Our gas-certified technicians provide stove and oven repair throughout ${biz.serviceAreaName}. Find service in your city:`,
                     'range-repair': `From slide-in ranges to pro-style units, we service every type across ${biz.serviceAreaName}. Find range repair near you:`,
                     'garbage-disposal-repair-and-installation': `Same-day disposal repair and new installations available across ${biz.serviceAreaName}. Select your city:`,
+                    'water-heater-installation': `Professional water heater installation across ${biz.serviceAreaName}. Find service in your city:`,
                   }[service.slug] || `We provide professional ${service.shortTitle.toLowerCase()} throughout ${biz.serviceAreaName}:`}
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px' }}>
@@ -443,7 +470,7 @@ export default async function ServicePage({ params }: PageProps) {
                       <svg width="14" height="14" fill="#1565C0" viewBox="0 0 24 24" style={{ flexShrink: 0 }}>
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                       </svg>
-                      {service.shortTitle} in {loc.name}
+                      {loc.name}, IL
                     </Link>
                   ))}
                 </div>
@@ -463,6 +490,7 @@ export default async function ServicePage({ params }: PageProps) {
                     'stove-and-oven-repair': `Kitchen appliances take a beating. If your stove or oven needs repair, we can inspect and service your other appliances too:`,
                     'range-repair': `If your range needs attention, we can check on your other kitchen appliances during the same visit. We repair them all:`,
                     'garbage-disposal-repair-and-installation': `While we're under your sink, we can also take a look at your dishwasher or any other appliance that needs attention:`,
+                    'water-heater-installation': `While we're at your home for a water heater installation, ask about our other appliance services — we handle everything in the kitchen and laundry room:`,
                   }[service.slug] || `${biz.shortName} provides comprehensive appliance repair beyond just ${service.title.toLowerCase()}:`}
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px' }}>

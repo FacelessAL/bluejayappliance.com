@@ -190,6 +190,91 @@ export default function ApplianceRentalPage() {
         </div>
       </section>
 
+      {/* Renting vs. Owning */}
+      <section style={{ backgroundColor: '#f8fafc', padding: '80px 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '32px', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center', marginBottom: '8px', color: '#0F1B2D' }}>
+            Renting vs. Buying: Why Renting Makes Sense
+          </h2>
+          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', textAlign: 'center', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px' }}>
+            Not everyone needs to own their appliances. Here&apos;s why renting could be the smarter financial move for your situation.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', maxWidth: '960px', margin: '0 auto' }}>
+            <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '32px', border: '1px solid #e2e8f0' }}>
+              <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '20px', fontWeight: 700, color: '#0F1B2D', marginBottom: '16px' }}>
+                The Cost of Buying
+              </h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {[
+                  'A new washer costs $500\u2013$1,200 upfront',
+                  'A dryer adds another $400\u2013$1,000',
+                  'Delivery and installation fees: $100\u2013$200',
+                  'Repairs after warranty expires are on you',
+                  'Average appliance lifespan: 8\u201312 years',
+                  'Total 10-year cost: $1,500\u2013$3,000+',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontFamily: 'var(--font-poppins)', fontSize: '14px', color: '#4b5563', lineHeight: '1.5' }}>
+                    <span style={{ color: '#ef4444', fontWeight: 700, fontSize: '16px', flexShrink: 0 }}>&#10005;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', padding: '32px', border: '2px solid #1565C0', boxShadow: '0 4px 16px rgba(21,101,192,0.1)' }}>
+              <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '20px', fontWeight: 700, color: '#1565C0', marginBottom: '16px' }}>
+                The Rental Advantage
+              </h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {[
+                  'As low as $35/month \u2014 no upfront cost',
+                  'Free delivery and professional installation',
+                  'All maintenance and repairs included',
+                  'Upgrade or swap anytime as needs change',
+                  'No long-term commitment required',
+                  'Predictable monthly expense \u2014 no surprises',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontFamily: 'var(--font-poppins)', fontSize: '14px', color: '#4b5563', lineHeight: '1.5' }}>
+                    <span style={{ color: '#16a34a', fontWeight: 700, fontSize: '16px', flexShrink: 0 }}>&#10003;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who It's For */}
+      <section style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 2rem' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center', marginBottom: '8px', color: '#0F1B2D' }}>
+            Who Is Appliance Rental For?
+          </h2>
+          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', textAlign: 'center', marginBottom: '40px', maxWidth: '680px', margin: '0 auto 40px' }}>
+            Our rental program is designed for real situations where buying doesn&apos;t make sense.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+            {[
+              { title: 'Renters & Tenants', desc: 'Your landlord won\'t replace the broken washer? Rent one from us. When your lease ends, we pick it up \u2014 no appliance to move or sell.' },
+              { title: 'Tight Budget, Immediate Need', desc: 'When your washer dies and you can\'t afford $800 for a new one, $35/month gets you a working machine this week with zero upfront cost.' },
+              { title: 'Temporary Living Situations', desc: 'Relocating for work, renovating your home, or between permanent housing? Rent appliances for exactly as long as you need them.' },
+              { title: 'Landlords & Property Managers', desc: 'Keep rental units move-in ready without buying appliances that tenants abuse. We handle maintenance, you keep tenants happy.' },
+              { title: 'First-Time Apartments', desc: 'Moving into your first unfurnished apartment? Renting appliances lets you get settled without draining your savings on day one.' },
+              { title: 'Seniors on Fixed Income', desc: 'A predictable $35\u2013$60 monthly expense is easier to budget than a surprise $1,000 appliance purchase. Maintenance is always included.' },
+            ].map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8fafc', borderRadius: '10px', padding: '24px', border: '1px solid #e5e7eb' }}>
+                <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#0F1B2D', marginBottom: '8px' }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '14px', color: '#4b5563', lineHeight: '1.6', margin: 0 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section style={{ backgroundColor: '#0F1B2D', color: '#ffffff', padding: '60px 0' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
@@ -214,6 +299,35 @@ export default function ApplianceRentalPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section style={{ backgroundColor: '#f8fafc', padding: '80px 0' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center', marginBottom: '40px', color: '#0F1B2D' }}>
+            Rental FAQ
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {[
+              { q: 'Is there a minimum rental period?', a: 'No long-term contracts required. We offer flexible month-to-month rental terms. Most customers rent for 6\u201324 months, but you can return the appliance anytime with 30 days notice.' },
+              { q: 'What happens if the appliance breaks down?', a: 'We fix it at no cost to you \u2014 that\'s the whole point. Call us and we\'ll send a technician to repair or replace the unit, typically within 24\u201348 hours.' },
+              { q: 'Are these used or new appliances?', a: 'We rent professionally refurbished appliances that have been thoroughly inspected, cleaned, and tested by our own technicians. Every unit is guaranteed to perform like new.' },
+              { q: 'Do you deliver and install for free?', a: 'Yes. Free delivery, installation, and hookup are included in every rental package. We also remove the unit for free when you\'re done renting.' },
+              { q: 'Can I rent if I have bad credit?', a: 'We keep the approval process simple. We work with customers on a case-by-case basis because we believe everyone deserves access to working appliances regardless of credit history.' },
+              { q: 'What areas do you deliver to?', a: `We deliver throughout ${biz.serviceAreaName} including Naperville, Aurora, Joliet, Plainfield, Bolingbrook, Downers Grove, Wheaton, and all surrounding communities.` },
+            ].map((faq, i) => (
+              <details key={i} style={{ backgroundColor: '#ffffff', borderRadius: '8px', border: '1px solid #e5e7eb', overflow: 'hidden' }}>
+                <summary className="font-[family-name:var(--font-figtree)]" style={{ padding: '18px 24px', fontSize: '16px', fontWeight: 700, color: '#0F1B2D', cursor: 'pointer', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  {faq.q}
+                  <span style={{ color: '#1565C0', fontSize: '20px', fontWeight: 700, marginLeft: '16px', flexShrink: 0 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 24px 18px', color: '#4b5563', fontSize: '14px', lineHeight: '1.7', fontFamily: 'var(--font-poppins)' }}>
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 2rem', textAlign: 'center' }}>
@@ -221,7 +335,7 @@ export default function ApplianceRentalPage() {
             Ready to Get Started?
           </h2>
           <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', marginBottom: '32px', lineHeight: '1.7' }}>
-            Give us a call to discuss your rental needs. We&apos;ll help you pick the right package and schedule a convenient delivery time.
+            Give us a call to discuss your rental needs. We&apos;ll help you pick the right package and schedule a convenient delivery time. No credit hassles, no hidden fees, no surprises.
           </p>
           <Link
             href={`tel:${biz.phoneRaw}`}

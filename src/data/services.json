@@ -152,5 +152,27 @@
     ],
     "schemaType": "Service",
     "schemaServiceType": "Garbage Disposal Repair & Installation"
+  },
+  {
+    "slug": "water-heater-installation",
+    "title": "Water Heater Installation",
+    "shortTitle": "Water Heater Installation",
+    "image": "/images/services/water-heater-installation.webp",
+    "metaTitle": "Water Heater Installation | Tank & Tankless | Blue Jay Appliance",
+    "metaDescription": "Professional water heater installation — tank, tankless, gas, and electric. Licensed technicians, permit-ready work, same-week scheduling. Call (630) 998-0209.",
+    "heroHeading": "Water Heater Installation",
+    "heroSubheading": "Need a new water heater? We install standard tank and tankless models — gas and electric — with proper permitting, code-compliant connections, and old unit removal included.",
+    "contentSections": [
+      {
+        "heading": "Tank & Tankless Water Heater Installation Done Right",
+        "body": "Whether you're replacing a failing 40-gallon tank unit or upgrading to an energy-efficient tankless system, Blue Jay Appliance Services handles the entire installation from start to finish. We remove your old water heater, install the new unit with proper gas or electrical connections, ensure code-compliant venting, and test everything before we leave. Our technicians are licensed for both gas and electric water heater work and familiar with local building codes throughout DuPage and Will counties."
+      },
+      {
+        "heading": "Helping You Choose the Right Water Heater",
+        "body": "The right water heater depends on your household size, hot water demand, fuel type, and budget. A standard 40- or 50-gallon tank unit is the most affordable upfront and works well for most families. Tankless models cost more initially but provide endless hot water on demand and can reduce energy bills by 20–30% over time. We walk you through the options honestly — including brand recommendations, energy ratings, and realistic payback periods — so you make the decision that fits your home and budget."
+      }
+    ],
+    "schemaType": "Service",
+    "schemaServiceType": "Water Heater Installation"
   }
 ]
