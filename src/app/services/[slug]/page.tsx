@@ -78,7 +78,7 @@ function getServiceIssues(slug: string): Array<{ issue: string; description: str
       { issue: 'No Hot Water', description: 'A water heater that produces no hot water has likely reached the end of its lifespan if it\'s over 10 years old. Common end-of-life causes include a failed gas valve, burned-out electric elements, or a tank that can no longer maintain temperature. We\'ll assess whether repair or replacement is the right call.' },
       { issue: 'Rusty or Discolored Water', description: 'Brown or rust-colored hot water usually means the anode rod has corroded through and the tank interior is rusting. Once the tank itself is corroding, replacement is the only real solution — patching a rusted tank is not viable long-term.' },
       { issue: 'Leaking Tank', description: 'Water pooling around the base of a tank water heater typically indicates internal corrosion and tank failure. This is not repairable — the unit needs replacement. We remove the old tank and install a new one, usually the same day.' },
-      { issue: 'Insufficient Hot Water', description: 'If your household has outgrown your current water heater — longer showers, more people, a new dishwasher — upgrading to a larger tank or a tankless system can solve the problem permanently.' },
+      { issue: 'Insufficient Hot Water', description: 'If your household has outgrown your current water heater — longer showers, more people, a new dishwasher — upgrading to a larger 50- or 75-gallon tank or adding a second unit can solve the problem permanently.' },
       { issue: 'High Energy Bills', description: 'An aging water heater loses efficiency as sediment builds up and insulation degrades. Replacing a 12-year-old unit with a modern high-efficiency model can reduce water heating costs by 15–30%.' },
       { issue: 'Strange Noises from Tank', description: 'Popping, rumbling, or banging noises from a water heater are caused by sediment hardening at the bottom of the tank. While flushing can sometimes help, persistent noises in an older unit usually mean it\'s time for replacement.' },
     ],
@@ -95,7 +95,7 @@ function getServiceBrands(slug: string): string[] {
     'stove-and-oven-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
     'range-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
     'garbage-disposal-repair-and-installation': ['InSinkErator', 'Waste King', 'GE', 'KitchenAid', 'Moen', 'Whirlpool', 'Frigidaire', 'Kenmore'],
-    'water-heater-installation': ['Rheem', 'A.O. Smith', 'Bradford White', 'Rinnai', 'Navien', 'Noritz', 'State', 'Whirlpool', 'GE', 'Kenmore', 'Bosch', 'Takagi'],
+    'water-heater-installation': ['Rheem', 'A.O. Smith', 'Bradford White', 'State', 'Whirlpool', 'GE', 'Kenmore', 'Ruud', 'American Standard', 'Reliance'],
   };
   return brands[slug] || [];
 }
@@ -152,7 +152,7 @@ function getServiceProcess(slug: string): Array<{ step: string; detail: string }
       { step: 'Test & Warranty', detail: 'We run the disposal with water flowing to confirm smooth operation and no leaks. Repairs and new installations are covered by our 90-day warranty.' },
     ],
     'water-heater-installation': [
-      { step: 'Discuss Your Hot Water Needs', detail: 'Call (630) 998-0209 and tell us about your situation — tank leaking, no hot water, upgrading to tankless, or new construction. We\'ll help you choose the right unit for your household size and budget.' },
+      { step: 'Discuss Your Hot Water Needs', detail: 'Call (630) 998-0209 and tell us about your situation — tank leaking, no hot water, need a bigger unit, or new construction. We\'ll help you choose the right unit for your household size and budget.' },
       { step: 'On-Site Assessment', detail: 'Our technician evaluates your current setup — gas vs. electric, venting requirements, water line sizing, and available space — to confirm the right unit and identify any code requirements.' },
       { step: 'Detailed Written Quote', detail: 'You receive a clear, itemized quote covering the water heater unit, all materials, labor, old unit removal, and any permit fees. No hidden costs — you approve everything before we start.' },
       { step: 'Professional Installation', detail: 'We remove the old unit, install the new water heater with proper gas/electric connections, code-compliant venting, expansion tank if required, and new water supply lines as needed.' },
@@ -220,9 +220,9 @@ function getServiceFAQs(slug: string): Array<{ question: string; answer: string 
       { question: 'Can I put anything down a garbage disposal?', answer: 'Avoid fibrous foods (celery, artichokes), grease/oil, bones, pasta/rice (they expand), and non-food items. We\'ll share care tips during your service visit to help extend your disposal\'s life.' },
     ],
     'water-heater-installation': [
-      { question: 'How much does a new water heater installation cost?', answer: 'A standard 40- or 50-gallon tank water heater installation typically runs between $1,200 and $2,500 including the unit, labor, and materials. Tankless installations range from $2,500 to $4,500 depending on the model and whether gas line or venting modifications are needed. We provide a detailed written quote before any work begins.' },
-      { question: 'Should I get a tank or tankless water heater?', answer: 'Tank units cost less upfront and work well for most households. Tankless units cost more initially but provide unlimited hot water and use 20-30% less energy. The best choice depends on your household size, hot water usage patterns, and budget. We\'ll walk you through both options honestly.' },
-      { question: 'How long does water heater installation take?', answer: 'A standard tank-to-tank replacement takes 2-4 hours. Switching from tank to tankless may take a full day because it often requires gas line resizing, new venting, and electrical work. We\'ll give you a realistic timeline during your quote.' },
+      { question: 'How much does a new water heater installation cost?', answer: 'A standard 40- or 50-gallon tank water heater installation typically runs between $1,200 and $2,500 including the unit, labor, and materials. Larger 75-gallon units or dual-tank setups may cost more. We provide a detailed written quote before any work begins.' },
+      { question: 'What size water heater do I need?', answer: 'A 40-gallon tank works well for 1-3 person households. Families of 4 or more typically need a 50-gallon unit. Larger homes with multiple bathrooms may benefit from a 75-gallon tank or a dual-tank configuration. We assess your specific needs during the on-site visit.' },
+      { question: 'How long does water heater installation take?', answer: 'A standard tank-to-tank replacement takes 2-4 hours including draining and removing the old unit, installing the new one, making all connections, and testing. We\'ll give you a realistic timeline during your quote.' },
       { question: 'Do you remove and dispose of the old water heater?', answer: 'Yes. Removal and disposal of your old unit is included in every installation. We drain the tank, disconnect it safely, and haul it away so you don\'t have to deal with it.' },
       { question: 'Do I need a permit for water heater installation?', answer: 'Most municipalities in DuPage and Will counties require a permit for water heater installation. We handle the permitting process as part of our service and ensure all work passes inspection.' },
     ],
@@ -429,7 +429,7 @@ export default async function ServicePage({ params }: PageProps) {
                       'stove-and-oven-repair': 'We repair gas and electric stoves and ovens across the full spectrum of brands, from standard to professional-grade:',
                       'range-repair': 'Freestanding, slide-in, drop-in, pro-style — we service ranges from every major manufacturer in every configuration:',
                       'garbage-disposal-repair-and-installation': 'We repair and install units from every major disposal manufacturer, and carry InSinkErator and Waste King for same-day replacement:',
-                      'water-heater-installation': 'We install tank and tankless water heaters from every major manufacturer — and can recommend the best brand for your budget and hot water needs:',
+                      'water-heater-installation': 'We install gas and electric tank water heaters from every major manufacturer — and can recommend the best brand for your budget and hot water needs:',
                     }[service.slug] || `We service ${service.shortTitle.toLowerCase()} from all major manufacturers:`}
                   </p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
