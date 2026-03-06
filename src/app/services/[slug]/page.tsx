@@ -50,7 +50,7 @@ function getServiceIssues(slug: string): Array<{ issue: string; description: str
       { issue: 'Strange Noises', description: 'Buzzing, clicking, or rattling sounds may indicate a failing compressor, loose condenser fan, defective evaporator fan motor, or expansion/contraction of internal components.' },
       { issue: 'Frost Buildup', description: 'Excessive frost on the back wall or around the freezer is usually a defrost system problem — the heater, thermostat, or timer may have failed, preventing the automatic defrost cycle.' },
     ],
-    'stove-and-oven-repair': [
+    'range-and-oven-repair': [
       { issue: 'Oven Not Heating', description: 'An oven that won\'t reach temperature typically has a burned-out bake or broil element (electric), a faulty gas igniter (gas), a defective oven sensor, or a malfunctioning control board.' },
       { issue: 'Burners Not Igniting', description: 'Gas burners that click but won\'t light or produce a weak flame usually need igniter replacement, gas valve repair, or cleaning of clogged burner ports. We also check gas line connections.' },
       { issue: 'Uneven Heating', description: 'Hot spots or inconsistent baking results often point to a failing oven sensor, malfunctioning convection fan, worn door gasket allowing heat escape, or calibration issues.' },
@@ -58,7 +58,7 @@ function getServiceIssues(slug: string): Array<{ issue: string; description: str
       { issue: 'Self-Clean Issues', description: 'If the self-clean cycle won\'t start or complete, the cause may be a defective door lock mechanism, failed thermal fuse, or control board malfunction. We repair all self-cleaning system components.' },
       { issue: 'Control Panel Problems', description: 'Unresponsive buttons, flickering displays, or erratic oven behavior often indicate a failing control board, loose wiring, or damaged membrane switch. We replace and reprogram as needed.' },
     ],
-    'range-repair': [
+    'cooktop-repair': [
       { issue: 'Burners Not Working', description: 'Whether gas or electric, non-functioning burners can be caused by faulty igniters, bad infinite switches, damaged coil elements, or wiring issues. We repair both gas and electric range burners.' },
       { issue: 'Temperature Inaccuracy', description: 'If your range oven runs too hot or too cold, the issue is often a failing oven sensor, miscalibrated thermostat, or control board problem. We recalibrate or replace the affected components.' },
       { issue: 'Gas Ignition Problems', description: 'Repeated clicking, delayed ignition, or gas smell without a flame are serious issues requiring immediate attention. We inspect and repair gas igniters, safety valves, and spark modules.' },
@@ -92,8 +92,8 @@ function getServiceBrands(slug: string): string[] {
     'dryer-repair': ['Whirlpool', 'Maytag', 'Samsung', 'LG', 'GE', 'Kenmore', 'Frigidaire', 'Amana', 'Speed Queen', 'Bosch', 'Electrolux'],
     'washer-repair': ['Whirlpool', 'Maytag', 'Samsung', 'LG', 'GE', 'Kenmore', 'Frigidaire', 'Speed Queen', 'Amana', 'Bosch', 'Electrolux'],
     'refrigerator-and-freezer-repair': ['Whirlpool', 'GE', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Kenmore', 'Maytag', 'Sub-Zero', 'Viking', 'Thermador', 'Amana'],
-    'stove-and-oven-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
-    'range-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
+    'range-and-oven-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
+    'cooktop-repair': ['GE', 'Whirlpool', 'Samsung', 'LG', 'Frigidaire', 'KitchenAid', 'Maytag', 'Bosch', 'Viking', 'Wolf', 'Thermador', 'Kenmore'],
     'garbage-disposal-repair-and-installation': ['InSinkErator', 'Waste King', 'GE', 'KitchenAid', 'Moen', 'Whirlpool', 'Frigidaire', 'Kenmore'],
     'water-heater-installation': ['Rheem', 'A.O. Smith', 'Bradford White', 'State', 'Whirlpool', 'GE', 'Kenmore', 'Ruud', 'American Standard', 'Reliance'],
   };
@@ -130,19 +130,19 @@ function getServiceProcess(slug: string): Array<{ step: string; detail: string }
       { step: 'Restore Cooling', detail: 'From relay swaps and fan motor replacements to defrost system repairs, most refrigerator fixes are completed the same day.' },
       { step: 'Confirm Temps & Warranty', detail: 'We verify the unit reaches proper temperature and all systems function correctly. Your repair is covered by our 90-day parts and labor warranty.' },
     ],
-    'stove-and-oven-repair': [
+    'range-and-oven-repair': [
       { step: 'Describe the Cooking Issue', detail: 'Call (630) 998-0209 and tell us what\'s happening — burners won\'t light, oven not heating, temperature swings, or error codes. Same or next-day appointments available.' },
       { step: 'Gas & Electrical Safety Check', detail: 'Our gas-certified technician checks ignition systems, gas connections, heating elements, oven sensors, and control boards while verifying safe operation throughout.' },
       { step: 'Get Your Written Estimate', detail: 'We present a clear estimate covering the specific repair — igniter replacement, element swap, sensor calibration, or control board fix — before any work starts.' },
       { step: 'Complete the Repair Safely', detail: 'We perform the repair, verify all gas connections are tight and leak-free (gas models), and test element continuity on electric models.' },
       { step: 'Verify Temperatures & Warranty', detail: 'We test burner ignition, oven temperature accuracy, and overall safe operation. Every repair is backed by our 90-day warranty on parts and labor.' },
     ],
-    'range-repair': [
+    'cooktop-repair': [
       { step: 'Explain the Range Problem', detail: 'Call (630) 998-0209 with details on your range issue — cooktop or oven side, gas or electric, and the specific symptoms. We\'ll schedule a convenient appointment.' },
       { step: 'Dual-System Inspection', detail: 'Since ranges combine a cooktop and oven, our tech inspects both systems independently — testing burners, igniters, elements, sensors, gas valves, and the control board.' },
       { step: 'Approve the Itemized Estimate', detail: 'We explain which component failed and provide a written estimate before starting. For dual-fuel ranges, we detail exactly which system needs attention.' },
-      { step: 'Expert Range Repair', detail: 'We repair the cooktop, oven, or both — handling gas igniters, electric elements, thermostats, and control issues with the right parts for your specific model.' },
-      { step: 'Full Function Test & Warranty', detail: 'We test every burner and the oven at temperature to confirm full operation. All range repairs are covered by our 90-day parts and labor warranty.' },
+      { step: 'Expert cooktop repair', detail: 'We repair the cooktop, oven, or both — handling gas igniters, electric elements, thermostats, and control issues with the right parts for your specific model.' },
+      { step: 'Full Function Test & Warranty', detail: 'We test every burner and the oven at temperature to confirm full operation. All cooktop repairs are covered by our 90-day parts and labor warranty.' },
     ],
     'garbage-disposal-repair-and-installation': [
       { step: 'Tell Us What Happened', detail: 'Call (630) 998-0209 and describe the issue — humming, jammed, leaking, or silent. If you need a new installation, let us know and we\'ll bring the right unit.' },
@@ -198,14 +198,14 @@ function getServiceFAQs(slug: string): Array<{ question: string; answer: string 
       { question: 'My refrigerator is making a loud buzzing noise. Is it serious?', answer: 'A buzzing noise can indicate a failing compressor, loose condenser fan blade, or defective evaporator fan motor. While not always urgent, it\'s best to have it diagnosed promptly before the issue worsens.' },
       { question: 'How long does a refrigerator repair typically take?', answer: 'Most common repairs are completed in 1-2 hours on the first visit. If the compressor or sealed system needs work, it may take longer. We keep you informed throughout the process.' },
     ],
-    'stove-and-oven-repair': [
+    'range-and-oven-repair': [
       { question: 'Why won\'t my oven heat up?', answer: 'Common causes include a burned-out bake element (electric), faulty igniter (gas), defective oven sensor, or a malfunctioning control board. We diagnose and repair all oven heating issues.' },
       { question: 'Is it safe to use a gas stove with ignition problems?', answer: 'If you smell gas, stop using the appliance immediately and ventilate the area. For issues like delayed ignition or clicking without lighting, call us for a prompt repair — these are safety concerns that should be addressed quickly.' },
       { question: 'Do you repair glass/ceramic cooktops?', answer: 'Yes, we repair glass and ceramic cooktops including cracked surfaces, faulty burner elements, and touch-control issues. We also service induction cooktops.' },
       { question: 'My oven temperature seems off. Can you fix it?', answer: 'Yes. Temperature inaccuracy is usually caused by a failing oven sensor, miscalibrated thermostat, or worn door gasket allowing heat to escape. We recalibrate or replace components as needed.' },
       { question: 'How much does stove or oven repair cost?', answer: 'Costs depend on the specific issue. Igniter replacements and element swaps are affordable, while control board repairs may cost more. We always provide a written estimate before starting work.' },
     ],
-    'range-repair': [
+    'cooktop-repair': [
       { question: 'What\'s the difference between a range, stove, and cooktop?', answer: 'A range is a combination unit with both a cooktop and oven. A stove typically refers to the cooktop alone, and a cooktop is built into the countertop. We repair all three types.' },
       { question: 'Do you repair both gas and electric ranges?', answer: 'Yes, we service gas, electric, dual-fuel, and induction ranges from all major manufacturers. Our technicians are certified for gas appliance work.' },
       { question: 'Why does my gas range keep clicking?', answer: 'Continuous clicking after the burner is lit is usually caused by moisture in the igniter, food debris around the burner, or a faulty spark module. We clean, dry, and repair the ignition system.' },
@@ -357,8 +357,8 @@ export default async function ServicePage({ params }: PageProps) {
                       'dryer-repair': 'Whether gas or electric, dryer problems share common patterns. Here are the failures our technicians encounter and resolve most frequently:',
                       'washer-repair': 'Washing machines — both top-load and front-load — develop recognizable symptoms when components fail. Here are the problems we fix regularly:',
                       'refrigerator-and-freezer-repair': 'Refrigerators and freezers can fail in ways that range from minor inconveniences to food-safety emergencies. Here are the issues we see and solve most often:',
-                      'stove-and-oven-repair': 'Gas and electric stoves and ovens each have their own common failure points. Here are the issues our gas-certified technicians handle routinely:',
-                      'range-repair': 'Ranges combine cooktop and oven systems, doubling the potential failure points. Here are the problems our technicians diagnose and repair most often:',
+                      'range-and-oven-repair': 'Gas and electric stoves and ovens each have their own common failure points. Here are the issues our gas-certified technicians handle routinely:',
+                      'cooktop-repair': 'Ranges combine cooktop and oven systems, doubling the potential failure points. Here are the problems our technicians diagnose and repair most often:',
                       'garbage-disposal-repair-and-installation': 'Garbage disposals are simple but critical kitchen components. When they fail, here are the issues we see and resolve:',
                       'water-heater-installation': 'Water heaters give warning signs before they fail completely. Here are the most common reasons homeowners call us for a new installation:',
                     }[service.slug] || `Here are the most common ${service.shortTitle.toLowerCase()} problems we diagnose and repair:`}
@@ -389,8 +389,8 @@ export default async function ServicePage({ params }: PageProps) {
                     'dryer-repair': 'We keep dryer repair straightforward — no runaround, no mystery charges. Here\'s exactly what to expect:',
                     'washer-repair': 'From your first call to a fully functioning washer, here\'s how our washer repair process works step by step:',
                     'refrigerator-and-freezer-repair': 'When your fridge or freezer is down, speed matters. Here\'s how we handle cooling emergencies and routine repairs:',
-                    'stove-and-oven-repair': 'We take extra care with stove and oven repairs because gas safety is paramount. Here\'s our process:',
-                    'range-repair': 'Range repairs require attention to both the cooktop and oven systems. Here\'s how we approach every range service call:',
+                    'range-and-oven-repair': 'We take extra care with range and oven repairs because gas safety is paramount. Here\'s our process:',
+                    'cooktop-repair': 'cooktop repairs require attention to both the cooktop and oven systems. Here\'s how we approach every range service call:',
                     'garbage-disposal-repair-and-installation': 'Whether it\'s a quick repair or a full replacement, here\'s what our disposal service looks like:',
                     'water-heater-installation': 'From your first call to hot water flowing, here\'s how our water heater installation process works:',
                   }[service.slug] || 'Here\'s how our repair process works from start to finish:'}
@@ -426,8 +426,8 @@ export default async function ServicePage({ params }: PageProps) {
                       'dryer-repair': 'We service residential dryers from every major manufacturer — gas and electric, standard and high-efficiency:',
                       'washer-repair': 'Top-loaders, front-loaders, HE models, and compact units — we repair washing machines from all of these manufacturers:',
                       'refrigerator-and-freezer-repair': 'From everyday Whirlpool models to luxury Sub-Zero built-ins, our technicians are trained on every major refrigerator brand:',
-                      'stove-and-oven-repair': 'We repair gas and electric stoves and ovens across the full spectrum of brands, from standard to professional-grade:',
-                      'range-repair': 'Freestanding, slide-in, drop-in, pro-style — we service ranges from every major manufacturer in every configuration:',
+                      'range-and-oven-repair': 'We repair gas and electric stoves and ovens across the full spectrum of brands, from standard to professional-grade:',
+                      'cooktop-repair': 'Freestanding, slide-in, drop-in, pro-style — we service ranges from every major manufacturer in every configuration:',
                       'garbage-disposal-repair-and-installation': 'We repair and install units from every major disposal manufacturer, and carry InSinkErator and Waste King for same-day replacement:',
                       'water-heater-installation': 'We install gas and electric tank water heaters from every major manufacturer — and can recommend the best brand for your budget and hot water needs:',
                     }[service.slug] || `We service ${service.shortTitle.toLowerCase()} from all major manufacturers:`}
@@ -453,8 +453,8 @@ export default async function ServicePage({ params }: PageProps) {
                     'dryer-repair': `Need a dryer technician in your area? We offer gas and electric dryer repair throughout ${biz.serviceAreaName}:`,
                     'washer-repair': `Washer problems don't wait — and neither do we. Find washing machine repair near you across ${biz.serviceAreaName}:`,
                     'refrigerator-and-freezer-repair': `Cooling emergencies get same-day priority across all of our service areas in ${biz.serviceAreaName}:`,
-                    'stove-and-oven-repair': `Our gas-certified technicians provide stove and oven repair throughout ${biz.serviceAreaName}. Find service in your city:`,
-                    'range-repair': `From slide-in ranges to pro-style units, we service every type across ${biz.serviceAreaName}. Find range repair near you:`,
+                    'range-and-oven-repair': `Our gas-certified technicians provide range and oven repair throughout ${biz.serviceAreaName}. Find service in your city:`,
+                    'cooktop-repair': `From slide-in ranges to pro-style units, we service every type across ${biz.serviceAreaName}. Find cooktop repair near you:`,
                     'garbage-disposal-repair-and-installation': `Same-day disposal repair and new installations available across ${biz.serviceAreaName}. Select your city:`,
                     'water-heater-installation': `Professional water heater installation across ${biz.serviceAreaName}. Find service in your city:`,
                   }[service.slug] || `We provide professional ${service.shortTitle.toLowerCase()} throughout ${biz.serviceAreaName}:`}
@@ -487,8 +487,8 @@ export default async function ServicePage({ params }: PageProps) {
                     'dryer-repair': `If your dryer is acting up, your washer might not be far behind. We repair every major household appliance:`,
                     'washer-repair': `Laundry appliances often age together. If your washer needs attention, your dryer might too. We service all major household appliances:`,
                     'refrigerator-and-freezer-repair': `A fridge problem sometimes reveals other appliance issues that have been easy to ignore. We can handle them all in one visit:`,
-                    'stove-and-oven-repair': `Kitchen appliances take a beating. If your stove or oven needs repair, we can inspect and service your other appliances too:`,
-                    'range-repair': `If your range needs attention, we can check on your other kitchen appliances during the same visit. We repair them all:`,
+                    'range-and-oven-repair': `Kitchen appliances take a beating. If your stove or oven needs repair, we can inspect and service your other appliances too:`,
+                    'cooktop-repair': `If your range needs attention, we can check on your other kitchen appliances during the same visit. We repair them all:`,
                     'garbage-disposal-repair-and-installation': `While we're under your sink, we can also take a look at your dishwasher or any other appliance that needs attention:`,
                     'water-heater-installation': `While we're at your home for a water heater installation, ask about our other appliance services — we handle everything in the kitchen and laundry room:`,
                   }[service.slug] || `${biz.shortName} provides comprehensive appliance repair beyond just ${service.title.toLowerCase()}:`}

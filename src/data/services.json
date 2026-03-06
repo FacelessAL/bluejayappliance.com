@@ -88,48 +88,48 @@
     "schemaServiceType": "Refrigerator & Freezer Repair"
   },
   {
-    "slug": "stove-and-oven-repair",
-    "title": "Stove & Oven Repair",
-    "shortTitle": "Stove & Oven Repair",
-    "image": "/images/services/stove-and-oven-repair.webp",
-    "metaTitle": "Stove & Oven Repair | Gas & Electric | Blue Jay Appliance",
-    "metaDescription": "Expert stove & oven repair — won't heat, igniter issues, temperature problems. Gas-certified technicians. Same or next-day service. Call (630) 998-0209.",
-    "heroHeading": "Stove & Oven Repair",
-    "heroSubheading": "Burners won't ignite, oven not reaching temperature, or uneven heating? Our technicians repair gas and electric stoves and ovens from all major manufacturers.",
+    "slug": "range-and-oven-repair",
+    "title": "Range & Oven Repair",
+    "shortTitle": "Range & Oven Repair",
+    "image": "/images/services/range-and-oven-repair.webp",
+    "metaTitle": "Range & Oven Repair | Gas & Electric | Blue Jay Appliance",
+    "metaDescription": "Expert range & oven repair — won't heat, igniter issues, temperature problems. Gas-certified technicians. Same or next-day service. Call (630) 998-0209.",
+    "heroHeading": "Range & Oven Repair",
+    "heroSubheading": "Burners won't ignite, oven not reaching temperature, or uneven heating? Our technicians repair gas and electric ranges and ovens from all major manufacturers.",
     "contentSections": [
       {
-        "heading": "Gas-Certified Stove & Oven Repair",
-        "body": "Stove and oven problems range from a weak gas igniter to a failed control board — and gas issues in particular require certified technicians who understand safety protocols. Blue Jay Appliance Services is fully gas-certified for all cooktop and oven work. We repair igniters, thermostats, bake and broil elements, gas valves, door hinges, self-clean locks, and electronic controls on GE, Whirlpool, Samsung, LG, KitchenAid, Wolf, Viking, Thermador, and every other brand."
+        "heading": "Gas-Certified Range & Oven Repair",
+        "body": "Range and oven problems range from a weak gas igniter to a failed control board — and gas issues in particular require certified technicians who understand safety protocols. Blue Jay Appliance Services is fully gas-certified for all range and oven work. We repair igniters, thermostats, bake and broil elements, gas valves, door hinges, self-clean locks, and electronic controls on GE, Whirlpool, Samsung, LG, KitchenAid, Wolf, Viking, Thermador, and every other brand."
       },
       {
-        "heading": "Safety-First Approach to Every Stove & Oven Call",
+        "heading": "Safety-First Approach to Every Range & Oven Call",
         "body": "Gas leaks and ignition problems aren't something to troubleshoot from a YouTube video. Our technicians verify gas connections, test for leaks, and ensure safe operation after every repair. For electric models, we test element continuity, wiring integrity, and control board function before clearing the unit for use. Written estimates before work begins, 90-day warranty on all repairs, and honest advice on whether repair or replacement makes sense for your situation."
       }
     ],
     "schemaType": "Service",
-    "schemaServiceType": "Stove & Oven Repair"
+    "schemaServiceType": "Range & Oven Repair"
   },
   {
-    "slug": "range-repair",
-    "title": "Range Repair",
-    "shortTitle": "Range Repair",
-    "image": "/images/services/range-repair.webp",
-    "metaTitle": "Range Repair Service | Gas, Electric & Dual-Fuel | Blue Jay Appliance",
-    "metaDescription": "Expert range repair — burner issues, temperature problems, control failures. Gas, electric, dual-fuel, induction. 90-day warranty. Call (630) 998-0209.",
-    "heroHeading": "Range Repair",
-    "heroSubheading": "Range not working properly? Whether it's a gas igniter issue, faulty thermostat, or broken cooktop element, we get your range back to full performance quickly.",
+    "slug": "cooktop-repair",
+    "title": "Cooktop Repair",
+    "shortTitle": "Cooktop Repair",
+    "image": "/images/services/cooktop-repair.webp",
+    "metaTitle": "Cooktop Repair | Gas, Electric & Induction | Blue Jay Appliance",
+    "metaDescription": "Expert cooktop repair — burner issues, temperature problems, control failures. Gas, electric, induction. 90-day warranty. Call (630) 998-0209.",
+    "heroHeading": "Cooktop Repair",
+    "heroSubheading": "Cooktop not working properly? Whether it's a gas igniter issue, faulty burner element, or broken control, we get your cooktop back to full performance quickly.",
     "contentSections": [
       {
-        "heading": "Complete Range Repair — Every Fuel Type, Every Brand",
-        "body": "Ranges combine a cooktop and oven into a single unit, which means twice the components that can fail. Blue Jay Appliance Services repairs freestanding, slide-in, and drop-in ranges in gas, electric, dual-fuel, and induction configurations. From high-BTU pro-style ranges by Wolf and Thermador to everyday 30-inch models from GE and Whirlpool, our technicians carry diagnostic tools and parts for efficient same-visit repair."
+        "heading": "Complete Cooktop Repair — Every Fuel Type, Every Brand",
+        "body": "Blue Jay Appliance Services repairs gas, electric, and induction cooktops in every configuration — freestanding, drop-in, and built-in. From high-BTU pro-style gas cooktops by Wolf and Thermador to everyday ceramic and induction models from GE and Whirlpool, our technicians carry diagnostic tools and parts for efficient same-visit repair. We handle igniter replacements, element swaps, control board repairs, and glass surface issues."
       },
       {
-        "heading": "Precision Diagnosis for Complex Cooking Appliances",
-        "body": "Range problems can be deceptive — a burner that won't light might be an igniter, a gas valve, or a spark module issue. An oven that runs hot could be the sensor, the thermostat, or a calibration drift. Dual-fuel models add another layer because the gas cooktop and electric oven have independent systems. We test each component individually, give you a clear written estimate, and complete the repair with a 90-day warranty on parts and labor."
+        "heading": "Precision Diagnosis for Every Cooktop Type",
+        "body": "Cooktop problems can be deceptive — a burner that won't light might be an igniter, a gas valve, or a spark module issue. Electric and induction cooktops have their own failure patterns including element burnout, cracked glass, and control board malfunctions. We test each component individually, give you a clear written estimate, and complete the repair with a 90-day warranty on parts and labor."
       }
     ],
     "schemaType": "Service",
-    "schemaServiceType": "Range Repair"
+    "schemaServiceType": "Cooktop Repair"
   },
   {
     "slug": "garbage-disposal-repair-and-installation",

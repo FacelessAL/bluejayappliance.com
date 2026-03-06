@@ -39,12 +39,34 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/our-services/stove-oven-range-repair-naperville-il",
-        destination: "/naperville-il-appliance-repair/stove-and-oven-repair",
+        destination: "/naperville-il-appliance-repair/range-and-oven-repair",
         permanent: true,
       },
       {
         source: "/our-services/garbage-disposal-repair-installation-naperville-il",
         destination: "/naperville-il-appliance-repair/garbage-disposal-repair-and-installation",
+        permanent: true,
+      },
+
+      // --- Service rename redirects (stove-and-oven-repair -> range-and-oven-repair, range-repair -> cooktop-repair) ---
+      {
+        source: "/services/stove-and-oven-repair",
+        destination: "/services/range-and-oven-repair",
+        permanent: true,
+      },
+      {
+        source: "/services/range-repair",
+        destination: "/services/cooktop-repair",
+        permanent: true,
+      },
+      {
+        source: "/:city/stove-and-oven-repair",
+        destination: "/:city/range-and-oven-repair",
+        permanent: true,
+      },
+      {
+        source: "/:city/range-repair",
+        destination: "/:city/cooktop-repair",
         permanent: true,
       },
 
