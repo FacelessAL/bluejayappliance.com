@@ -159,29 +159,33 @@ export default function AboutPage() {
                 style={{ borderRadius: '12px', width: '100%', height: 'auto' }}
                 unoptimized
               />
-              {/* Areas We Serve - under image */}
-              <div style={{ marginTop: '32px' }}>
-                <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '20px', fontWeight: 700, color: '#0F1B2D', marginBottom: '8px' }}>
-                  Areas We Serve
-                </h3>
-                <p style={{ color: '#4b5563', marginBottom: '16px', fontFamily: 'var(--font-poppins)', fontSize: '14px', lineHeight: '1.6' }}>
-                  Our expert team serves homeowners across:
-                </p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                  {locations.map((location) => (
-                    <Link
-                      key={location.slug}
-                      href={`/${location.slug}`}
-                      style={{ backgroundColor: '#E3F2FD', borderRadius: '8px', padding: '12px', textAlign: 'center', textDecoration: 'none', transition: 'all 0.2s' }}
-                    >
-                      <span className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', color: '#0F1B2D' }}>
-                        {location.fullName}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Areas We Serve */}
+      <section style={{ padding: '64px 0', backgroundColor: '#ffffff', borderTop: '1px solid #e5e7eb' }}>
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, color: '#0F1B2D', marginBottom: '8px', textAlign: 'center' }}>
+            Areas We Serve
+          </h2>
+          <p style={{ color: '#4b5563', marginBottom: '32px', fontFamily: 'var(--font-poppins)', fontSize: '15px', lineHeight: '1.6', textAlign: 'center' }}>
+            Our expert team serves homeowners across {biz.serviceAreaName}:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            {locations.map((location) => (
+              <Link
+                key={location.slug}
+                href={`/${location.slug}`}
+                style={{ backgroundColor: '#f8fafc', borderRadius: '8px', padding: '14px 20px', textAlign: 'center', textDecoration: 'none', transition: 'all 0.2s', border: '1px solid #e2e8f0' }}
+                className="hover:bg-blue-600 hover:text-white hover:border-blue-600"
+              >
+                <span className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 600, fontSize: '14px', textTransform: 'uppercase' }}>
+                  {location.fullName}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

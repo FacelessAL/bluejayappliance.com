@@ -24,12 +24,13 @@ const packages = [
     name: 'Washer Only',
     price: '$35',
     period: '/mo',
+    startCost: '$135 to start (first month + $100 refundable deposit)',
     features: [
       'Top-loading washer',
       'Standard washing capacity',
-      'Free delivery & installation',
-      'Maintenance included',
-      'Energy efficient',
+      'Free delivery & hookup',
+      'All maintenance included',
+      '$100 deposit refunded when unit returned',
     ],
     popular: false,
   },
@@ -37,12 +38,13 @@ const packages = [
     name: 'Washer & Dryer Set',
     price: '$60',
     period: '/mo',
+    startCost: '$260 to start (first month + $200 refundable deposit)',
     features: [
-      'Top-loading washer',
-      'Standard washing capacity',
-      'Standard capacity dryer',
-      'Free delivery & installation',
-      'Maintenance included',
+      'Top-loading washer + dryer',
+      'Free delivery & hookup',
+      'All maintenance included',
+      'Auto-billing after first month',
+      '$100 deposit per unit, refunded on return',
     ],
     popular: true,
   },
@@ -50,12 +52,13 @@ const packages = [
     name: 'Dryer Only',
     price: '$35',
     period: '/mo',
+    startCost: '$135 to start (first month + $100 refundable deposit)',
     features: [
+      'Gas or electric available',
       'Standard drying capacity',
-      'Free delivery & installation',
-      'Maintenance included',
-      'Energy efficient',
-      'Quick drying cycles',
+      'Free delivery & hookup',
+      'All maintenance included',
+      '$100 deposit refunded when unit returned',
     ],
     popular: false,
   },
@@ -124,7 +127,7 @@ export default function ApplianceRentalPage() {
             Pricing &amp; Packages
           </h2>
           <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', textAlign: 'center', marginBottom: '48px' }}>
-            Simple, transparent pricing with no hidden fees
+            Simple, transparent pricing. First month + refundable deposit to start, then auto-billed monthly.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {packages.map((pkg) => (
@@ -148,10 +151,13 @@ export default function ApplianceRentalPage() {
                 <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '20px', fontWeight: 700, color: '#0F1B2D', marginBottom: '16px', textTransform: 'uppercase' }}>
                   {pkg.name}
                 </h3>
-                <div style={{ marginBottom: '24px' }}>
+                <div style={{ marginBottom: '12px' }}>
                   <span style={{ fontSize: '42px', fontWeight: 800, color: '#1565C0', fontFamily: 'var(--font-figtree)' }}>{pkg.price}</span>
                   <span style={{ fontSize: '16px', color: '#6b7280' }}>{pkg.period}</span>
                 </div>
+                <p style={{ fontSize: '12px', color: '#6b7280', fontFamily: 'var(--font-poppins)', marginBottom: '20px', lineHeight: '1.4' }}>
+                  {pkg.startCost}
+                </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', textAlign: 'left' }}>
                   {pkg.features.map((feature, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 0', borderBottom: '1px solid #f3f4f6', fontSize: '14px', color: '#374151', fontFamily: 'var(--font-poppins)' }}>
@@ -227,7 +233,7 @@ export default function ApplianceRentalPage() {
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {[
-                  'As low as $35/month \u2014 no upfront cost',
+                  'As low as $35/month + a $100 refundable deposit per unit',
                   'Free delivery and professional installation',
                   'All maintenance and repairs included',
                   'Upgrade or swap anytime as needs change',
@@ -257,7 +263,7 @@ export default function ApplianceRentalPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             {[
               { title: 'Renters & Tenants', desc: 'Your landlord won\'t replace the broken washer? Rent one from us. When your lease ends, we pick it up \u2014 no appliance to move or sell.' },
-              { title: 'Tight Budget, Immediate Need', desc: 'When your washer dies and you can\'t afford $800 for a new one, $35/month gets you a working machine this week with zero upfront cost.' },
+              { title: 'Tight Budget, Immediate Need', desc: 'When your washer dies and you can\'t afford $800 for a new one, $135 (first month + refundable deposit) gets you a working machine this week instead of $800+ for a new one.' },
               { title: 'Temporary Living Situations', desc: 'Relocating for work, renovating your home, or between permanent housing? Rent appliances for exactly as long as you need them.' },
               { title: 'Landlords & Property Managers', desc: 'Keep rental units move-in ready without buying appliances that tenants abuse. We handle maintenance, you keep tenants happy.' },
               { title: 'First-Time Apartments', desc: 'Moving into your first unfurnished apartment? Renting appliances lets you get settled without draining your savings on day one.' },

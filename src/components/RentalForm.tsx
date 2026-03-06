@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
 import { getBusiness } from '@/lib/data';
 
 const applianceOptions = [
@@ -31,24 +31,14 @@ const labelStyle: React.CSSProperties = {
   fontFamily: 'var(--font-figtree)',
 };
 
-interface PlaceSuggestion {
-  placeId: string;
-  description: string;
-}
-
 export default function RentalForm() {
   const biz = getBusiness();
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-  const [addressQuery, setAddressQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<PlaceSuggestion[]>([]);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [loadingPlace, setLoadingPlace] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const suggestionsRef = useRef<HTMLDivElement>(null);
   const [smsConsent, setSmsConsent] = useState(false);
   const [honeypot, setHoneypot] = useState('');
   const [formData, setFormData] = useState({
     appliance: '',
+    dryerType: '',
     details: '',
     serviceAddress: '',
     city: '',
@@ -63,62 +53,8 @@ export default function RentalForm() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (suggestionsRef.current && !suggestionsRef.current.contains(e.target as Node)) {
-        setShowSuggestions(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
-  }, []);
-
-  const handleAddressSearch = useCallback((value: string) => {
-    setAddressQuery(value);
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    if (value.length < 3) {
-      setSuggestions([]);
-      setShowSuggestions(false);
-      return;
-    }
-    debounceRef.current = setTimeout(async () => {
-      try {
-        const res = await fetch('/api/places', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ input: value }),
-        });
-        const data = await res.json();
-        setSuggestions(data.suggestions || []);
-        setShowSuggestions((data.suggestions || []).length > 0);
-      } catch {
-        setSuggestions([]);
-      }
-    }, 300);
-  }, []);
-
-  const selectSuggestion = useCallback(async (suggestion: PlaceSuggestion) => {
-    setAddressQuery(suggestion.description);
-    setShowSuggestions(false);
-    setSuggestions([]);
-    setLoadingPlace(true);
-    try {
-      const res = await fetch(`/api/places?placeId=${suggestion.placeId}`);
-      const data = await res.json();
-      setFormData((prev) => ({
-        ...prev,
-        serviceAddress: data.serviceAddress || prev.serviceAddress,
-        city: data.city || prev.city,
-        postalCode: data.postalCode || prev.postalCode,
-      }));
-    } catch {
-      // User can still type manually
-    } finally {
-      setLoadingPlace(false);
-    }
-  }, []);
-
-  const canSubmit = formData.appliance && formData.serviceAddress && formData.firstName && formData.phone && smsConsent;
+  const needsDryerType = formData.appliance === 'Dryer Only' || formData.appliance === 'Washer & Dryer Set';
+  const canSubmit = formData.appliance && formData.serviceAddress && formData.city && formData.firstName && formData.phone && smsConsent && (!needsDryerType || formData.dryerType);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -129,6 +65,10 @@ export default function RentalForm() {
       return;
     }
 
+    const applianceDesc = needsDryerType
+      ? `${formData.appliance} (${formData.dryerType} dryer)`
+      : formData.appliance;
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -137,10 +77,10 @@ export default function RentalForm() {
           first_name: formData.firstName,
           last_name: formData.lastName,
           full_name: `${formData.firstName} ${formData.lastName}`.trim(),
-          email: formData.email,
+          email: formData.email || '',
           phone: formData.phone,
-          service_needed: `Appliance Rental — ${formData.appliance}`,
-          issue_description: formData.details || `Rental inquiry for ${formData.appliance}`,
+          service_needed: `Appliance Rental — ${applianceDesc}`,
+          issue_description: formData.details || `Rental inquiry for ${applianceDesc}`,
           urgency: 'Flexible / Not urgent',
           service_address: formData.serviceAddress,
           city: formData.city,
@@ -187,7 +127,7 @@ export default function RentalForm() {
           <label style={labelStyle}>What do you need to rent? *</label>
           <select
             value={formData.appliance}
-            onChange={(e) => update('appliance', e.target.value)}
+            onChange={(e) => { update('appliance', e.target.value); if (!e.target.value.includes('Dryer')) update('dryerType', ''); }}
             style={{ ...inputStyle, cursor: 'pointer', appearance: 'auto' }}
             required
           >
@@ -198,6 +138,44 @@ export default function RentalForm() {
           </select>
         </div>
 
+        {/* Gas or Electric — shown when dryer is involved */}
+        {needsDryerType && (
+          <div>
+            <label style={labelStyle}>Gas or electric dryer? *</label>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              {['Gas', 'Electric'].map((type) => (
+                <button
+                  key={type}
+                  type="button"
+                  onClick={() => update('dryerType', type)}
+                  style={{
+                    flex: 1,
+                    padding: '14px 16px',
+                    border: formData.dryerType === type ? '2px solid #1565C0' : '2px solid #e5e7eb',
+                    borderRadius: '8px',
+                    backgroundColor: formData.dryerType === type ? '#E3F2FD' : '#f9fafb',
+                    color: formData.dryerType === type ? '#1565C0' : '#6b7280',
+                    fontWeight: formData.dryerType === type ? 700 : 500,
+                    fontSize: '15px',
+                    fontFamily: 'var(--font-figtree)',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Installation Requirement Note */}
+        <div style={{ backgroundColor: '#fffbeb', border: '1px solid #fde68a', borderRadius: '8px', padding: '12px 16px' }}>
+          <p style={{ fontSize: '13px', color: '#92400e', fontFamily: 'var(--font-poppins)', lineHeight: '1.5', margin: 0 }}>
+            <strong>Important:</strong> Rental appliances require existing hookups at the delivery address (water supply, drain, gas line or electrical outlet, and dryer vent as applicable). We do not install new hookups.
+          </p>
+        </div>
+
         {/* Additional Details */}
         <div>
           <label style={labelStyle}>Additional details (optional)</label>
@@ -205,45 +183,32 @@ export default function RentalForm() {
             value={formData.details}
             onChange={(e) => update('details', e.target.value)}
             style={{ ...inputStyle, resize: 'vertical', minHeight: '80px' }}
-            placeholder="Gas or electric dryer? Any size preferences? Timeline?"
+            placeholder="Any size preferences? Timeline? Questions?"
           />
         </div>
 
-        {/* Address Search */}
-        <div ref={suggestionsRef} style={{ position: 'relative' }}>
+        {/* Address — simple manual fields */}
+        <div>
           <label style={labelStyle}>Delivery Address *</label>
           <input
             type="text"
-            value={addressQuery}
-            onChange={(e) => handleAddressSearch(e.target.value)}
-            onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
+            value={formData.serviceAddress}
+            onChange={(e) => update('serviceAddress', e.target.value)}
             style={inputStyle}
-            placeholder="Start typing your address..."
+            placeholder="Street address"
+            required
           />
-          {loadingPlace && (
-            <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px', fontFamily: 'var(--font-poppins)' }}>Filling in address details...</div>
-          )}
-          {showSuggestions && suggestions.length > 0 && (
-            <ul style={{ position: 'absolute', top: '100%', left: 0, right: 0, backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '0 0 8px 8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', listStyle: 'none', padding: 0, margin: 0, zIndex: 50, maxHeight: '200px', overflowY: 'auto' }}>
-              {suggestions.map((s) => (
-                <li
-                  key={s.placeId}
-                  onClick={() => selectSuggestion(s)}
-                  style={{ padding: '10px 14px', fontSize: '14px', fontFamily: 'var(--font-poppins)', color: '#0F1B2D', cursor: 'pointer', borderBottom: '1px solid #f3f4f6', transition: 'background-color 0.1s' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f0f9ff')}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#ffffff')}
-                >
-                  {s.description}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
-
-        {/* Hidden address fields auto-filled */}
-        <input type="hidden" value={formData.serviceAddress} />
-        <input type="hidden" value={formData.city} />
-        <input type="hidden" value={formData.postalCode} />
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '12px' }}>
+          <div>
+            <label style={labelStyle}>City *</label>
+            <input type="text" value={formData.city} onChange={(e) => update('city', e.target.value)} style={inputStyle} placeholder="City" required />
+          </div>
+          <div>
+            <label style={labelStyle}>Zip Code</label>
+            <input type="text" value={formData.postalCode} onChange={(e) => update('postalCode', e.target.value)} style={inputStyle} placeholder="Zip" />
+          </div>
+        </div>
 
         {/* Name */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
