@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getBusiness } from '@/lib/data';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RentalForm from '@/components/RentalForm';
 
 const biz = getBusiness();
 
@@ -328,25 +329,60 @@ export default function ApplianceRentalPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
-        <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 2rem', textAlign: 'center' }}>
-          <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '16px', color: '#0F1B2D' }}>
-            Ready to Get Started?
-          </h2>
-          <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '16px', color: '#6b7280', marginBottom: '32px', lineHeight: '1.7' }}>
-            Give us a call to discuss your rental needs. We&apos;ll help you pick the right package and schedule a convenient delivery time. No credit hassles, no hidden fees, no surprises.
-          </p>
-          <Link
-            href={`tel:${biz.phoneRaw}`}
-            className="font-[family-name:var(--font-figtree)] hover:bg-blue-800 transition-colors"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#1565C0', color: '#ffffff', padding: '20px 48px', borderRadius: '50px', fontWeight: 700, fontSize: '22px', textDecoration: 'none' }}
-          >
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            {biz.phoneCTA}
-          </Link>
+      {/* Rental Inquiry Form */}
+      <section id="rental-form" style={{ backgroundColor: '#ffffff', padding: '80px 0' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+          <div className="grid-2col" style={{ alignItems: 'start' }}>
+            <div>
+              <h2 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '28px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '16px', color: '#0F1B2D' }}>
+                Request Rental Info
+              </h2>
+              <p style={{ fontFamily: 'var(--font-poppins)', fontSize: '15px', color: '#6b7280', marginBottom: '24px', lineHeight: '1.7' }}>
+                Fill out the form and we&apos;ll call you back to discuss your rental options, pricing, and delivery schedule. No credit hassles, no hidden fees.
+              </p>
+              <div style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '24px' }}>
+                <RentalForm />
+              </div>
+            </div>
+            <div style={{ position: 'sticky', top: '120px' }}>
+              <div style={{ backgroundColor: '#0F1B2D', borderRadius: '12px', padding: '32px', color: '#ffffff', textAlign: 'center', marginBottom: '24px' }}>
+                <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 700, fontSize: '20px', marginBottom: '8px' }}>
+                  Prefer to Call?
+                </h3>
+                <p style={{ fontSize: '14px', marginBottom: '20px', opacity: 0.8, fontFamily: 'var(--font-poppins)' }}>Talk to us directly about rental options</p>
+                <Link
+                  href={`tel:${biz.phoneRaw}`}
+                  style={{ display: 'block', fontSize: '26px', fontWeight: 800, color: '#ffffff', textDecoration: 'none', marginBottom: '16px', fontFamily: 'var(--font-figtree)' }}
+                >
+                  {biz.phone}
+                </Link>
+                <Link
+                  href="/contact-us"
+                  style={{ display: 'inline-block', backgroundColor: '#1565C0', color: '#ffffff', padding: '12px 28px', borderRadius: '6px', fontWeight: 700, fontSize: '14px', textDecoration: 'none', fontFamily: 'var(--font-figtree)' }}
+                >
+                  Or Schedule a Repair
+                </Link>
+              </div>
+              <div style={{ backgroundColor: '#f8fafc', borderRadius: '12px', padding: '24px', border: '1px solid #e2e8f0' }}>
+                <h4 className="font-[family-name:var(--font-figtree)]" style={{ fontSize: '16px', fontWeight: 700, color: '#0F1B2D', marginBottom: '16px' }}>What&apos;s Included</h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {[
+                    'Free delivery & installation',
+                    'All maintenance & repairs included',
+                    'Free pickup when you\'re done',
+                    'No long-term contracts',
+                    'Month-to-month flexibility',
+                    'Simple approval process',
+                  ].map((item, i) => (
+                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontFamily: 'var(--font-poppins)', color: '#374151' }}>
+                      <span style={{ color: '#16a34a', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
