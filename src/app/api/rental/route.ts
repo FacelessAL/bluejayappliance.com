@@ -4,16 +4,12 @@ const GHL_API_KEY = process.env.GHL_API_KEY || '';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
 const GHL_BASE_URL = 'https://services.leadconnectorhq.com';
 
-// ─── GHL Custom Field IDs ───────────────────────────────────
-// These map our website form fields to the custom fields in GHL.
-// Verified via GHL API — these are the actual field IDs in the
-// Blue Jay Appliance GHL account.
-const GHL_FIELD_SERVICE_NEEDED = 'xxGKSl3NyhSKVh3Ve0E1';     // "What service do you need?" (LARGE_TEXT) → contact.what_service_do_you_need
-const GHL_FIELD_ISSUE_DESCRIPTION = 'Xc3sCoSKFhuIM1fOVT3d';  // "Describe your issue" (LARGE_TEXT) → contact.describe_your_issue
-const GHL_FIELD_URGENCY = 'DoeWbZYfJ1BAtp4Euz0P';            // "When do you need service?" (LARGE_TEXT) → contact.when_do_you_need_service
+// ─── GHL Custom Field IDs (Rental-specific) ─────────────────
+// Created via GHL API for the appliance rental form.
+const GHL_FIELD_RENTAL_APPLIANCE_TYPE = 'gZfxsk5SNjT87eu2Bvxk'; // "Rental Appliance Type" (TEXT) → contact.rental_appliance_type
+const GHL_FIELD_RENTAL_DETAILS = 'ukg7YsvZeebo4WBsRMDX';         // "Rental Details" (LARGE_TEXT) → contact.rental_details
 
 // Webhook URL — triggers GHL workflow "Email Jesse of Form"
-// for notifications (email to Jesse, etc.)
 const GHL_WEBHOOK_URL =
   'https://services.leadconnectorhq.com/hooks/eqc7U7yE00bzdSYNPP0N/webhook-trigger/27247886-0b17-4052-a7c9-01e06bc8d6a2';
 
@@ -27,9 +23,8 @@ export async function POST(request: NextRequest) {
       full_name,
       email,
       phone,
-      service_needed,
-      issue_description,
-      urgency,
+      appliance_type,
+      rental_details,
       service_address,
       city,
       postal_code,
@@ -48,9 +43,7 @@ export async function POST(request: NextRequest) {
 
     let contactId: string | undefined;
 
-    // ─── STEP 1: CREATE/UPDATE CONTACT VIA GHL API (PRIMARY) ───
-    // This upserts the contact in GHL with all form data mapped
-    // to the correct built-in and custom fields.
+    // ─── STEP 1: CREATE/UPDATE CONTACT VIA GHL API ───────────
     if (GHL_API_KEY && GHL_LOCATION_ID) {
       const ghlHeaders = {
         Authorization: `Bearer ${GHL_API_KEY}`,
@@ -59,30 +52,25 @@ export async function POST(request: NextRequest) {
       };
 
       try {
-        const upsertBody = {
-          locationId: GHL_LOCATION_ID,
-          // ── Built-in GHL contact fields ──
-          firstName,
-          lastName,
-          name: displayName,
-          email: email || '',
-          phone,
-          address1: service_address || '',
-          city: city || '',
-          postalCode: postal_code || '',
-          source: 'Website Contact Form',
-          // ── Custom fields (mapped to GHL field IDs) ──
-          customFields: [
-            { id: GHL_FIELD_SERVICE_NEEDED, value: service_needed || '' },
-            { id: GHL_FIELD_ISSUE_DESCRIPTION, value: issue_description || '' },
-            { id: GHL_FIELD_URGENCY, value: urgency || '' },
-          ],
-        };
-
         const contactRes = await fetch(`${GHL_BASE_URL}/contacts/upsert`, {
           method: 'POST',
           headers: ghlHeaders,
-          body: JSON.stringify(upsertBody),
+          body: JSON.stringify({
+            locationId: GHL_LOCATION_ID,
+            firstName,
+            lastName,
+            name: displayName,
+            email: email || '',
+            phone,
+            address1: service_address || '',
+            city: city || '',
+            postalCode: postal_code || '',
+            source: 'Website Rental Form',
+            customFields: [
+              { id: GHL_FIELD_RENTAL_APPLIANCE_TYPE, value: appliance_type || '' },
+              { id: GHL_FIELD_RENTAL_DETAILS, value: rental_details || '' },
+            ],
+          }),
         });
 
         if (contactRes.ok) {
@@ -90,31 +78,28 @@ export async function POST(request: NextRequest) {
           contactId = contactData.contact?.id;
 
           if (contactId) {
-            // Add tags for easy filtering in GHL
-            const tags = [service_needed, urgency, 'website-lead'].filter(Boolean);
-            if (tags.length > 0) {
-              await fetch(`${GHL_BASE_URL}/contacts/${contactId}/tags`, {
-                method: 'POST',
-                headers: ghlHeaders,
-                body: JSON.stringify({ tags }),
-              }).catch((err) => console.error('Failed to add tags:', err));
-            }
+            // Add tags
+            const tags = ['appliance-rental', appliance_type, 'website-lead'].filter(Boolean);
+            await fetch(`${GHL_BASE_URL}/contacts/${contactId}/tags`, {
+              method: 'POST',
+              headers: ghlHeaders,
+              body: JSON.stringify({ tags }),
+            }).catch((err) => console.error('Failed to add tags:', err));
 
-            // Add a timestamped note with the full request details
+            // Add note
             const noteDate = new Date().toLocaleString('en-US', {
               timeZone: 'America/Chicago',
               month: 'short', day: 'numeric', year: 'numeric',
               hour: 'numeric', minute: '2-digit',
             });
             const noteBody = [
-              `Website Service Request — ${noteDate}`,
+              `Appliance Rental Inquiry — ${noteDate}`,
               '',
-              `Service: ${service_needed || 'N/A'}`,
-              `Urgency: ${urgency || 'N/A'}`,
-              `Address: ${[service_address, city, postal_code].filter(Boolean).join(', ')}`,
+              `Appliance: ${appliance_type || 'N/A'}`,
+              `Delivery Address: ${[service_address, city, postal_code].filter(Boolean).join(', ')}`,
               '',
-              `Issue Description:`,
-              issue_description || 'No details provided',
+              `Details:`,
+              rental_details || 'No additional details provided',
               '',
               `SMS Consent: Yes`,
             ].join('\n');
@@ -133,23 +118,20 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // ─── STEP 2: WEBHOOK (triggers GHL workflow for notifications) ───
-    // The "Email Jesse of Form" workflow sends Jesse an email with the
-    // lead details. This fires regardless of whether the API call above
-    // succeeded, so notifications are always delivered.
+    // ─── STEP 2: WEBHOOK (notifications) ─────────────────────
     const webhookPayload = {
       first_name: firstName,
       last_name: lastName,
       full_name: displayName,
       email: email || '',
       phone,
-      service_needed: service_needed || '',
-      issue_description: issue_description || '',
-      urgency: urgency || '',
+      service_needed: `Appliance Rental — ${appliance_type || 'Unknown'}`,
+      issue_description: rental_details || `Rental inquiry for ${appliance_type}`,
+      urgency: 'Flexible / Not urgent',
       service_address: service_address || '',
       city: city || '',
       postal_code: postal_code || '',
-      source: 'Website Contact Form',
+      source: 'Website Rental Form',
     };
 
     fetch(GHL_WEBHOOK_URL, {
@@ -160,7 +142,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true, contactId });
   } catch (error) {
-    console.error('Contact form API error:', error);
+    console.error('Rental form API error:', error);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

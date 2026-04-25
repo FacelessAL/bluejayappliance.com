@@ -1,6 +1,6 @@
 # Blue Jay Appliance — Customer Intake Workflow Audit
-**Date:** February 14, 2026  
-**Status:** Phase 1 complete, polished and verified
+**Date:** March 10, 2026  
+**Status:** GHL integration verified — all fields tested end-to-end
 
 ---
 
@@ -11,13 +11,13 @@ When a customer submits the contact form, the following happens in order:
 ### 1. Spam Check (client-side)
 - Honeypot field checked — if filled (bot), form fakes success and does nothing
 
-### 2. Contact Created/Updated (GHL)
+### 2. Contact Created/Updated (GHL API)
 - Upserted via email/phone match
 - First name, last name, email, phone, address, city, zip saved
 - **Custom fields populated** (using GHL field IDs):
-  - What service do you need? → `okz7uk4DI6P5p0gNLIm5`
-  - Describe your issue → `uurHpeIpvfnWTqdzSxGV`
-  - When do you need service? → `epQjKKfBLuGAG6p6dh4g`
+  - Service Needed → `gNISHNBHDMOe7mvW4jKa`
+  - Issue Description → `L48HHY2xwCB3dMxFUodf`
+  - Urgency → `YAoiWJNqtiQXIcYYnRdE`
 - Source set to "Website Contact Form"
 
 ### 3. Tags Added (without overwriting)
@@ -26,22 +26,18 @@ When a customer submits the contact form, the following happens in order:
 - `website-lead` tag (always)
 - Uses POST `/contacts/{id}/tags` — appends, never overwrites existing tags
 
-### 4. Opportunity Created or Updated
-- New contacts → new opportunity in "Service Requests" pipeline at "New Lead"
-- Returning contacts → existing opportunity updated with new service name, reset to "New Lead"
-- Name format: "FirstName LastName - Service Type"
-
-### 5. Contact Note Logged
+### 4. Contact Note Logged
 - Timestamped note with full request details added to contact
 - Ensures complete history even for returning customers
 - Includes: service, urgency, address, issue description, SMS consent
 
-### 6. Notifications Sent (parallel, non-blocking)
-- **Team email** → service@bluejayappliance.com with full lead details + call button
-- **Team SMS** → +1 847-489-9592 (pending A2P registration)
-- **Customer confirmation email** → personalized thank-you with request summary
+### 5. Notifications Sent (via GHL Workflow)
+- **GHL Workflow "Email Jesse of Form"** triggers on webhook receipt
+- **Team email** → service@bluejayappliance.com + jesse.mandujano73@gmail.com with full lead details
+- **Customer confirmation** → can be added as a step in the GHL workflow
+- **SMS** → can be added in GHL workflow (requires A2P registration)
 
-### 7. Success Screen
+### 6. Success Screen
 - Confirms submission with check mark
 - Mentions confirmation email sent
 - Emergency requests get highlighted callout
@@ -49,46 +45,23 @@ When a customer submits the contact form, the following happens in order:
 
 ---
 
-## PIPELINE STRUCTURE (GHL)
+## WHAT'S WORKING 
 
-Current stages:
-| Stage | Purpose |
-|-------|---------|
-| **New Lead** | Form just submitted, waiting for team response |
-| **Contacted** | Team has reached out to the customer |
-| **Proposal Sent** | Quote/estimate provided |
-| **Closed** | Job completed or declined |
-
-### Recommended additions (do in GHL UI → Pipelines → Service Requests):
-| Stage | Purpose |
-|-------|---------|
-| **Scheduled** | Appointment booked (add between Contacted and Proposal Sent) |
-| **Won** | Job completed and paid (replace or add alongside Closed) |
-| **Lost** | Customer declined or went elsewhere (for conversion tracking) |
-
----
-
-## WHAT'S WORKING ✅
-
-- ✅ Contact creation with separate first/last name fields
-- ✅ Custom fields populated with correct GHL field IDs
-- ✅ Tags appended (not overwritten) with `website-lead` marker
-- ✅ Contact notes with timestamped request history
-- ✅ Opportunity creation and duplicate handling (update existing)
-- ✅ Customer confirmation email (branded, personalized)
-- ✅ Team email notification (full details + call button)
-- ✅ Google Places autocomplete (server-side, API key secure)
-- ✅ A2P compliance (consent checkbox, privacy policy, terms disclosures)
-- ✅ Honeypot spam protection
-- ✅ Enhanced success screen with emergency callout
-- ✅ Webhook fallback if GHL API key missing
+- Contact upsert via GHL API with all form fields mapped to correct custom field IDs
+- Tags appended (not overwritten) with `website-lead` marker
+- Contact notes with timestamped request history
+- Team email notification via GHL workflow "Email Jesse of Form" (webhook)
+- Google Places autocomplete (server-side, API key secure)
+- A2P compliance (consent checkbox, privacy policy, terms disclosures)
+- Honeypot spam protection
+- Enhanced success screen with emergency callout
+- All field mappings verified end-to-end via API test (Mar 10, 2026)
 
 ---
 
 ## PENDING ITEMS
 
 ### You handle in GHL UI:
-- [ ] **Add pipeline stages** — Scheduled, Won, Lost (GHL → Pipelines → Service Requests)
 - [ ] **Complete A2P 10DLC registration** — GHL → Settings → Compliance
   - Opt-in URL: `https://bluejayappliance.com/contact-us`
   - Privacy Policy: `https://bluejayappliance.com/privacy-policy`
@@ -104,9 +77,7 @@ Current stages:
 - [ ] **Lost lead re-engagement** — Email 30 days after "Lost"
 
 ### Future Enhancements:
-- [ ] Email open/click tracking (Resend supports this)
-- [ ] Revenue tracking via opportunity monetary values
-- [ ] Referral program email after "Won"
+- [ ] Customer confirmation email (add as step in GHL workflow)
 - [ ] Seasonal campaign emails (water heater flush, sump pump check)
 
 ---
@@ -115,10 +86,12 @@ Current stages:
 
 | GHL Field Name | Field ID | Data Type | Our Form Field |
 |----------------|----------|-----------|----------------|
-| What service do you need? | `okz7uk4DI6P5p0gNLIm5` | SINGLE_OPTIONS | `service` |
-| Describe your issue | `uurHpeIpvfnWTqdzSxGV` | LARGE_TEXT | `issue` |
-| When do you need service? | `epQjKKfBLuGAG6p6dh4g` | SINGLE_OPTIONS | `urgency` |
-| Property Type | `rFbivLFI0PrJp2WWrYlu` | SINGLE_OPTIONS | Not collected |
+| Service Needed | `gNISHNBHDMOe7mvW4jKa` | TEXT | `service` |
+| Issue Description | `L48HHY2xwCB3dMxFUodf` | LARGE_TEXT | `issue` |
+| Urgency | `YAoiWJNqtiQXIcYYnRdE` | TEXT | `urgency` |
+| Detailed Message | `By3Kk9aJJNC3gLh9lyST` | LARGE_TEXT | Used by GHL embedded form |
+| Optional Message | `aBni8GjoEqc5QfJ71sef` | LARGE_TEXT | Not used |
+| Package Interest | `hk1y6Hf3Mm27zieG0L0a` | SINGLE_OPTIONS | Not used |
 
 ---
 
@@ -128,9 +101,4 @@ Current stages:
 |----------|---------|--------|
 | `GHL_API_KEY` | Go High Level API | ✅ Set |
 | `GHL_LOCATION_ID` | GHL location | ✅ Set |
-| `GHL_PIPELINE_ID` | Service Requests pipeline | ✅ Set |
-| `GHL_PIPELINE_STAGE_ID` | "New Lead" stage | ✅ Set |
-| `NOTIFICATION_EMAIL` | Team alert email | ✅ Set |
-| `NOTIFICATION_PHONE` | Team alert SMS | ✅ Set (works once A2P registered) |
-| `RESEND_API_KEY` | Transactional email | ✅ Set |
 | `GOOGLE_PLACES_API_KEY` | Address autocomplete | ✅ Set |

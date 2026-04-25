@@ -1,0 +1,61 @@
+name: Auto-Publish Blog Article
+
+on:
+  schedule:
+    # Runs daily at 12:00 UTC (7am CT). The publish script determines
+    # whether today is a publish day based on the week number.
+    - cron: '0 12 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Determine publish schedule and publish if needed
+        id: publish
+        run: node scripts/publish-article.js
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Commit and push
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          git config user.name "BlueJay Bot"
+          git config user.email "bot@bluejayappliance.com"
+          git add src/data/articles.json
+          git commit -m "📝 Auto-publish: ${{ steps.publish.outputs.article_title }}"
+          git push
+
+      - name: Discord success notification
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"embeds\":[{\"title\":\"✅ Article Published\",\"description\":\"**${{ steps.publish.outputs.article_title }}**\n\nSlug: \`${{ steps.publish.outputs.article_slug }}\`\nSchedule: ${{ steps.publish.outputs.schedule_info }}\",\"color\":3066993,\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]}" \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}"
+
+      - name: Discord skip notification
+        if: steps.publish.outputs.published == 'false' && steps.publish.outputs.skip_reason != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"embeds\":[{\"title\":\"⏭️ No Article Published Today\",\"description\":\"${{ steps.publish.outputs.skip_reason }}\",\"color\":15105570,\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]}" \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}"
+
+      - name: Discord failure notification
+        if: failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"embeds\":[{\"title\":\"❌ Article Publish Failed\",\"description\":\"The auto-publish workflow failed. Check GitHub Actions for details.\",\"color\":15158332,\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]}" \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}"

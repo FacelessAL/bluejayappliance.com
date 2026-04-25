@@ -70,7 +70,7 @@ export default function RentalForm() {
       : formData.appliance;
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/rental', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -79,9 +79,8 @@ export default function RentalForm() {
           full_name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email || '',
           phone: formData.phone,
-          service_needed: `Appliance Rental — ${applianceDesc}`,
-          issue_description: formData.details || `Rental inquiry for ${applianceDesc}`,
-          urgency: 'Flexible / Not urgent',
+          appliance_type: applianceDesc,
+          rental_details: formData.details || `Rental inquiry for ${applianceDesc}`,
           service_address: formData.serviceAddress,
           city: formData.city,
           postal_code: formData.postalCode,
