@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: article.metaTitle,
     description: article.metaDescription,
-    alternates: { canonical: `${biz.url}/blog/${slug}` },
+    alternates: { canonical: `${biz.url}/resources/${slug}` },
     openGraph: {
       title: article.metaTitle,
       description: article.metaDescription,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function BlogArticlePage({ params }: PageProps) {
+export default async function ResourceArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) notFound();
@@ -59,7 +59,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       logo: { '@type': 'ImageObject', url: `${biz.url}/images/logo.webp` },
     },
     datePublished: article.publishDate,
-    mainEntityOfPage: `${biz.url}/blog/${slug}`,
+    mainEntityOfPage: `${biz.url}/resources/${slug}`,
   };
 
   return (
@@ -69,8 +69,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Breadcrumbs items={[
-        { label: 'Blog', href: '/blog' },
-        { label: article.title, href: `/blog/${slug}` },
+        { label: 'Resources', href: '/resources' },
+        { label: article.title, href: `/resources/${slug}` },
       ]} />
 
       <article style={{ padding: '40px 20px 64px' }}>

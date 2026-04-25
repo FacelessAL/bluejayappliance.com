@@ -245,8 +245,8 @@ export default function Navbar() {
             <Link href="/reviews" className={isActive('/reviews') ? 'nm-active' : ''}>
               Reviews
             </Link>
-            <Link href="/blog" className={pathname.startsWith('/blog') ? 'nm-active' : ''}>
-              Blog
+            <Link href="/resources" className={pathname.startsWith('/resources') ? 'nm-active' : ''}>
+              Resources
             </Link>
             <Link href="/about-us" className={isActive('/about-us') ? 'nm-active' : ''}>
               About Us
@@ -277,7 +277,7 @@ export default function Navbar() {
               <Link href="/service-area" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Locations</Link>
               <Link href="/appliance-rental" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Appliance Rental</Link>
               <Link href="/reviews" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Reviews</Link>
-              <Link href="/blog" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Blog</Link>
+              <Link href="/resources" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Resources</Link>
               <Link href="/about-us" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>About Us</Link>
               <Link href="/contact-us" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Contact</Link>
               <Link href="/gallery" style={{ display: 'block', color: '#fff', padding: '12px 8px', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none', fontSize: '14px' }} onClick={() => setIsOpen(false)}>Gallery</Link>

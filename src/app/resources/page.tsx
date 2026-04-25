@@ -9,15 +9,15 @@ const biz = getBusiness();
 export const metadata: Metadata = {
   title: `Appliance Repair Tips & Guides | ${biz.name}`,
   description: `Expert appliance repair tips, maintenance guides, and local service insights from ${biz.name} in ${biz.address.city}, ${biz.address.state}. Stay informed with our latest articles.`,
-  alternates: { canonical: `${biz.url}/blog` },
+  alternates: { canonical: `${biz.url}/resources` },
 };
 
-export default function BlogPage() {
+export default function ResourcesPage() {
   const articles = getPublishedArticles();
 
   return (
     <>
-      <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} />
+      <Breadcrumbs items={[{ label: 'Resources', href: '/resources' }]} />
 
       {/* Hero */}
       <section style={{ backgroundColor: '#f8fafc', padding: '48px 20px 40px', textAlign: 'center' }}>
@@ -43,7 +43,7 @@ export default function BlogPage() {
               {articles.map((article: Article) => (
                 <Link
                   key={article.slug}
-                  href={`/blog/${article.slug}`}
+                  href={`/resources/${article.slug}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <article style={{
