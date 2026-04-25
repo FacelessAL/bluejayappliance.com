@@ -83,6 +83,7 @@ export default function Footer() {
                 { href: '/about-us', label: 'About Us' },
                 { href: '/services', label: 'Services' },
                 { href: '/service-area', label: 'Service Area' },
+                { href: '/resources', label: 'Resources' },
                 { href: '/contact-us', label: 'Contact Us' },
                 { href: '/gallery', label: 'Gallery' },
               ].map((link) => (
