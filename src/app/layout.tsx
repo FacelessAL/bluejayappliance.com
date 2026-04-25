@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import MobileCallBar from "@/components/MobileCallBar";
 import HeaderSpacer from "@/components/HeaderSpacer";
 import { getBusiness } from "@/lib/data";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -74,6 +75,7 @@ export default function RootLayout({
         <main className="main-content">{children}</main>
         <Footer />
         <MobileCallBar />
+        <Analytics />
       </body>
     </html>
   );
