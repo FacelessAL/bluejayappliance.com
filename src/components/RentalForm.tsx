@@ -54,7 +54,7 @@ export default function RentalForm() {
   };
 
   const needsDryerType = formData.appliance === 'Dryer Only' || formData.appliance === 'Washer & Dryer Set';
-  const canSubmit = formData.appliance && formData.serviceAddress && formData.city && formData.firstName && formData.phone && smsConsent && (!needsDryerType || formData.dryerType);
+  const canSubmit = formData.appliance && formData.serviceAddress && formData.city && formData.firstName && formData.phone && (!needsDryerType || formData.dryerType);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -241,8 +241,9 @@ export default function RentalForm() {
             style={{ marginTop: '3px', width: '18px', height: '18px', accentColor: '#1565C0', cursor: 'pointer', flexShrink: 0 }}
           />
           <label htmlFor="rentalSmsConsent" style={{ fontSize: '12px', lineHeight: '1.6', color: '#374151', fontFamily: 'var(--font-poppins)', cursor: 'pointer' }}>
-            I agree to receive SMS text messages from {biz.name} regarding my rental inquiry and scheduling. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. View our{' '}
-            <a href="/privacy-policy" target="_blank" style={{ color: '#1565C0', textDecoration: 'underline' }}>Privacy Policy</a>.
+            I agree to receive SMS/text messages from <strong>{biz.name}</strong> at the phone number provided regarding my rental inquiry, including scheduling updates, delivery confirmations, and follow-up communications. Message frequency varies (typically 1–5 messages per request). Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. Consent is not a condition of purchase or service. View our{' '}
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#1565C0', textDecoration: 'underline' }}>Privacy Policy</a>{' '}and{' '}
+            <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" style={{ color: '#1565C0', textDecoration: 'underline' }}>Terms of Service</a>.
           </label>
         </div>
 

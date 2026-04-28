@@ -60,8 +60,7 @@ export default function ContactForm() {
   const canSubmit =
     formData.service && formData.issue && formData.urgency &&
     formData.serviceAddress && formData.city && formData.postalCode &&
-    formData.firstName && formData.lastName && formData.email && formData.phone &&
-    smsConsent;
+    formData.firstName && formData.lastName && formData.email && formData.phone;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -289,9 +288,9 @@ export default function ContactForm() {
             style={{ marginTop: '3px', width: '18px', height: '18px', accentColor: '#1565C0', cursor: 'pointer', flexShrink: 0 }}
           />
           <label htmlFor="smsConsent" style={{ fontSize: '12px', lineHeight: '1.6', color: '#374151', fontFamily: 'var(--font-poppins)', cursor: 'pointer' }}>
-            I agree to receive SMS text messages from {biz.name} regarding my service request, appointment updates, and follow-ups. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. View our{' '}
-            <a href="/privacy-policy" target="_blank" style={{ color: '#1565C0', textDecoration: 'underline' }}>Privacy Policy</a>{' '}and{' '}
-            <a href="/terms-of-service" target="_blank" style={{ color: '#1565C0', textDecoration: 'underline' }}>Terms of Service</a>.
+            I agree to receive SMS/text messages from <strong>{biz.name}</strong> at the phone number provided regarding my service request, including appointment confirmations, scheduling updates, service reminders, and follow-up communications. Message frequency varies (typically 1–5 messages per service request). Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. Consent is not a condition of purchase or service. View our{' '}
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#1565C0', textDecoration: 'underline' }}>Privacy Policy</a>{' '}and{' '}
+            <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" style={{ color: '#1565C0', textDecoration: 'underline' }}>Terms of Service</a>.
           </label>
         </div>
 
