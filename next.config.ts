@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // ============================================================
+      // Canonical host consolidation (301 permanent)
+      // Force non-www → www so Google consolidates all signals on
+      // https://www.bluejayappliance.com
+      // ============================================================
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "bluejayappliance.com" }],
+        destination: "https://www.bluejayappliance.com/:path*",
+        statusCode: 301,
+      },
+
+      // ============================================================
       // WordPress → Next.js migration redirects (301 permanent)
       // Preserves SEO rankings for all indexed URLs
       // ============================================================
@@ -260,6 +272,24 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
+  },
+  async headers() {
+    // Prevent indexing of any non-production (Vercel preview/branch) deploys.
+    // Production deploys (VERCEL_ENV === 'production') are unaffected and remain indexable.
+    if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production") {
+      return [
+        {
+          source: "/:path*",
+          headers: [
+            {
+              key: "X-Robots-Tag",
+              value: "noindex, nofollow",
+            },
+          ],
+        },
+      ];
+    }
+    return [];
   },
 };
 
