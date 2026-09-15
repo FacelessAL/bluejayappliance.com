@@ -4,7 +4,14 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { getBusiness, getAllServices } from '@/lib/data';
+import { getBusiness, getAllServices, getAllLocations } from '@/lib/data';
+
+const FEATURED_LOCATION_SLUGS = [
+  'naperville-il-appliance-repair',
+  'aurora-il-appliance-repair',
+  'joliet-il-appliance-repair',
+  'plainfield-il-appliance-repair',
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +22,7 @@ export default function Navbar() {
   const locationsRef = useRef<HTMLDivElement>(null);
   const biz = getBusiness();
   const services = getAllServices();
+  const featuredLocations = getAllLocations().filter((l) => FEATURED_LOCATION_SLUGS.includes(l.slug));
   const pathname = usePathname();
 
   useEffect(() => {
@@ -231,10 +239,15 @@ export default function Navbar() {
               {locationsOpen && (
                 <div className="nm-dropdown-menu">
                   <Link href="/service-area" onClick={() => setLocationsOpen(false)}>All Locations</Link>
-                  <Link href="/aurora" onClick={() => setLocationsOpen(false)}>Aurora</Link>
-                  <Link href="/joliet" onClick={() => setLocationsOpen(false)}>Joliet</Link>
-                  <Link href="/" onClick={() => setLocationsOpen(false)}>Naperville</Link>
-                  <Link href="/plainfield" onClick={() => setLocationsOpen(false)}>Plainfield</Link>
+                  {featuredLocations.map((loc) => (
+                    <Link
+                      key={loc.slug}
+                      href={`/${loc.slug}`}
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      {loc.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>

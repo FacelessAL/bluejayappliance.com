@@ -190,7 +190,11 @@ export default async function ResourceArticlePage({ params }: PageProps) {
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <svg width="16" height="16" fill="none" stroke="#9ca3af" strokeWidth="2" viewBox="0 0 24 24" style={{ flexShrink: 0, marginTop: '3px' }}><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                <span>Mon–Sat: 8AM–7PM</span>
+                <span>
+                  {biz.hours.map((h) => (
+                    <span key={h.days} style={{ display: 'block' }}>{h.days}: {h.time}</span>
+                  ))}
+                </span>
               </div>
             </div>
             <div style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid #f3f4f6' }}>
@@ -200,7 +204,7 @@ export default async function ResourceArticlePage({ params }: PageProps) {
                     <svg key={i} width="14" height="14" fill="#facc15" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   ))}
                 </div>
-                <span style={{ fontSize: '13px', fontWeight: 600, color: '#0F1B2D' }}>5.0</span>
+                <span style={{ fontSize: '13px', fontWeight: 600, color: '#0F1B2D' }}>{biz.rating.toFixed(1)}</span>
                 <span style={{ fontSize: '12px', color: '#9ca3af' }}>on Google</span>
               </div>
             </div>

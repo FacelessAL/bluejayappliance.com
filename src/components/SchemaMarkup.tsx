@@ -100,20 +100,14 @@ export default function SchemaMarkup({
         latitude: biz.geo.latitude,
         longitude: biz.geo.longitude,
       },
-      openingHoursSpecification: [
-        {
+      openingHoursSpecification: biz.hours
+        .filter((h) => h.opens && h.closes)
+        .map((h) => ({
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '17:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Saturday'],
-          opens: '08:00',
-          closes: '12:00',
-        },
-      ],
+          dayOfWeek: h.dayOfWeek,
+          opens: h.opens,
+          closes: h.closes,
+        })),
       priceRange: '$$',
       aggregateRating: {
         '@type': 'AggregateRating',

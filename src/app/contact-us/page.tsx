@@ -113,9 +113,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-[family-name:var(--font-figtree)]" style={{ fontWeight: 700, color: '#0F1B2D', marginBottom: '4px' }}>Business Hours</h3>
                     <p style={{ color: '#4b5563', fontFamily: 'var(--font-poppins)', fontSize: '14px', lineHeight: '1.8' }}>
-                      Mon – Fri: 8:00 AM – 5:00 PM<br />
-                      Saturday: 8:00 AM – 12:00 PM<br />
-                      Sunday: Closed
+                      {biz.hours.map((h) => (
+                        <span key={h.days} style={{ display: 'block' }}>{h.days}: {h.time}</span>
+                      ))}
                     </p>
                   </div>
                 </div>

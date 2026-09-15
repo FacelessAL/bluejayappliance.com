@@ -58,7 +58,7 @@ const coreValues = [
 const differentiators = [
   {
     title: 'Family-Owned & Operated',
-    description: 'We\'re a local business with 20 years of industry experience, not a national franchise. You\'ll get personalized service from people who care.',
+    description: 'We\'re a local business with over a decade of industry experience, not a national franchise. You\'ll get personalized service from people who care.',
   },
   {
     title: 'Transparent, Upfront Pricing',

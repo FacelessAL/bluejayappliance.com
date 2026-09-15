@@ -37,6 +37,29 @@
     "longitude": -88.1480549
   },
   "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-12:00",
+  "hours": [
+    {
+      "days": "Mon – Fri",
+      "time": "8:00 AM – 5:00 PM",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "days": "Saturday",
+      "time": "8:00 AM – 12:00 PM",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed",
+      "dayOfWeek": ["Sunday"],
+      "opens": null,
+      "closes": null
+    }
+  ],
   "description": "Professional appliance repair services in Naperville, Illinois. Blue Jay Appliance Services provides same or next-day service for all major appliances. Experienced technicians, transparent pricing, and a 90-day warranty on all parts and labor.",
   "tagline": "Naperville's Local Appliance Repair Experts",
   "serviceAreaName": "Naperville & Surrounding Areas",

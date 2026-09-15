@@ -103,56 +103,56 @@ function getServiceBrands(slug: string): string[] {
 function getServiceProcess(slug: string): Array<{ step: string; detail: string }> {
   const processes: Record<string, Array<{ step: string; detail: string }>> = {
     'dishwasher-repair': [
-      { step: 'Describe the Symptoms', detail: 'Call us at (630) 998-0209 and tell us what\'s happening — leaking, not draining, error codes, or anything else. We\'ll schedule a same or next-day visit.' },
+      { step: 'Describe the Symptoms', detail: `Call us at ${biz.phone} and tell us what's happening — leaking, not draining, error codes, or anything else. We'll schedule a same or next-day visit.` },
       { step: 'Run Diagnostic Cycles', detail: 'Our technician runs your dishwasher through a diagnostic cycle, checks water supply and drain lines, tests the door latch, and inspects internal components to pinpoint the failure.' },
       { step: 'Review Your Written Estimate', detail: 'We present a clear, itemized estimate covering parts and labor. You see the exact cost before we touch a single component.' },
       { step: 'Complete the Repair', detail: 'Most dishwasher repairs — pump replacements, gasket swaps, control board fixes — are completed in one visit with parts from our truck.' },
       { step: 'Verify & Warranty', detail: 'We run a full wash cycle to confirm everything works properly, then back the repair with our 90-day parts and labor warranty.' },
     ],
     'dryer-repair': [
-      { step: 'Tell Us What\'s Wrong', detail: 'Call (630) 998-0209 and describe the issue — no heat, strange noises, won\'t start, or long dry times. We\'ll book a same or next-day appointment.' },
+      { step: 'Tell Us What\'s Wrong', detail: `Call ${biz.phone} and describe the issue — no heat, strange noises, won't start, or long dry times. We'll book a same or next-day appointment.` },
       { step: 'Inspect & Test Components', detail: 'Our tech checks the heating element or gas igniter, thermal fuse, thermostat, belt, drum rollers, and exhaust vent to isolate the exact failure point.' },
       { step: 'Get an Upfront Price', detail: 'Before starting, you receive a written estimate with no hidden charges. We explain what failed and why, so you can make an informed decision.' },
       { step: 'Repair on the Spot', detail: 'We carry common dryer parts — heating elements, belts, thermal fuses, igniters — for fast same-visit repair on most models.' },
       { step: 'Safety Check & Warranty', detail: 'We verify proper heating, drum operation, and airflow before leaving. Every dryer repair includes our 90-day parts and labor warranty.' },
     ],
     'washer-repair': [
-      { step: 'Describe the Problem', detail: 'Call (630) 998-0209 and let us know what\'s happening — won\'t drain, shaking violently, leaking, or error codes. We schedule around your availability.' },
+      { step: 'Describe the Problem', detail: `Call ${biz.phone} and let us know what's happening — won't drain, shaking violently, leaking, or error codes. We schedule around your availability.` },
       { step: 'Diagnose the Failure', detail: 'Our technician inspects the pump, motor coupling, lid or door switch, tub bearings, inlet valves, and control board to identify the root cause.' },
       { step: 'Approve the Written Estimate', detail: 'We provide an itemized, written estimate before any work begins. No surprises, no pressure — you decide whether to proceed.' },
       { step: 'Fix It Right', detail: 'Common washer repairs like pump replacements, bearing swaps, and switch fixes are typically completed on the first visit with parts we carry.' },
       { step: 'Test Cycles & Warranty', detail: 'We run your washer through fill, wash, and spin cycles to confirm the repair. Everything is backed by our 90-day parts and labor warranty.' },
     ],
     'refrigerator-and-freezer-repair': [
-      { step: 'Report the Issue', detail: 'Call (630) 998-0209 with details — not cooling, ice maker down, leaking, or unusual noises. Cooling emergencies get same-day priority scheduling.' },
+      { step: 'Report the Issue', detail: `Call ${biz.phone} with details — not cooling, ice maker down, leaking, or unusual noises. Cooling emergencies get same-day priority scheduling.` },
       { step: 'Precision Temperature Diagnosis', detail: 'Our tech measures temperatures at multiple points, tests the compressor, evaporator and condenser fans, defrost system, thermostat, and sealed system pressures.' },
       { step: 'Review the Written Quote', detail: 'We explain the diagnosis in plain language and provide a detailed written estimate. You see the exact cost and approve it before we start.' },
       { step: 'Restore Cooling', detail: 'From relay swaps and fan motor replacements to defrost system repairs, most refrigerator fixes are completed the same day.' },
       { step: 'Confirm Temps & Warranty', detail: 'We verify the unit reaches proper temperature and all systems function correctly. Your repair is covered by our 90-day parts and labor warranty.' },
     ],
     'range-and-oven-repair': [
-      { step: 'Describe the Cooking Issue', detail: 'Call (630) 998-0209 and tell us what\'s happening — burners won\'t light, oven not heating, temperature swings, or error codes. Same or next-day appointments available.' },
+      { step: 'Describe the Cooking Issue', detail: `Call ${biz.phone} and tell us what's happening — burners won't light, oven not heating, temperature swings, or error codes. Same or next-day appointments available.` },
       { step: 'Gas & Electrical Safety Check', detail: 'Our gas-certified technician checks ignition systems, gas connections, heating elements, oven sensors, and control boards while verifying safe operation throughout.' },
       { step: 'Get Your Written Estimate', detail: 'We present a clear estimate covering the specific repair — igniter replacement, element swap, sensor calibration, or control board fix — before any work starts.' },
       { step: 'Complete the Repair Safely', detail: 'We perform the repair, verify all gas connections are tight and leak-free (gas models), and test element continuity on electric models.' },
       { step: 'Verify Temperatures & Warranty', detail: 'We test burner ignition, oven temperature accuracy, and overall safe operation. Every repair is backed by our 90-day warranty on parts and labor.' },
     ],
     'cooktop-repair': [
-      { step: 'Explain the Range Problem', detail: 'Call (630) 998-0209 with details on your range issue — cooktop or oven side, gas or electric, and the specific symptoms. We\'ll schedule a convenient appointment.' },
+      { step: 'Explain the Range Problem', detail: `Call ${biz.phone} with details on your range issue — cooktop or oven side, gas or electric, and the specific symptoms. We'll schedule a convenient appointment.` },
       { step: 'Dual-System Inspection', detail: 'Since ranges combine a cooktop and oven, our tech inspects both systems independently — testing burners, igniters, elements, sensors, gas valves, and the control board.' },
       { step: 'Approve the Itemized Estimate', detail: 'We explain which component failed and provide a written estimate before starting. For dual-fuel ranges, we detail exactly which system needs attention.' },
       { step: 'Expert cooktop repair', detail: 'We repair the cooktop, oven, or both — handling gas igniters, electric elements, thermostats, and control issues with the right parts for your specific model.' },
       { step: 'Full Function Test & Warranty', detail: 'We test every burner and the oven at temperature to confirm full operation. All cooktop repairs are covered by our 90-day parts and labor warranty.' },
     ],
     'garbage-disposal-repair-and-installation': [
-      { step: 'Tell Us What Happened', detail: 'Call (630) 998-0209 and describe the issue — humming, jammed, leaking, or silent. If you need a new installation, let us know and we\'ll bring the right unit.' },
+      { step: 'Tell Us What Happened', detail: `Call ${biz.phone} and describe the issue — humming, jammed, leaking, or silent. If you need a new installation, let us know and we'll bring the right unit.` },
       { step: 'Inspect the Disposal & Plumbing', detail: 'Our tech checks the motor, impellers, mounting assembly, plumbing connections, electrical wiring, and dishwasher drain hookup to find the problem.' },
       { step: 'Repair or Replace Recommendation', detail: 'We give you an honest assessment — if the disposal can be repaired affordably, we\'ll quote it. If replacement makes more sense, we\'ll recommend the right size and model.' },
       { step: 'Same-Visit Resolution', detail: 'Whether it\'s clearing a jam, fixing a leak, or installing a brand-new unit with all plumbing and electrical connections — most disposal jobs are done in one visit.' },
       { step: 'Test & Warranty', detail: 'We run the disposal with water flowing to confirm smooth operation and no leaks. Repairs and new installations are covered by our 90-day warranty.' },
     ],
     'water-heater-installation': [
-      { step: 'Discuss Your Hot Water Needs', detail: 'Call (630) 998-0209 and tell us about your situation — tank leaking, no hot water, need a bigger unit, or new construction. We\'ll help you choose the right unit for your household size and budget.' },
+      { step: 'Discuss Your Hot Water Needs', detail: `Call ${biz.phone} and tell us about your situation — tank leaking, no hot water, need a bigger unit, or new construction. We'll help you choose the right unit for your household size and budget.` },
       { step: 'On-Site Assessment', detail: 'Our technician evaluates your current setup — gas vs. electric, venting requirements, water line sizing, and available space — to confirm the right unit and identify any code requirements.' },
       { step: 'Detailed Written Quote', detail: 'You receive a clear, itemized quote covering the water heater unit, all materials, labor, old unit removal, and any permit fees. No hidden costs — you approve everything before we start.' },
       { step: 'Professional Installation', detail: 'We remove the old unit, install the new water heater with proper gas/electric connections, code-compliant venting, expansion tank if required, and new water supply lines as needed.' },
@@ -160,7 +160,7 @@ function getServiceProcess(slug: string): Array<{ step: string; detail: string }
     ],
   };
   return processes[slug] || [
-    { step: 'Call & Schedule', detail: 'Call (630) 998-0209 to describe the issue and book a same or next-day appointment.' },
+    { step: 'Call & Schedule', detail: `Call ${biz.phone} to describe the issue and book a same or next-day appointment.` },
     { step: 'Diagnosis', detail: 'Our technician inspects your appliance and identifies the exact problem.' },
     { step: 'Written Estimate', detail: 'You receive a clear, written estimate before any work begins.' },
     { step: 'Expert Repair', detail: 'We complete the repair using quality parts, usually on the first visit.' },
