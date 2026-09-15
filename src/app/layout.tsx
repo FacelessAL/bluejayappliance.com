@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins, Figtree } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
@@ -22,6 +23,11 @@ const figtree = Figtree({
 });
 
 const biz = getBusiness();
+
+// Only load Google Ads tag on the live production deploy so dev/preview
+// traffic doesn't pollute conversion + remarketing data.
+const googleAdsId =
+  process.env.VERCEL_ENV === "production" ? biz.googleAdsId : "";
 
 export const metadata: Metadata = {
   title: {
@@ -76,6 +82,23 @@ export default function RootLayout({
         <Footer />
         <MobileCallBar />
         <Analytics />
+        {googleAdsId && (
+          <>
+            {/* Google tag (gtag.js) — Google Ads */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-gtag" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${googleAdsId}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
